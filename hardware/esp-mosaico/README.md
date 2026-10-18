@@ -13,7 +13,7 @@
 | 数量 | 尚未登记 |
 | 当前设备固件版本 | 尚未登记；不能直接认定与最新出厂应用一致 |
 | 已有外接模块 | 尚未登记；摄像头和交互子板仅作为参考，不代表已经拥有 |
-| 资料状态 | `experimental`：完成官方资料整理，尚未核对实物接线、测量电源或执行功能测试 |
+| 资料状态 | `experimental`：归档 9 份 PDF，完成原理图与 BSP 交叉核对；尚未执行设备测试 |
 | 工具链 | 本目录为文档，无构建依赖；尚无本仓库验证过的软件环境 |
 | 核对日期 | 2026-10-18（Asia/Shanghai） |
 
@@ -31,14 +31,15 @@
 | 电源 | USB Type-C、锂电池、充电与电量计电路 | 供电、充电和电量显示 |
 | 外部连接与操作 | 左右模块接口、背部触点、三个按键、振动马达 | 扩展、调试与人机交互 |
 
-配置依据：[官方 V1.2 硬件指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide.html)，查询于 2026-10-18。完整器件参数、图片和原理图从该页面的相关文档进入，不在本目录重复保存。
+配置依据：[官方 V1.2 硬件指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide.html)，查询于 2026-10-18。已取得的主板、底板、扩展模块原理图和模组规格图见 [资料归档](rev-1.2/upstream/README.md)，电源与接口分析见 [设计分析](rev-1.2/design-analysis.md)，关键位号见 [器件表](rev-1.2/components.csv)。
 
 ## 阅读与使用
 
 1. 先核对 CoreBoard、BaseBoard 的丝印及设备当前固件版本。
 2. 阅读 [左右接口说明](rev-1.2/interfaces.md)，确认 H2 / H1、Pin1 和连接器观察方向。
 3. 阅读 [顶部按键说明](rev-1.2/buttons.md)，区分开关机、下载模式和应用按键。
-4. 开发扩展板时，将自己的设计放入新的 `hardware/<board-id>/`，配套代码放入 `firmware/<firmware-id>/`；本目录保留主机参考资料。
+4. 阅读 [设计分析](rev-1.2/design-analysis.md)，核对独立 OUT_3V3 电源、总线资源和已发现的资料差异。
+5. 开发扩展板时，将自己的设计放入新的 `hardware/<board-id>/`，配套代码放入 `firmware/<firmware-id>/`；本目录保留主机参考资料。
 
 首次只识别设备和接口，无需安装软件。准备下载固件时需要可传数据的 USB 线、电脑和与所用工程匹配的开发环境；本仓库尚无可运行的最小固件示例。
 
@@ -54,6 +55,8 @@
 ## 已知差异与恢复入口
 
 - 本目录只针对 CoreBoard V1.2 资料范围；V1.0 的部分板载管脚不同，不能套用。
+- 已归档 PDF 不能替代 PCB 工程、完整 BOM、制造输出和整机结构模型；这些文件尚未取得。
+- 屏幕规格书与主板连接器的针数、部分电压参数存在差异，详见 [设计分析](rev-1.2/design-analysis.md#显示音频与存储)。
 - AI KEY 的界面动作随固件改变。出厂应用指南描述的行为须结合本机固件核对。
 - 充满电时的指示灯颜色在两份官方指南中存在差异：硬件指南写绿色，出厂应用指南写白色；本机颜色待确认，不将其中一种写成实测结论。
 - 下载或日志异常时，先查看 [BOOT 与下载模式](rev-1.2/buttons.md#下载模式与恢复入口)，并核对应用的 USB 控制台配置。
@@ -71,6 +74,6 @@
 | [摄像头模块指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide_camera.html) | 左槽限制及 USB Serial/JTAG 资源冲突 |
 | [交互子板指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide_interact.html) | 两侧插槽使用与插入方向 |
 
-本目录自行整理的文档沿用仓库现有 [LICENSE](../../LICENSE)。链接中的官方设计、图片及代码保留原有权利和许可证，不因被引用而改为本仓库许可；本目录没有复制第三方设计源文件。
+本目录自行整理的文档和关键器件表沿用仓库现有 [LICENSE](../../LICENSE)。`rev-1.2/upstream/` 中的第三方 PDF 保留原有权利，不纳入本仓库 GPL 授权；文件归属、分发限制与取得情况见 [归档说明](rev-1.2/upstream/README.md)。固定提交、文件版本及 SHA-256 见 [来源清单](rev-1.2/sources.json)。
 
 返回 [仓库首页与项目索引](../../README.md)。

@@ -41,6 +41,8 @@ GPIO 定义依据 [BSP 主板头文件](https://github.com/esp-mosaico/esp-mosai
 
 POWER 通过 SAM8108 开关机电路工作。官方指南要求 GPIO57 正常运行时保持高阻，关机请求时以开漏方式拉低。应用应通过匹配版本的 BSP 电源接口处理关机，不自行试探该管脚电平。[来源：V1.2 电源控制说明](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide.html#id44)
 
+已进一步核对 [CoreBoard 原理图第 5 页](upstream/mainboard/coreboard-v1.2.1-schematic.pdf)：GPIO57 经 R19 接 U22 的 ONOFF（Pin4），与 S3 POWER 按键共用触发节点；U22 OUT（Pin6）则通过 PWR_EN 控制 Q2.1。完整连接分析见 [SAM8108 与三个按键](design-analysis.md#sam8108-与三个按键)。
+
 ## 下载模式与恢复入口
 
 正常下载失败、需要进入 ROM 下载模式时，官方给出的基本操作是：

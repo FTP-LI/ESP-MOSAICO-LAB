@@ -14,7 +14,7 @@
 | 板载音频冲突 | 不占用右侧列出的 I2S 引脚 | GPIO49、52、54、37、40 与 ES8311 音频共用 |
 | 安装方向 | 按模块与 H2 的配合方向 | 相对左侧旋转 180°，仍须核对 Pin1 |
 
-上表与下方针号表依据 [官方 V1.2 模块接口定义](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide.html#id59)。保留板载音频时，右侧这五个共用 GPIO 不可分配给扩展功能。
+上表与下方针号表依据 [官方 V1.2 模块接口定义](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide.html#id59)，并与 [BaseBoard 原理图第 1 页](upstream/mainboard/baseboard-v1.2.1-schematic.pdf)交叉核对。保留板载音频时，右侧这五个共用 GPIO 不可分配给扩展功能。
 
 ## 引脚对照
 
@@ -40,12 +40,14 @@
 | 16 | GPIO0 / SDA | GPIO0 / SDA | 共用外扩 I2C 数据 |
 | 17 | 5V_IN | 5V_IN | 外部向主机输入电源 |
 | 18 | 5V_OUT | 5V_OUT | 主机向模块输出电源 |
-| 19 | VCC_3V3 | VCC_3V3 | 主机向模块输出 3.3 V |
+| 19 | OUT_3V3 | OUT_3V3 | 主机向模块输出 3.3 V；官方接口表及模块图称 VCC_3V3 |
 | 20 | GND | GND | 地 |
 
 `5V_IN` 与 `5V_OUT` 的方向不同；UART 的 RX / TX 按主机方向命名。GPIO 电压容限、允许灌拉电流、模块接口电平及电源允许偏差未在本次工作中完成核对，不能从电源针脚名称推断。
 
 ## 电源与共享资源
+
+底板原理图中，Pin19 的网名为 `OUT_3V3`：由底板 U21 从 `5V_OUT` 独立降压产生，EN 接主板 `VCC_3V3`。它与主板 `MCU_3V3`、受控 `VCC_3V3` 是不同网络。两侧共用 OUT_3V3，SDA / SCL 分别通过底板 4.7 kΩ 电阻上拉至该电源。[详细电源关系](design-analysis.md#主板底板与电源关系)。
 
 出厂应用指南将 `IN` 标为 5 V 输入，将 `5V` 和 `3V` 分别标为最大 100 mA 的输出。该页面未进一步区分单槽与双槽合计预算，本仓库不据此声明“两槽各可取 100 mA”，也不将 Type-C 的输出额定值套到扩展接口。[来源：出厂应用指南](https://mosaico.espressif.com/zh/guide/)，查询于 2026-10-18；这些数值不是本机测量结果。
 
@@ -61,6 +63,8 @@
 | 需要保留板载音频的扩展 | 按实际设计选择 | 避开右侧与音频共用的五个 GPIO |
 
 模块约束来源：[摄像头模块指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide_camera.html)、[交互子板指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide_interact.html)，查询于 2026-10-18。自制模块两项为本仓库的设计检查建议，不代表已验证兼容。
+
+模块电源和 EEPROM 接法存在特例：交互子板的 WS2812 使用 5 V；摄像头 GPIO14 用于 DVP D4，EEPROM 采用固定左槽地址，工作时按 BSP 约束暂停访问。见 [扩展板原理图分析](design-analysis.md#扩展子板作为设计参考)。
 
 官方模块指南要求安装前关机或关闭对外电源。软件能够检测插拔，不自动证明任意自制板具备带电插拔能力。当前未确认持有哪种扩展模块，也没有经过验证的自制板接线方案。
 

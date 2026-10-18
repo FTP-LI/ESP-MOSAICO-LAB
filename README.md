@@ -7,6 +7,8 @@
 ## 先从这里看
 
 - [当前设备与板载硬件](hardware/esp-mosaico/README.md)
+- [V1.2 设计分析与关键器件](hardware/esp-mosaico/rev-1.2/design-analysis.md)
+- [官方原理图与规格图归档](hardware/esp-mosaico/rev-1.2/upstream/README.md)
 - [左侧 H2 与右侧 H1 的区别、引脚和电源](hardware/esp-mosaico/rev-1.2/interfaces.md)
 - [顶部 POWER、BOOT、AI KEY 按键](hardware/esp-mosaico/rev-1.2/buttons.md)
 - [SAM8108 是什么、有哪些替代方案](hardware/esp-mosaico/rev-1.2/buttons.md#sam8108-与替代方案)
@@ -25,7 +27,11 @@ ESP-MOSAICO-LAB/
 │       ├── README.md
 │       └── rev-1.2/
 │           ├── interfaces.md       左右接口与电源
-│           └── buttons.md          顶部按键、电源芯片与下载模式
+│           ├── buttons.md          顶部按键、电源芯片与下载模式
+│           ├── design-analysis.md  原理图分析与资料差异
+│           ├── components.csv      关键器件表；非完整 BOM
+│           ├── sources.json        来源、版本与文件校验值
+│           └── upstream/           9 份原始 PDF 及归档说明
 ├── firmware/                       配套固件；待添加项目
 ├── automation/                     自动化程序；待添加项目
 ├── tools/                          烧录、诊断与配置工具；待添加工具
@@ -71,4 +77,4 @@ ESP-MOSAICO-LAB/
 
 本仓库沿用已有的 [GNU GPL v3 许可证文本](LICENSE)。新增项目须在 README 中明确源码、硬件设计和文档的许可范围。
 
-硬件说明由本仓库整理，文中标明官方来源与查询日期；官方原理图、图片和源码通过链接引用，未复制为本仓库设计文件。引入第三方文件时需另行记录来源和原许可证，保留归属信息。仓库规范及模板不替代许可证，也不替未来项目预先决定许可范围。
+硬件分析由本仓库整理，文中标明来源与查询日期。官方原理图和供应商规格图集中在 [upstream 归档](hardware/esp-mosaico/rev-1.2/upstream/README.md)，保留原有归属与限制，不适用本仓库 GPL 许可；带明确分发限制的手册只保留官方链接。源码和其他图片通过链接引用。仓库规范及模板不替代许可证。

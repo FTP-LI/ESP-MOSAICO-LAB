@@ -1,0 +1,30 @@
+board,designators,part_or_value,quantity_in_group,role,source_id,pdf_page,status
+CoreBoard,U3,ESP32-S31,1,主控；具体封装内 PSRAM 版本需结合实物与官方型号,coreboard-v1.2,2,原理图核对；非完整BOM
+CoreBoard,U4,GD5F1GM7UEYIGR,1,SPI NAND资源存储,coreboard-v1.2,2,原理图核对；非完整BOM
+CoreBoard,U5,GD25Q128EWIGR,1,SPI NOR程序存储,coreboard-v1.2,2,原理图核对；非完整BOM
+CoreBoard,U11,BMI270,1,六轴IMU,coreboard-v1.2,3,原理图核对；非完整BOM
+CoreBoard,U26 U27,BMM150,2,磁力计；地址0x11及0x12,coreboard-v1.2,3,原理图核对；非完整BOM
+CoreBoard,U12,LMA2718B331-OE1R22,1,麦克风,coreboard-v1.2,4,原理图核对；采购后缀需复核
+CoreBoard,U13,HE9073A33M5R,1,音频3.3V LDO,coreboard-v1.2,4,原理图核对；非完整BOM
+CoreBoard,U14,ES8311,1,音频编解码器,coreboard-v1.2,4,原理图核对；非完整BOM
+CoreBoard,U15,NS4150B,1,扬声器功放,coreboard-v1.2,4,原理图核对；非完整BOM
+CoreBoard,U16,SY7088DGC,1,升压电路,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,U18,TPS2041BDBVR,1,USB供电开关,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,U19,HUSB320_BA000-QN12R,1,USB Type-C角色检测与供电控制,coreboard-v1.2,5,原理图核对；采购后缀需复核
+CoreBoard,U20,BQ27220YZFR,1,电量计,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,U21,TLV62569DBVR,1,MCU_3V3降压,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,U22,SAM8108,1,按键开关机控制器,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,U23,TP4057,1,单节锂电充电管理,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,Q2,WST2011,1,双MOS电源路径；分单元Q2.1及Q2.2,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,Q5,AO3401A,1,VCC_3V3受控开关,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,R42,10mOhm,1,电量计电流采样,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,R45,2MOhm,1,SAM8108输出上拉至VSYS,coreboard-v1.2,5,原理图核对；非完整BOM
+CoreBoard,R47,15kOhm,1,充电电流设置；图中标注约66mA,coreboard-v1.2,5,标称电路计算；非实测
+CoreBoard,R1 R2,4.7kOhm,2,板载I2C上拉至MCU_3V3,coreboard-v1.2,2,原理图核对；非完整BOM
+CoreBoard,CN1,BTB040-24PLBDR-M41,1,显示连接器；24信号针,coreboard-v1.2,3,原理图核对；封装方向未实测
+CoreBoard,CN3,HC-PBB05-2-60-M-H1.0-G1-R-P-04,1,60针主底板连接器,coreboard-v1.2,2,原理图核对；封装方向未实测
+BaseBoard,U21,TLV62569DBVR,1,5V_OUT到OUT_3V3独立降压,baseboard-v1.2,1,原理图核对；非完整BOM
+BaseBoard,R2 R3,4.7kOhm,2,外扩I2C上拉至OUT_3V3,baseboard-v1.2,1,原理图核对；非完整BOM
+BaseBoard,CN2,HC-PBB05-2-60-F-H4.5-G1-R-P-04,1,60针主底板连接器,baseboard-v1.2,1,原理图核对；封装方向未实测
+BaseBoard,H1 H2,B-2200R20P-B120,2,左右2x10扩展连接器,baseboard-v1.2,1,原理图核对；封装方向未实测
+BaseBoard,H5,PZ254V-11-07P,1,7针背部调试与供电触点,baseboard-v1.2,1,原理图核对；封装方向未实测
