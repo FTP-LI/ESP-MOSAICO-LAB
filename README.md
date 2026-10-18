@@ -1,2 +1,49 @@
-# ESP-MOSAICOs-EXTEN
-Unofficial expansion boards and automation tools for ESP-Mosaico.
+# ESP-MOSAICO-LAB
+
+面向 ESP-Mosaico 设备的**非官方扩展项目**，用于长期维护扩展板、配套固件、自动化程序和使用文档。本仓库不代表官方产品或官方支持功能。
+
+当前处于仓库初始化阶段：已建立仓库规范、协作模板和记录模板，尚未收录具体硬件、固件或自动化项目，也没有设备实测或兼容性结论。
+
+## 项目索引
+
+| 类别 | 目录约定 | 当前内容与状态 |
+| --- | --- | --- |
+| 扩展板与硬件资料 | `hardware/<board-id>/` | 暂无项目；有实际设计资料后建立目录 |
+| 配套固件 | `firmware/<firmware-id>/` | 暂无项目；有实际源码后建立目录 |
+| 自动化程序 | `automation/<automation-id>/` | 暂无项目；有实际程序后建立目录 |
+| 烧录、诊断和配置工具 | `tools/` | 暂无工具 |
+| 独立使用示例 | `examples/` | 暂无示例 |
+| 跨项目文档 | [docs/](docs/README.md) | 兼容性索引及项目、测试、硬件检查和发布模板 |
+
+新增项目时，在此索引中添加项目 README 链接与状态：`experimental`、`verified` 或 `deprecated`。`verified` 必须链接对应测试记录；未测试的设备和版本必须标为“未验证”。
+
+## 快速开始
+
+1. 阅读 [仓库规范](REPOSITORY_GUIDELINES.md)，了解目录、验证和发布要求。
+2. 从项目索引进入具体项目，并核对 [兼容性记录](docs/compatibility.md)。当前尚无可安装、烧录或接线的项目。
+3. 新建项目时，在对应类别下使用小写英文及连字符命名目录，将 [项目 README 模板](docs/templates/project-readme.md) 复制为该目录的 `README.md`，填写实际信息并加入根目录索引。
+4. 验证时使用 [测试记录模板](docs/templates/test-record.md)；硬件项目另使用 [硬件检查记录模板](docs/templates/hardware-review.md)。没有执行的检查须标为“未执行”。
+
+硬件设计按修订版保存，例如 `hardware/<board-id>/rev-1.0/`。只有存在实际内容时才建立目录；模板中的占位说明不能作为参数依据或测试结论。连接方式尚未确认时必须注明“不可按此接线”。
+
+## 参与和反馈
+
+- 默认分支为 `main`。功能、修复与硬件改动建议使用短期分支；影响接线、固件行为或自动化写操作的改动通过 PR 保留检查记录。
+- 提交信息采用 `<type>(<scope>): <说明>`，例如 `docs(repo): 完善仓库使用说明`。
+- 反馈问题使用 [Issue 模板](.github/ISSUE_TEMPLATE/bug-report.md)，说明项目、版本、设备环境及复现步骤；方案讨论使用 [功能提案模板](.github/ISSUE_TEMPLATE/feature-request.md)。
+- 提交改动时填写 [PR 模板](.github/pull_request_template.md)，说明实际验证结果、待验证项以及迁移或恢复方法。
+- 真实密码、Wi-Fi 凭据、Token、私钥和设备私有配置不得提交。示例使用合成或脱敏数据；新增真实配置路径时同步更新 [.gitignore](.gitignore)。
+
+当前仅有文档和模板，尚无项目构建或设备测试流程。新增项目时须记录适用的构建、检查与测试命令，并按需要建立自动检查工作流。
+
+## 版本与发布
+
+发布标签采用 `vMAJOR.MINOR.PATCH`，硬件修订版独立采用 `rev-1.0` 等标识。当前尚未发布版本。
+
+发布前更新 [CHANGELOG.md](CHANGELOG.md)，并填写 [发布说明模板](docs/templates/release-notes.md)。固件二进制通过 GitHub Release 附件分发，注明源码提交、目标硬件和构建条件；不得静默覆盖已发布的标签或附件。
+
+## 来源与许可
+
+本仓库沿用已有的 [GNU GPL v3 许可证文本](LICENSE)，本次初始化不修改许可证。新增源码、硬件设计和文档时，维护者须在项目 README 中明确各类文件的许可范围；不同许可证按目录或文件记录。
+
+目前尚未引入官方或第三方技术文件。后续引用官方资料时记录来源链接及版本或查询日期；引入第三方文件时记录来源和原许可证，保留归属信息。仓库规范及模板不替代许可证，也不替未来项目预先决定许可范围。
