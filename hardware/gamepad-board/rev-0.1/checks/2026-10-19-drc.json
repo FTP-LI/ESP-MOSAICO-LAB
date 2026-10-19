@@ -54,5 +54,6 @@
     "eda/gamepad-board-rev-0.1.net": "63aada2403ebddd66927f772884a873aab82f8cc824b4638a2756409740c7942",
     "eda/drc.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
     "eda/schematic-preview.png": "6462ea9a4f1ed1aa15605471d07b2c6f6139b12e831d2b1b30d94fa2eed6102a"
-  }
+  },
+  "design_commit": "9950809b8e0fb403214148131ae891e45ed143ec"
 }
