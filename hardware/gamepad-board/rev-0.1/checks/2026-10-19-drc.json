@@ -1,0 +1,59 @@
+{
+  "checked_at": "2026-10-19T21:49:53+08:00",
+  "baseline_commit": "12e746b3ac51a57d99dbd78390e89d2874435bc9",
+  "client_version": "3.2.149",
+  "document_edit_version": "3.2.149.88089769",
+  "project_uuid": "b493cab299a74725b524efca06c42b9d",
+  "schematic_uuid": "09f3ad767640753b",
+  "page_uuid": "43d12f3fc0a5c859",
+  "pcb": {
+    "uuid": "a9cfdddb6baec258",
+    "name": "GamePlay V1.0"
+  },
+  "calls": {
+    "details": "sch_Drc.check(true, false, true)",
+    "passed": "sch_Drc.check(true, false, false)"
+  },
+  "before": {
+    "drc": [
+      {
+        "type": "warn",
+        "count": 10
+      }
+    ],
+    "passed": false
+  },
+  "after_wire_repair_and_switch_replacement": {
+    "drc": [
+      {
+        "type": "warn",
+        "count": 1
+      }
+    ],
+    "passed": false
+  },
+  "after": {
+    "drc": [],
+    "passed": true
+  },
+  "rule_attribution": "Inferred from source inspection, controlled changes and installed client rule implementation; API returned only type/count.",
+  "physical_components": 28,
+  "wire_groups": 47,
+  "action_count": 9,
+  "checks": {
+    "reopened_original_page": true,
+    "native_archive_page_matches_source_normalized": true,
+    "duplicate_net_negative_check_rejected": true,
+    "firmware_mapping_matches": true,
+    "physical_hardware_tested": false,
+    "pcb_layout_completed": false
+  },
+  "artifacts_sha256": {
+    "eda/gamepad-board-rev-0.1.epro2": "d5ad653248aca8c9fa40b0dd9eeab6843d9235b1b6176324789ae06e561e15b1",
+    "eda/gamepad-board-rev-0.1.esch": "c23149f493b4caceb34d1dedde3a2bcdd476668c72061e044559c4d34182d97f",
+    "eda/gamepad-board-rev-0.1.net": "63aada2403ebddd66927f772884a873aab82f8cc824b4638a2756409740c7942",
+    "eda/drc.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "eda/schematic-preview.png": "6462ea9a4f1ed1aa15605471d07b2c6f6139b12e831d2b1b30d94fa2eed6102a"
+  },
+  "design_commit": "9950809b8e0fb403214148131ae891e45ed143ec"
+}
