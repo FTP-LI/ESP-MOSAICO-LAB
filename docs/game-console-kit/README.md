@@ -2,7 +2,7 @@
 
 本套件面向 ESP-Mosaico CoreBoard V1.2，采用外接手柄／按键扩展板，复用主机屏幕和电池，属于 ESP-MOSAICO-LAB 的非官方扩展。采用仓库现有的分类结构：套件总入口放在本目录，控制板和可选手柄结构件放在 `hardware/`，游戏固件放在 `firmware/`。
 
-当前状态为 `experimental`，阶段为板级诊断与电气原型。已建立 [诊断固件](../../firmware/game-console/README.md)、[ESP-IDF 环境](../../tools/esp-idf/README.md) 和 [9 键 H2 原理图草案](../../hardware/gamepad-board/rev-0.1/README.md)。两种配置编译通过；尚未烧录、打样或进行实测，DRC 警告与连接器配合待处理。更新日期：2026-10-19（Asia/Shanghai）。
+当前状态为 `experimental`，阶段为板级诊断与电气原型。已建立 [诊断固件](../../firmware/game-console/README.md)、[ESP-IDF 环境](../../tools/esp-idf/README.md) 和 [9 键 H2 原理图草案](../../hardware/gamepad-board/rev-0.1/README.md)。两种配置编译通过，[原理图严格 DRC 已通过](../../hardware/gamepad-board/rev-0.1/checks/2026-10-19-drc.md)；尚未烧录、打样或进行实测，连接器配合与器件封装待确认。更新日期：2026-10-19（Asia/Shanghai）。
 
 开始开发时先看 [快速开始](quick-start.md)，完成工程获取、构建检查和联调准备；功能范围与并行安排见 [首轮需求与并行开发](requirements.md)。硬件制作按键原型，软件先跑显示、声音和游戏原型，通过统一逻辑按键约定联调。
 
