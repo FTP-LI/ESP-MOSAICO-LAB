@@ -4,7 +4,7 @@
 
 ## 环境与依据
 
-- 基线提交：`c4ebb7ff5b17768e79b8f55caf6484a2d53575e5`；本次精确文件由 [同名 JSON](2026-10-19-layout-decision.json) 中的 SHA-256 定位，检查在提交前工作区执行。
+- 基线提交：`c4ebb7ff5b17768e79b8f55caf6484a2d53575e5`；本次设计归档提交：[a7b837e6228cac7ef5c105a2ce5f0bf3a155dc94](https://github.com/FTP-LI/ESP-MOSAICO-LAB/commit/a7b837e6228cac7ef5c105a2ce5f0bf3a155dc94)。精确文件由 [同名 JSON](2026-10-19-layout-decision.json) 中的 SHA-256 定位，检查在该提交前工作区执行，之后仅补充提交定位。
 - 日期与环境：2026-10-19，Asia/Shanghai；Windows，嘉立创EDA 专业版 3.2.149；文档 editVersion `3.2.149.88089769`。
 - 工程 `ESP-MOSAICO-LAB`：`b493cab299a74725b524efca06c42b9d`。
 - 原理图 `gamepad-board-rev-0.1`：`09f3ad767640753b`；母图页 `43d12f3fc0a5c859`。
