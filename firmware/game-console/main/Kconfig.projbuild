@@ -1,0 +1,9 @@
+menu "Mosaico diagnostics"
+    config DIAG_GAMEPAD_ENABLE
+        bool "Enable rev-0.1 left H2 GPIO gamepad (verify wiring first)"
+        default n
+        help
+            Enable nine active-low inputs on GPIO55,53,19,48,18,13,17,12,16.
+            Requires the gamepad-board rev-0.1 wiring review. Do not connect
+            another module to H2. Default firmware only reads AI and BOOT.
+endmenu
