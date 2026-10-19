@@ -1,0 +1,95 @@
+{
+  "checked_at": "2026-10-19T22:32:19+08:00",
+  "baseline_commit": "711c58f48e82537a7c957fd4cd588d81f94d03e3",
+  "source_revision": "cb40db4c605e3b594622f9c521ebfa7a997325d5",
+  "client": "EasyEDA 3.2.149",
+  "edit_version": "3.2.149.88089769",
+  "project_uuid": "b493cab299a74725b524efca06c42b9d",
+  "schematic_uuid": "09f3ad767640753b",
+  "page_uuid": "43d12f3fc0a5c859",
+  "pcb_uuid": "a9cfdddb6baec258",
+  "pcb_name": "GamePlay V1.0",
+  "j1": {
+    "supplier_id": "C492438",
+    "mpn": "PZ254R-12-20P",
+    "schematic_primitive_id": "19947f774f4d2f21",
+    "pcb_primitive_id": "940b352d06311f8d",
+    "unique_id": "gge38",
+    "library_drill_mm": 1.1000231999999999,
+    "drawing_drill_mm": 1.02
+  },
+  "operations": [
+    "Replace mother schematic J1 via sch_PrimitiveComponent API",
+    "Update two schematic notes via API",
+    "Place J1 and assign existing nets via PCB APIs",
+    "Add document-layer vertical layout guides via PCB APIs",
+    "Save and reopen original SCH and PCB; export through sys_FileManager"
+  ],
+  "saved_reopened_schematic": true,
+  "saved_reopened_pcb": true,
+  "electrical_connections_unchanged": true,
+  "drc_calls": [
+    "sch_Drc.check(true,false,true)",
+    "sch_Drc.check(true,false,false)"
+  ],
+  "drc": [],
+  "passed": true,
+  "pcb_status": "Preliminary: J1 only plus document-layer guides; remaining 27 electrical prototype parts not placed; no routes, board outline or silicone electrodes",
+  "pcb_manufacturing_drc_passed": false,
+  "fabrication_released": false,
+  "physical_tested": false,
+  "firmware_changed": false,
+  "stl_sha256": "3764037576f08c795c2df9e77c706ef695194a006a3029c2b605b8bddc9ca2b5",
+  "stl_frame_extents_mm": [
+    44.9,
+    44.9,
+    11.10005
+  ],
+  "layout_design_envelope_mm": [
+    72,
+    112
+  ],
+  "unresolved": [
+    "H2 Pin1 and installed orientation",
+    "Cross-vendor mating engagement",
+    "PCB Z and full assembled host thickness",
+    "Library drill versus manufacturer drawing",
+    "Membrane samples, force/travel, keycap guides and contact resistance"
+  ],
+  "checked_worktree_artifacts_sha256": {
+    "eda/drc.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "eda/gamepad-board-rev-0.1.epro2": "19423c9d7919e47368238d90b435d94c1a955eccef1f5fafef91b9fa33f99bf3",
+    "eda/gamepad-board-rev-0.1.esch": "5c1d5ba51e46b34406fa163f4fb47d6fc0e74744f3ac78cce1131d63d2234880",
+    "eda/gamepad-board-rev-0.1.net": "0f1d9403e8c3418aa35da06c0784c758ecc2e73f5c38386d21781155007a41e7",
+    "eda/GamePlay-V1.0.epcb": "39ca05e005b8e561514981310a4e0ebb3eceddceac5b2f9e3d9644ef9631560d",
+    "eda/pcb-layout-preview.png": "42d2d55d4e2e18b946e3e021d2b65d708782d9698728665ef3d56b78e874793b",
+    "eda/schematic-preview.png": "34b2a33c078d3ab2f5cd07254553f5df7eeb5ffa64c4159b13bf5939260546e2"
+  },
+  "schematic_visual_review_completed": false,
+  "schematic_image_api_result": "fully transparent; historical preview retained and labelled",
+  "pcb_visual_review_completed": true,
+  "stl_analysis_environment": {
+    "python": "3.12",
+    "trimesh": "5.1.1",
+    "numpy": "2.5.4",
+    "matplotlib": "3.11.2",
+    "networkx": "3.7"
+  },
+  "artifacts_sha256": {
+    "eda/drc.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "eda/gamepad-board-rev-0.1.epro2": "19423c9d7919e47368238d90b435d94c1a955eccef1f5fafef91b9fa33f99bf3",
+    "eda/gamepad-board-rev-0.1.esch": "77e2eda492bf1cc53af832e138806b820cd7c53ecb04bce41577d8cd47927122",
+    "eda/gamepad-board-rev-0.1.net": "9679cb90c2680059a02efcf254b68bea3a12f351a5c0f3b63135333efcdd96df",
+    "eda/GamePlay-V1.0.epcb": "14f079cc21ffdfdb68a49668e7b41db7221c45f80a700bd20fbf3589e4c09af3",
+    "eda/pcb-layout-preview.png": "42d2d55d4e2e18b946e3e021d2b65d708782d9698728665ef3d56b78e874793b",
+    "eda/schematic-preview.png": "34b2a33c078d3ab2f5cd07254553f5df7eeb5ffa64c4159b13bf5939260546e2"
+  },
+  "supporting_artifacts_sha256": {
+    "hardware/gamepad-enclosure/rev-0.1/sources.json": "56cb6939b350dbcb33ae05e8b39389e975d425ef6918255744f6bdf1672282bd",
+    "hardware/gamepad-enclosure/rev-0.1/dimensions/host-frame-measurements.json": "c217f464550a88a5fc82e7ffda7dc207c82fb28cef95a01163d124a0c3befccf",
+    "hardware/gamepad-enclosure/rev-0.1/dimensions/host-frame-dimensions.png": "eeae38310d554cc637f80d0361a59f3d41bedeb3d02621ecaab7b2c935904cdf",
+    "hardware/gamepad-enclosure/rev-0.1/vertical-layout.json": "d75a4c3fece36ac52dbd3325836e5c792198929919adcc6eb0c82f61730d6ee7",
+    "hardware/gamepad-enclosure/rev-0.1/vertical-layout.svg": "f6456fadfeb91dbf82dca198ecf529c625537bf0a353263f8e110eb0cbc37133"
+  },
+  "hash_basis": "artifacts_sha256 and supporting_artifacts_sha256 hash normalized Git blobs; checked_worktree_artifacts_sha256 records files at live check time"
+}

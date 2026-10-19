@@ -1,0 +1,159 @@
+{
+  "status": "experimental; placement reference only; no fabrication",
+  "units": "mm",
+  "coordinates": "Concept front XY, X right, Y up; no final transform from raw STL axes",
+  "enclosure_design_envelope_mm": [
+    72,
+    112
+  ],
+  "rectangles": [
+    {
+      "bounds": [
+        -36,
+        -64,
+        36,
+        48
+      ],
+      "label": "72 x 112 design envelope",
+      "kind": "design"
+    },
+    {
+      "bounds": [
+        -22.45,
+        0,
+        22.45,
+        44.9
+      ],
+      "label": "STL frame 44.90 x 44.90",
+      "kind": "host"
+    },
+    {
+      "bounds": [
+        -16,
+        -8,
+        16,
+        0
+      ],
+      "label": "USB / access reserve",
+      "kind": "clearance"
+    },
+    {
+      "bounds": [
+        -33,
+        -44,
+        -3,
+        -14
+      ],
+      "label": "D-pad membrane reserve",
+      "kind": "reserve"
+    },
+    {
+      "bounds": [
+        2,
+        -38,
+        34,
+        -14
+      ],
+      "label": "A/B membrane reserve",
+      "kind": "reserve"
+    },
+    {
+      "bounds": [
+        -14,
+        -56,
+        14,
+        -46
+      ],
+      "label": "Select / Start reserve",
+      "kind": "reserve"
+    }
+  ],
+  "buttons": [
+    {
+      "name": "UP",
+      "xy": [
+        -17.995241,
+        -21.092619
+      ],
+      "radius": 2.75
+    },
+    {
+      "name": "DOWN",
+      "xy": [
+        -17.995241,
+        -37.092618
+      ],
+      "radius": 2.75
+    },
+    {
+      "name": "LEFT",
+      "xy": [
+        -25.945509,
+        -29.145459
+      ],
+      "radius": 2.75
+    },
+    {
+      "name": "RIGHT",
+      "xy": [
+        -9.94551,
+        -29.145459
+      ],
+      "radius": 2.75
+    },
+    {
+      "name": "A",
+      "xy": [
+        24.988581,
+        -23.531341
+      ],
+      "radius": 2.700418
+    },
+    {
+      "name": "B",
+      "xy": [
+        11.040491,
+        -28.47845
+      ],
+      "radius": 2.700409
+    },
+    {
+      "name": "SELECT",
+      "xy": [
+        -7,
+        -51
+      ],
+      "radius": 2.0
+    },
+    {
+      "name": "START",
+      "xy": [
+        7,
+        -51
+      ],
+      "radius": 2.0
+    },
+    {
+      "name": "MENU",
+      "xy": [
+        0,
+        -12
+      ],
+      "radius": 2.0
+    }
+  ],
+  "position_basis": {
+    "UP_DOWN_LEFT_RIGHT_A_B": "Reference carbon-contact circle centres from MIT esp-box-emu; not final keycap cutouts",
+    "START_SELECT_MENU": "Concept placeholders; exact sample geometry not adopted"
+  },
+  "connector_park_xy": [
+    -50,
+    22.4375286
+  ],
+  "limits": [
+    "Not a board outline",
+    "No PCB contacts, routing, fastening holes or enclosure cutouts",
+    "J1 parked outside design envelope; final Z, mating depth, rotation and Pin1 unverified",
+    "Horizontal form retained in docs/game-console-kit/form-factor.md"
+  ]
+}

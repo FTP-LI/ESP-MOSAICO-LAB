@@ -1,0 +1,3 @@
+item,quantity,vendor,product,variant,variant_id,status,product_url,scope
+pads,1,FunnyPlaying,GBC Replacement Silicon Pads,ORIGINAL COLOR,39901960863805,available at query; sample candidate,https://funnyplaying.com/products/gbc-replacement-silicone-pads?variant=39901960863805,D-pad and A/B membranes plus Start/Select silicone buttons
+buttons,1,FunnyPlaying,GBC Custom Buttons,Black,39333911593021,available at query; sample candidate,https://funnyplaying.com/products/cgb-custom-buttons?variant=39333911593021,D-pad and A/B caps; included power cover unused
