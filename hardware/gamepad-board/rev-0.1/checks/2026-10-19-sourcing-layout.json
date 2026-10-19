@@ -1,7 +1,7 @@
 {
   "checked_at": "2026-10-19T22:32:19+08:00",
   "baseline_commit": "711c58f48e82537a7c957fd4cd588d81f94d03e3",
-  "source_revision": "Working tree identified by hashes; source commit added to companion Markdown after commit",
+  "source_revision": "cb40db4c605e3b594622f9c521ebfa7a997325d5",
   "client": "EasyEDA 3.2.149",
   "edit_version": "3.2.149.88089769",
   "project_uuid": "b493cab299a74725b524efca06c42b9d",
@@ -89,7 +89,7 @@
     "hardware/gamepad-enclosure/rev-0.1/dimensions/host-frame-measurements.json": "c217f464550a88a5fc82e7ffda7dc207c82fb28cef95a01163d124a0c3befccf",
     "hardware/gamepad-enclosure/rev-0.1/dimensions/host-frame-dimensions.png": "eeae38310d554cc637f80d0361a59f3d41bedeb3d02621ecaab7b2c935904cdf",
     "hardware/gamepad-enclosure/rev-0.1/vertical-layout.json": "d75a4c3fece36ac52dbd3325836e5c792198929919adcc6eb0c82f61730d6ee7",
-    "hardware/gamepad-enclosure/rev-0.1/vertical-layout.svg": "06fbefd647abb8e8f2ac8a76cbec19fb8093ab850a4985b15c87fa5105674a8e"
+    "hardware/gamepad-enclosure/rev-0.1/vertical-layout.svg": "f6456fadfeb91dbf82dca198ecf529c625537bf0a353263f8e110eb0cbc37133"
   },
   "hash_basis": "artifacts_sha256 and supporting_artifacts_sha256 hash normalized Git blobs; checked_worktree_artifacts_sha256 records files at live check time"
 }

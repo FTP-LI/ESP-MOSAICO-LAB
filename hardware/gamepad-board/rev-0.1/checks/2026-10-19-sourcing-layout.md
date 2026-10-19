@@ -1,6 +1,6 @@
 # 弯排针、外框测量与纵向预布局检查
 
-2026-10-19（Asia/Shanghai），`experimental`。本记录对应未发布的 rev-0.1，母 PCB 文档名为 GamePlay V1.0。基线提交 `711c58f48e82537a7c957fd4cd588d81f94d03e3`；本轮源文件提交在提交后补记。精确工件哈希见 [同名 JSON](2026-10-19-sourcing-layout.json)。
+2026-10-19（Asia/Shanghai），`experimental`。本记录对应未发布的 rev-0.1，母 PCB 文档名为 GamePlay V1.0。基线提交 `711c58f48e82537a7c957fd4cd588d81f94d03e3`；本轮源文件提交：[`cb40db4c605e3b594622f9c521ebfa7a997325d5`](https://github.com/FTP-LI/ESP-MOSAICO-LAB/commit/cb40db4c605e3b594622f9c521ebfa7a997325d5)。精确工件哈希见 [同名 JSON](2026-10-19-sourcing-layout.json)。
 
 通过 EasyEDA API 直接修改 ESP-MOSAICO-LAB 的原母版，没有新建原理图、PCB 或工程副本。仍为一个原理图、一个图页，PCB UUID 为 `a9cfdddb6baec258`。客户端 3.2.149，文档 editVersion 为 `3.2.149.88089769`。
 
