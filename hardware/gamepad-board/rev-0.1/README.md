@@ -6,6 +6,8 @@
 
 已直接在母版修复全部 10 项原理图 DRC 警告，严格检查通过；临时诊断副本已删除。原母 PCB 已命名为 `GamePlay V1.0`，UUID 与关联原理图保持不变。该 PCB 尚无布局，文档名中的 V1.0 不表示生产版发布，硬件资料仍归属未发布的 rev-0.1。
 
+后续形态已确定为纵向优先、横向保留，主游戏键采用硅胶导电胶方向，详见 [掌机形态设计](../../../docs/game-console-kit/form-factor.md)。母版已通过 API 补充设计说明；J1 直排针和九个轻触开关仍是电气验证候选。弯排针、胶垫、键帽及触点封装待配合验证，并未完成 PCB 替换或结构模型。
+
 ## 文件与恢复
 
 - [eda/gamepad-board-rev-0.1.epro2](eda/gamepad-board-rev-0.1.epro2)：API 导出的原生工程，包含原理图、器件库、空 PCB `GamePlay V1.0` 和 Panel1。扩展名已按 API 实际格式纠正；母版后续直接修改，归档用于版本追溯。
@@ -13,7 +15,8 @@
 - `eda/gamepad-board-rev-0.1.net`：嘉立创EDA 导出的 JSON 网表，用于核对实际电气连接。
 - `eda/drc.json`：EDA 检查返回值，详见设计检查记录。
 - [eda/schematic-preview.png](eda/schematic-preview.png)：重新打开母版后通过 API 获取的当前图页预览。
-- [checks/2026-10-19-drc.md](checks/2026-10-19-drc.md)：本轮修复、复核和限制；同目录 JSON 保存 API 检查结果及文件 SHA-256。
+- [checks/2026-10-19-drc.md](checks/2026-10-19-drc.md)：历史 10 项警告修复与复核，对应旧提交及旧归档哈希。
+- [checks/2026-10-19-layout-decision.md](checks/2026-10-19-layout-decision.md)：本次形态说明更新、保存重开与实时 DRC 检查；同名 JSON 记录当前归档 SHA-256。
 - `interfaces.md`、`pin-map.csv`：硬件与固件共用的接口约定。
 - [bom.csv](bom.csv)：含商城料号和链接的候选 BOM；[parts-selection.md](parts-selection.md) 说明更换依据与规格书差异，不作为已批准采购单。
 

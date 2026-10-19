@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-19T22:02:58+08:00",
+  "baseline_commit": "c4ebb7ff5b17768e79b8f55caf6484a2d53575e5",
+  "source_revision": "working tree; exact EDA artifacts identified by SHA-256 below; commit recorded in companion Markdown after commit",
+  "client_version": "3.2.149",
+  "document_edit_version": "3.2.149.88089769",
+  "project_uuid": "b493cab299a74725b524efca06c42b9d",
+  "schematic_uuid": "09f3ad767640753b",
+  "page_uuid": "43d12f3fc0a5c859",
+  "pcb": {
+    "uuid": "a9cfdddb6baec258",
+    "name": "GamePlay V1.0"
+  },
+  "changes": [
+    "Replaced one explanatory text in mother schematic through API",
+    "Vertical first; horizontal reserved",
+    "Silicone D-pad and A/B planned; current tactile switches and straight header are electrical prototypes",
+    "Reuse host speaker and GPIO8 motor"
+  ],
+  "text_id_before": "1be4c958e788e4af",
+  "text_id_after": "7c91cae2e8c6ffc7",
+  "calls": {
+    "details": "sch_Drc.check(true,false,true)",
+    "passed": "sch_Drc.check(true,false,false)"
+  },
+  "drc": [],
+  "passed": true,
+  "checks": {
+    "saved_and_reopened": true,
+    "netlist_json_unchanged": true,
+    "schematic_count": 1,
+    "physical_hardware_tested": false,
+    "pcb_layout_completed": false,
+    "silicone_contact_footprints_completed": false,
+    "final_right_angle_header_selected": false,
+    "firmware_modified": false
+  },
+  "artifacts_sha256": {
+    "eda/drc.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
+    "eda/gamepad-board-rev-0.1.epro2": "bbdb24d4421b5b4918af4727e6d60cc1ba1fd50922d743630c01e6c8b37d7ce5",
+    "eda/gamepad-board-rev-0.1.esch": "fe81be6ed0aa41db382b9b6ffdcb8ce8e2b856123d563c282fd2fb3a6deab63a",
+    "eda/gamepad-board-rev-0.1.net": "63aada2403ebddd66927f772884a873aab82f8cc824b4638a2756409740c7942",
+    "eda/schematic-preview.png": "34b2a33c078d3ab2f5cd07254553f5df7eeb5ffa64c4159b13bf5939260546e2"
+  }
+}
