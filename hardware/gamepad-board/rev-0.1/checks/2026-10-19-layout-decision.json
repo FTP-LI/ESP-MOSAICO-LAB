@@ -1,7 +1,7 @@
 {
   "checked_at": "2026-10-19T22:02:58+08:00",
   "baseline_commit": "c4ebb7ff5b17768e79b8f55caf6484a2d53575e5",
-  "source_revision": "working tree; exact EDA artifacts identified by SHA-256 below; commit recorded in companion Markdown after commit",
+  "source_revision": "Checks performed in the working tree immediately before design_commit",
   "client_version": "3.2.149",
   "document_edit_version": "3.2.149.88089769",
   "project_uuid": "b493cab299a74725b524efca06c42b9d",
@@ -36,10 +36,19 @@
     "firmware_modified": false
   },
   "artifacts_sha256": {
+    "eda/drc.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "eda/gamepad-board-rev-0.1.epro2": "bbdb24d4421b5b4918af4727e6d60cc1ba1fd50922d743630c01e6c8b37d7ce5",
+    "eda/gamepad-board-rev-0.1.esch": "f76cb7bff170a8cdf840cea788e4cfc5ec80759a3b9716c198068c3fa2565aef",
+    "eda/gamepad-board-rev-0.1.net": "71c6081dee961a83584488f0aa2c412a058c0d732e4ae501f4e1e37a5a68d417",
+    "eda/schematic-preview.png": "34b2a33c078d3ab2f5cd07254553f5df7eeb5ffa64c4159b13bf5939260546e2"
+  },
+  "design_commit": "a7b837e6228cac7ef5c105a2ce5f0bf3a155dc94",
+  "checked_worktree_artifacts_sha256": {
     "eda/drc.json": "a5338d955b09046ec0b16f3a9625b7955c763aae07dc722e474e6078745f932f",
     "eda/gamepad-board-rev-0.1.epro2": "bbdb24d4421b5b4918af4727e6d60cc1ba1fd50922d743630c01e6c8b37d7ce5",
     "eda/gamepad-board-rev-0.1.esch": "fe81be6ed0aa41db382b9b6ffdcb8ce8e2b856123d563c282fd2fb3a6deab63a",
     "eda/gamepad-board-rev-0.1.net": "63aada2403ebddd66927f772884a873aab82f8cc824b4638a2756409740c7942",
     "eda/schematic-preview.png": "34b2a33c078d3ab2f5cd07254553f5df7eeb5ffa64c4159b13bf5939260546e2"
-  }
+  },
+  "hash_note": "artifacts_sha256 identifies Git blobs at design_commit; checked_worktree_artifacts_sha256 identifies Windows files at check time. Git text line-ending normalization may make text hashes differ; binary export hashes are identical."
 }
