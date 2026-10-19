@@ -1,0 +1,5 @@
+designators,quantity,specification,footprint,candidate,status,substitution_rule
+J1,1,2x10 2.54mm H2 mating connector,TBD,C62032 symbol only,mechanical review required,verify gender mating face Pin1 and height
+SW1-SW9,9,Normally-open SPST tactile switch,TBD,C9900019844 symbol only,mechanical review required,verify pin pairing footprint force and travel
+R1-R9,9,10k ohm 1% 0.1W,R0603,0603WAF1002T5E C25804,candidate,match resistance tolerance power and footprint
+R10-R18,9,1k ohm 1% 0.1W,R0603,0603WAF1001T5E,candidate,match resistance tolerance power and footprint
