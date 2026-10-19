@@ -1,0 +1,65 @@
+{
+  "date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "orders_placed": false,
+  "products": [
+    {
+      "item": "pads",
+      "title": "GBC Replacement Silicon Pads",
+      "variant_id": 39901960863805,
+      "variant": "ORIGINAL COLOR",
+      "sku": "GBC 经典导电胶",
+      "available": true,
+      "api_price_cents": 190,
+      "product_url": "https://funnyplaying.com/products/gbc-replacement-silicone-pads?variant=39901960863805",
+      "availability_api": "https://funnyplaying.com/products/gbc-replacement-silicone-pads.js",
+      "retrieved_at": "2026-10-19T22:09:06+08:00",
+      "raw_response_sha256": "1567cc5f71d14187802e7654770d99665cfa3268ab924febf0c7a04e2230cce7",
+      "shipping_to_user_address_checked": false
+    },
+    {
+      "item": "buttons",
+      "title": "GBC Custom Buttons",
+      "variant_id": 39333911593021,
+      "variant": "Black",
+      "sku": "GBC 黑按键",
+      "available": true,
+      "api_price_cents": 190,
+      "product_url": "https://funnyplaying.com/products/cgb-custom-buttons?variant=39333911593021",
+      "availability_api": "https://funnyplaying.com/products/cgb-custom-buttons.js",
+      "retrieved_at": "2026-10-19T22:09:07+08:00",
+      "raw_response_sha256": "ffd78e967047d99c4c9d442e7fb569272f5bcaf12d6ac5852ad6df24f10aa0d4",
+      "shipping_to_user_address_checked": false
+    }
+  ],
+  "connector": {
+    "mpn": "PZ254R-12-20P",
+    "supplier_id": "C492438",
+    "product_url": "https://item.szlcsc.com/502994.html",
+    "reported_inventory": 35403,
+    "stock_basis": "Domestic product structured data inventoryLevel; observed at retrieval, not reserved",
+    "retrieved_at": "2026-10-19T22:09:06+08:00",
+    "raw_response_sha256": "88159934407704532dbd043de6672319f2ba3a22ccdffd2b8fb8e43c80c52261"
+  },
+  "drawings": [
+    {
+      "name": "H2 B-2200R20P-B120",
+      "sha256": "9aaf464aa81271f10be0ff7ae8dce64d20964e03e05e67b2758d779f11cd3dba",
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20170821/C124406_1503303322844901560.pdf"
+    },
+    {
+      "name": "J1 PZ254R-12-20P",
+      "sha256": "2b95c41a6dd3ed7571b2ba7eb6c3ebb6e21c844d8ef700eaf9ffe3c056e9e27d",
+      "url": "https://atta.szlcsc.com/upload/public/pdf/source/20260728/C73D277B1C8C5ADC4E6D5DF9EF7BEB73.pdf"
+    }
+  ],
+  "input_model": {
+    "name": "ESP-MOSAICO.stl",
+    "provided_by": "user",
+    "public_origin_url": null,
+    "revision_verified": false,
+    "redistributed": false,
+    "sha256": "3764037576f08c795c2df9e77c706ef695194a006a3029c2b605b8bddc9ca2b5"
+  },
+  "gbc_reference_commit": "66834cfd677cc67a1a13ad94fa1c1be839c4efd9"
+}

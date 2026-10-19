@@ -1,5 +1,5 @@
 designators,quantity,specification,footprint,candidate,status,substitution_rule,product_url,checked_on
-J1,1,2x10 2.54mm male straight header,HDR-TH_20P-P2.54-V-M-R2-C10-S2.54,PZ254V-12-20P C492427,electrical prototype only - right-angle header selection pending,verify mating face Pin1 height and depth before final header selection,https://item.szlcsc.com/502983.html,2026-10-19
+J1,1,2x10 2.54mm male 90-degree right-angle header,HDR-TH_20P-P2.54-H-M-R2-C10-S2.54,PZ254R-12-20P C492438,in-stock sample candidate; mother schematic replaced; mechanical fit pending,verify Pin1 mating engagement and PCB Z; library drill 1.10mm differs from drawing 1.02mm,https://item.szlcsc.com/502994.html,2026-10-19
 SW1-SW9,9,Normally-open SPST 4x3x2mm tactile switch,SW-SMD_KAN0444-0201B-102,KAN0444-0201B/102 C231644,electrical prototype only - main gameplay keys planned as silicone contacts,resolve drawing suffix for prototype; final main keys require matched membrane keycaps and contact footprints,https://item.szlcsc.com/231470.html,2026-10-19
 R1-R9,9,10k ohm 1% 0.1W,R0603,0603WAF1002T5E C25804,candidate,match resistance tolerance power and footprint,https://item.szlcsc.com/26547.html,2026-10-19
 R10-R18,9,1k ohm 1% 0.1W,R0603,0603WAF1001T5E C21190,candidate,match resistance tolerance power and footprint,https://item.szlcsc.com/21904.html,2026-10-19

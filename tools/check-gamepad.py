@@ -1,6 +1,7 @@
 """Check the exported EDA connectivity against the shared H2 input contract."""
 import csv
 import json
+import math
 import re
 import zipfile
 from collections import Counter
@@ -45,8 +46,8 @@ assert re.findall(r'"([A-Z]+)"', names_block)[:9] == [r["action"] for r in rows]
 physical = {ref: c["props"] for ref, c in components.items() if ref and re.fullmatch(r"(?:J|R|SW)\d+", ref)}
 assert len(physical) == 28
 assert all(p["Add into BOM"] == p["Convert to PCB"] == "yes" for p in physical.values())
-assert physical["J1"]["Name"] == physical["J1"]["Manufacturer Part"] == "PZ254V-12-20P"
-assert physical["J1"]["Supplier Part"] == "C492427"
+assert physical["J1"]["Name"] == physical["J1"]["Manufacturer Part"] == "PZ254R-12-20P"
+assert physical["J1"]["Supplier Part"] == "C492438"
 
 
 def records(text):
@@ -99,6 +100,35 @@ with zipfile.ZipFile(board / "eda/gamepad-board-rev-0.1.epro2") as archive:
     assert primitives(saved_page) == primitives(page), "Native project and page source differ"
     pcb = documents["a9cfdddb6baec258"]["records"]
     assert next(d["title"] for h, d in pcb if h["type"] == "META") == "GamePlay V1.0"
+    pcb_source = list(records((board / "eda/GamePlay-V1.0.epcb").read_text(encoding="utf-8")))
+    # The client expands empty rule selectors and display defaults in live source.
+    # Compare placed geometry, component properties and connectivity explicitly.
+    placed_types = {"COMPONENT", "ATTR", "PAD_NET", "LINE", "STRING"}
+    assert primitives([(h, d) for h, d in pcb if h["type"] in placed_types]) == primitives(
+        [(h, d) for h, d in pcb_source if h["type"] in placed_types]
+    ), "Native project and PCB placement/connectivity differ"
+    placed = [(h, d) for h, d in pcb if h["type"] == "COMPONENT" and d]
+    assert len(placed) == 1, "This preliminary PCB contains only the candidate J1"
+    placed_id = placed[0][0]["id"]
+    assert placed[0][1]["attrs"]["Unique ID"] == components["J1"]["props"]["Unique ID"]
+    attrs = {d["key"]: d["value"] for h, d in pcb
+             if h["type"] == "ATTR" and d and d.get("parentId") == placed_id}
+    assert attrs["Designator"] == "J1"
+    pads = [d for h, d in documents[attrs["Footprint"]]["records"] if h["type"] == "PAD" and d]
+    assert {p["num"] for p in pads} == {str(i) for i in range(1, 21)}
+    xs = sorted({p["centerX"] for p in pads})
+    ys = sorted({p["centerY"] for p in pads})
+    assert len(xs) == 10 and len(ys) == 2
+    assert all(math.isclose(b - a, 100, abs_tol=0.001) for a, b in zip(xs, xs[1:]))
+    assert math.isclose(ys[1] - ys[0], 100, abs_tol=0.001)
+    # Record the actual library drill, not the different manufacturer recommendation.
+    assert all(math.isclose(p["hole"]["width"], 43.308, abs_tol=0.001) for p in pads)
+    pcb_nets = {json.loads(h["id"])[2]: d["padNet"] for h, d in pcb
+                if h["type"] == "PAD_NET" and d and json.loads(h["id"])[1] == placed_id}
+    assert pcb_nets == {str(i): net("J1", i) for i in range(1, 21)}
+    lines = [d for h, d in pcb if h["type"] == "LINE" and d]
+    assert lines and all(d["layerId"] == 13 for d in lines), "Layout guides must stay on the document layer"
+    assert any(h["type"] == "STRING" and d and "REFERENCE ONLY" in str(d) for h, d in pcb)
 assert json.loads((board / "eda/drc.json").read_text(encoding="utf-8")) == []
-print("PASS: 9-key connectivity, 28 BOM parts, firmware mapping, unique NET names, native export and PCB name")
+print("PASS: 9-key connectivity, 28 BOM parts, firmware mapping, native SCH/PCB exports, J1 pad nets and library pitch")
 print("Archived DRC result is empty; this script does not run live EDA DRC or verify physical hardware.")
