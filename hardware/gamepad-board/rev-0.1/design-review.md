@@ -1,6 +1,6 @@
 # rev-0.1 设计检查
 
-日期：2026-10-19（Asia/Shanghai）。状态：`experimental`。源码基线 `5c9069479d10636ce99e8c3d38ed29b1ba6fb203` 加当前工作区未提交改动；没有打样、上电或设备测量。
+日期：2026-10-19（Asia/Shanghai）。状态：`experimental`。设计归档提交：[b067d5a84a7f8f1e98d6773ccea19afafe026976](https://github.com/FTP-LI/ESP-MOSAICO-LAB/commit/b067d5a84a7f8f1e98d6773ccea19afafe026976)。检查在该提交前的工作区执行，随后补充提交定位；没有打样、上电或设备测量。
 
 ## API 编辑结果
 
