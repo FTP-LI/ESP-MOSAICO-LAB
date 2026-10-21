@@ -1,0 +1,171 @@
+{
+  "archive": "voice-assistant-2026-10-21.zip",
+  "sha256": "68317027663f89bd5a6df9f24d4c889bf7878d8bf52c0f7920d34d2be2aa1e36",
+  "files": [
+    {
+      "path": "README.md",
+      "bytes": 23338,
+      "sha256": "092cdadc10c85bd87fca2d7fc10407f5e80d7b0758ae8ee8f01792dfee79cd72"
+    },
+    {
+      "path": "assets/fonts/generate_font.py",
+      "bytes": 3791,
+      "sha256": "c666116afab72010c1001a151da8cf6948d7aa0607b0ae6d39f5bfafe75ce02b"
+    },
+    {
+      "path": "assets/voice/LICENSE.esp-sr",
+      "bytes": 1187,
+      "sha256": "7d916fb00bc0742c47cafb0d0144b67f826d76779730b1cb8796045ea6ba1b9a"
+    },
+    {
+      "path": "assets/voice/README.md",
+      "bytes": 558,
+      "sha256": "f96a665af938b9d5809b98b4d69830460ae11920bf1705566878d587c19c3da3"
+    },
+    {
+      "path": "assets/voice/pack_wake.py",
+      "bytes": 626,
+      "sha256": "04370e329d83fb2841267cd7aae0a154a2711623d23716c8aa1e26868a3b7361"
+    },
+    {
+      "path": "build-idf62/tt_voice/wake_model.bin",
+      "bytes": 125951,
+      "sha256": "fe559fe9ed38dc041ecfbcde6568d4cdc6abb3c7073a60747e67b6083d78ce2b"
+    },
+    {
+      "path": "dependencies.lock",
+      "bytes": 14781,
+      "sha256": "28ca414ddebb0d7c8522440d603071c6564ddacfb4c789c8da853df394acd549"
+    },
+    {
+      "path": "docs/AI_SETUP.md",
+      "bytes": 12545,
+      "sha256": "8b9b842118394575954e346188ddb09a15ca1448d180dfec4490c1c514276315"
+    },
+    {
+      "path": "docs/HUMAN_INTERACTION.md",
+      "bytes": 5322,
+      "sha256": "3feb08a7c29512cbe79ffad7e741d5cdc49236891ebb7eaa99b0efa5602ade3f"
+    },
+    {
+      "path": "docs/PET_CARE.md",
+      "bytes": 5084,
+      "sha256": "6345f18ba13ebff8fc501717852273cbc72940ac464bf27b00e20cd9f4fb50bb"
+    },
+    {
+      "path": "docs/SYSTEM_OPTIMIZATION.md",
+      "bytes": 12927,
+      "sha256": "9b39e6762693244b28bc520b1c0d3a84770f7dc9e6deeb3a67b3f6130cd5743d"
+    },
+    {
+      "path": "docs/UI_STYLE.md",
+      "bytes": 8597,
+      "sha256": "4eadcc812f7151083cac12569bc5a3e26237ea2ecacc1c92999f47c05e2d69f7"
+    },
+    {
+      "path": "main/CMakeLists.txt",
+      "bytes": 1220,
+      "sha256": "c1c39314f3323a1475e16d30267182266c2fb8f38c782cb7f497567070aa85e2"
+    },
+    {
+      "path": "main/core/voice_model.c",
+      "bytes": 1219,
+      "sha256": "a5a704b2350d8ec895f9f1c4e34869bd2f195afee3882980e6b2f82ea657bd37"
+    },
+    {
+      "path": "main/core/voice_model.h",
+      "bytes": 826,
+      "sha256": "e4eca7833199ae38c4898f0be8fe1b3918838d7dad114b80f9f694feb77bcbf7"
+    },
+    {
+      "path": "main/idf_component.yml",
+      "bytes": 128,
+      "sha256": "0bc6f5168233ea5a6f7267a6c685f6fa347378fefdf54ff8793c03820f53184a"
+    },
+    {
+      "path": "main/main.c",
+      "bytes": 19105,
+      "sha256": "2551a12167503af476b842f16cc4189e69c9b6dc3865021b5c93b376b7004b40"
+    },
+    {
+      "path": "main/platform/interaction.c",
+      "bytes": 11936,
+      "sha256": "b372a6768e01c51ba7814fc717e78c8f553626ff599f4edb0019cbae85169a72"
+    },
+    {
+      "path": "main/platform/interaction.h",
+      "bytes": 1059,
+      "sha256": "979cfb2f4c96d2ebcbcfa815a060b1142a5f14235aa5cc4fb9800a10f974c537"
+    },
+    {
+      "path": "main/platform/voice.c",
+      "bytes": 23008,
+      "sha256": "72ab32849806618712d38d99f331d8e3a6e5ec208ec9b4d657a48fe7c5df4c50"
+    },
+    {
+      "path": "main/platform/voice.h",
+      "bytes": 470,
+      "sha256": "2af872b2e98276b8d61192f4db4d0af5482a3c3fb96bd03472f326362715c832"
+    },
+    {
+      "path": "main/platform/voice_portal.html",
+      "bytes": 5044,
+      "sha256": "bc5e6d5cb681f9bda1c581c02f012049390ea476f972b0b5fd4fb9f0d418835d"
+    },
+    {
+      "path": "main/sources.cmake",
+      "bytes": 1202,
+      "sha256": "8387c139293f6496322b5d0c6182ee91a75f6000d68e1ec6db7c0160ba79149d"
+    },
+    {
+      "path": "main/ui/ui.c",
+      "bytes": 51464,
+      "sha256": "dda9f2c2e0d67d5d8ebf51eab35652de9d022b83ecd862081ce0ad991dc982b0"
+    },
+    {
+      "path": "main/ui/ui.h",
+      "bytes": 1707,
+      "sha256": "1179d010651e9dd4d63d47f00a4b42811d20c2347d7624777803b78f2e3c46d5"
+    },
+    {
+      "path": "main/ui/ui_text.c",
+      "bytes": 21569,
+      "sha256": "956635ba9b4aef85acd177e8519b3ce5fd943a31ad445868d8048414572d2dcd"
+    },
+    {
+      "path": "pc/CMakeLists.txt",
+      "bytes": 3507,
+      "sha256": "b5b3af533d585f7072a8ffd2b521f577be37e01801b5c558d5bdade13755b8c2"
+    },
+    {
+      "path": "pc/README.md",
+      "bytes": 11706,
+      "sha256": "2bcf7d6d0f7613accba211ae6ff1271538d95211777bdb32a184c10b9cb2a3b4"
+    },
+    {
+      "path": "pc/main.c",
+      "bytes": 84843,
+      "sha256": "8b9527313336f3852194904c4c3f2df794dbfc3f0f8d053559f3f352fe6ca7cc"
+    },
+    {
+      "path": "sdkconfig.application.defaults",
+      "bytes": 883,
+      "sha256": "ef45b4e9eab8d2f96b57b7c43125275294357d06ab5af67ce5325aee64a544fd"
+    },
+    {
+      "path": "sdkconfig.defaults",
+      "bytes": 968,
+      "sha256": "906c72d17624e76f98d6bacb6d1aacb274f1717a1038155c02cdd4639e6a1818"
+    },
+    {
+      "path": "tests/CMakeLists.txt",
+      "bytes": 1527,
+      "sha256": "8d43f76cae7256a19eef29ba9ffab822c6d74734b5ccdc597d7d3a6b50bed4ae"
+    },
+    {
+      "path": "tests/test_scene_voice.c",
+      "bytes": 1771,
+      "sha256": "b5a5eaaf2e222518773bca88bdffe09ee7ae6ac2a9c99d16315b2f0b79be26d5"
+    }
+  ]
+}

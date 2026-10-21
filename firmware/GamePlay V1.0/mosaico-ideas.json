@@ -1,0 +1,26 @@
+{
+  "schema": "mosaico-ideas/project-upload/v1",
+  "project": {
+    "title": "GamePlay V1.0（开发中）",
+    "categories": ["display", "audio"],
+    "boards": [],
+    "tags": ["esp32s31", "game-console", "gamepad", "experimental"],
+    "license": "原创源码与说明沿用仓库 GNU GPL v3；第三方组件保留各自许可证，发布前完成逐项清单。",
+    "external_links": [
+      {
+        "label": "源码与硬件设计（开发分支，尚无发布版本）",
+        "url": "https://github.com/FTP-LI/ESP-MOSAICO-LAB",
+        "platform": "github"
+      }
+    ]
+  },
+  "content": {
+    "readme": "docs/ideas-readme.md",
+    "covers": [],
+    "resources": [],
+    "attachments": []
+  },
+  "release": {
+    "changelog": "建立 GamePlay V1.0 的 Mosaico Ideas 发布框架：统一版本文件、保留 Vibe 的应用分区、官方 Iris 打包目标、返回 Recovery 接口及本地检查。保留显示、声音与按键诊断；新框架尚未完整构建或生成实际安装包，游戏核心与设备实测尚未完成。尚未创建平台草稿或公开发布。"
+  }
+}

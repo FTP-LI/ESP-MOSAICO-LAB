@@ -1,0 +1,16 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Time-Tick: 电脑预览（GDB）",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build-pc/time_tick_preview.exe",
+      "cwd": "${workspaceFolder}",
+      "MIMode": "gdb",
+      "miDebuggerPath": "gdb.exe",
+      "externalConsole": false,
+      "preLaunchTask": "Time-Tick: 编译电脑预览"
+    }
+  ]
+}

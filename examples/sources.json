@@ -1,0 +1,43 @@
+{
+  "retrieved_date": "2026-10-19",
+  "timezone": "Asia/Shanghai",
+  "purpose": "Download-time snapshot; see vibe-validation.md for later build and flash validation.",
+  "repositories": [
+    {
+      "directory": "esp-mosaico-claw",
+      "source_url": "https://github.com/esp-mosaico/esp-mosaico-claw.git",
+      "branch_at_download": "master",
+      "commit": "2e1017e42d507cd9216d4da5b2c7d45cb2007971",
+      "submodule_status": [
+        " 62aaeed7de8f3055615448620dd00ed39fd6af13 third-party/esp-claw (62aaeed)",
+        " ca2f9c1eae4d95cd11ca49487949a8f5e7a39f9c third-party/esp-mosaico-utils (ca2f9c1)"
+      ],
+      "working_tree_clean": true,
+      "shallow_clone": true
+    },
+    {
+      "directory": "esp-mosaico-vibe",
+      "source_url": "https://github.com/esp-mosaico/esp-mosaico-vibe.git",
+      "branch_at_download": "main",
+      "commit": "dd63f3a742686d90046dd4eb003a4f8eb1ad05f1",
+      "submodule_status": [
+        " a2c985ad698b3f04a21c63e006b43e7e948bc1d7 submodule/esp-mosaico-bsp (a2c985a)",
+        " fc63d43f3ac72aa54e701b07b07fbed07a16b3ca submodule/esp-mosaico-utils (fc63d43)",
+        " ca3200a6b7f63e2bdea07851e19fdbd3a42eb742 submodule/raylib-lite-engine (ca3200a)"
+      ],
+      "working_tree_clean": true,
+      "shallow_clone": true
+    },
+    {
+      "directory": "esp-mosaico-bsp",
+      "source_url": "https://github.com/esp-mosaico/esp-mosaico-bsp.git",
+      "branch_at_download": "master",
+      "commit": "a7a93d290be28d18fbfd32361c90aa20b0cd1c67",
+      "submodule_status": [],
+      "working_tree_clean": true,
+      "shallow_clone": true
+    }
+  ],
+  "layout_updated_date": "2026-10-19",
+  "snapshot_note": "working_tree_clean describes download time; current local Vibe modifications are preserved."
+}

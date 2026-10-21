@@ -1,0 +1,23 @@
+{
+  "checked_date": "2026-10-19",
+  "website": "https://mosaico-ideas.espressif.com/publish",
+  "website_status_at_check": "maintenance; login required",
+  "sdk": {
+    "url": "https://github.com/espressif/esp-idf",
+    "commit": "1c42e514c90ae621af33bde3b6ad3dac22edcbfd"
+  },
+  "vibe": {
+    "url": "https://github.com/esp-mosaico/esp-mosaico-vibe",
+    "commit": "dd63f3a742686d90046dd4eb003a4f8eb1ad05f1"
+  },
+  "utils": {
+    "url": "https://github.com/esp-mosaico/esp-mosaico-utils",
+    "commit": "fc63d43f3ac72aa54e701b07b07fbed07a16b3ca"
+  },
+  "bsp": {
+    "url": "https://github.com/esp-mosaico/esp-mosaico-bsp",
+    "commit": "5f88b91e1be055d1d3674364123b2779a1758377",
+    "local_path": "components/esp-mosaico-bsp"
+  },
+  "note": "SDK and BSP retain the existing diagnostic baseline; application integration still requires a new full build and device validation."
+}

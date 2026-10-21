@@ -1,0 +1,12 @@
+{
+  "size": [480, 480],
+  "fallback": "cloudy",
+  "scenes": [
+    {"key": "sunny", "enum": "TT_WEATHER_CLEAR", "source": "sunny.png"},
+    {"key": "cloudy", "enum": "TT_WEATHER_CLOUDY", "source": "cloudy.png"},
+    {"key": "rain", "enum": "TT_WEATHER_RAIN", "source": "rain.png"},
+    {"key": "snow", "enum": "TT_WEATHER_SNOW", "source": "snow.png"},
+    {"key": "fog", "enum": "TT_WEATHER_FOG", "source": "fog.png"},
+    {"key": "storm", "enum": "TT_WEATHER_STORM", "source": "storm.png"}
+  ]
+}

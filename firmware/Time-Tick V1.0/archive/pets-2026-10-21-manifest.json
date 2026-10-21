@@ -1,0 +1,162 @@
+{
+  "assets/pets/animation-prompts.json": {
+    "entry": "pets/animation-prompts.json",
+    "sha256": "94546775bece3816542eae32f9f7b86c70234ac07ce45aa189095eb28c5b746d",
+    "bytes": 9451
+  },
+  "assets/pets/cat-actions.png": {
+    "entry": "pets/cat-actions.png",
+    "sha256": "16901197560d31431fdae0922cb9ab3c1f35c34ae3e32182b51aa56bd594c79b",
+    "bytes": 2629906
+  },
+  "assets/pets/chick-actions.png": {
+    "entry": "pets/chick-actions.png",
+    "sha256": "dadd132c7a506a147a1f15ced662b99f599404136de8611110c0fdba692f5c27",
+    "bytes": 2448125
+  },
+  "assets/pets/convert_assets.py": {
+    "entry": "pets/convert_assets.py",
+    "sha256": "cf472843c30629efce1b27f066701139cf6e31e40936639c00470142255c6b6d",
+    "bytes": 8611
+  },
+  "assets/pets/dog-actions.png": {
+    "entry": "pets/dog-actions.png",
+    "sha256": "28a6de139df0e761abe860a6907cdefca6a54e14c2eae9817eb0ed2e4e6e48ac",
+    "bytes": 2765486
+  },
+  "assets/pets/garden.png": {
+    "entry": "pets/garden.png",
+    "sha256": "010774b6e08c4944774e13310a7dd333e20ba6fa716424501ac530559e5a06e5",
+    "bytes": 3469079
+  },
+  "assets/pets/pets.png": {
+    "entry": "pets/pets.png",
+    "sha256": "efac199ac85b6f997b35ecf87ac721566baad3e82b1d67f0b83c278ab401f6b4",
+    "bytes": 1846783
+  },
+  "assets/pets/prompts.json": {
+    "entry": "pets/prompts.json",
+    "sha256": "5c9b75069cdc9aaef984e4595a648c43f4e930d6612f26a4b003778528d50af8",
+    "bytes": 3054
+  },
+  "assets/pets/README.md": {
+    "entry": "pets/README.md",
+    "sha256": "2eec04e6b96970652907cd115af2f27ae1f9ca7eb043b5862d26fb056c846871",
+    "bytes": 4599
+  },
+  "assets/pets/walk-cycle.png": {
+    "entry": "pets/walk-cycle.png",
+    "sha256": "7ee2fec525d1a1a7c6677e0fba43bf27fbf3ee789afd284b9efe2ce0e6d19bef",
+    "bytes": 2026737
+  },
+  "assets/pets/wardrobe/accessories.png": {
+    "entry": "pets/wardrobe/accessories.png",
+    "sha256": "f5575a4d7e19c566a85b437b6fcb811656d21348b89d03a74f19f66e6a98ce40",
+    "bytes": 2271178
+  },
+  "assets/pets/wardrobe/autumn-idle.png": {
+    "entry": "pets/wardrobe/autumn-idle.png",
+    "sha256": "7f2c9b7cf9765529012b0e26b84d85e141864295e439411a49821ec7bb4e13d6",
+    "bytes": 1391234
+  },
+  "assets/pets/wardrobe/autumn-prompts.json": {
+    "entry": "pets/wardrobe/autumn-prompts.json",
+    "sha256": "724e2f76390e40e8c5878a9a299f92b8a4dcb53a8abca6cb36fb2b2cf6edcb18",
+    "bytes": 3377
+  },
+  "assets/pets/wardrobe/autumn-walk.png": {
+    "entry": "pets/wardrobe/autumn-walk.png",
+    "sha256": "cdd678dd42381d45db78f9a86af476e3b7d68d593e982e98960422382de6339d",
+    "bytes": 1444905
+  },
+  "assets/pets/wardrobe/convert.py": {
+    "entry": "pets/wardrobe/convert.py",
+    "sha256": "e1c7ad0d5787228b557451f2b61a4253febc6753c60349dc3e2c5016310c97a3",
+    "bytes": 4162
+  },
+  "assets/pets/wardrobe/dog-idle-prompt.txt": {
+    "entry": "pets/wardrobe/dog-idle-prompt.txt",
+    "sha256": "217523fe2b05833c3d15534a26f006f44350049f15a3c949bcd62a74328bc4d7",
+    "bytes": 1098
+  },
+  "assets/pets/wardrobe/idle-dog.png": {
+    "entry": "pets/wardrobe/idle-dog.png",
+    "sha256": "60bc7316e4c9873f426329dd7ae7d13d43ebcde59ec432bd70d3fc7f3cfefb92",
+    "bytes": 1297031
+  },
+  "assets/pets/wardrobe/idle.png": {
+    "entry": "pets/wardrobe/idle.png",
+    "sha256": "0e9a677f34d8a41ff208e8eecefd68fbb779e9346cb4d5389da4d0c47f614e86",
+    "bytes": 2519831
+  },
+  "assets/pets/wardrobe/prompts.json": {
+    "entry": "pets/wardrobe/prompts.json",
+    "sha256": "9ef7b09408977c87c631f3bd3e808dcb94e0a26e2e755f4b3a706b5c179e4847",
+    "bytes": 2723
+  },
+  "assets/pets/weather/convert_weather_props.py": {
+    "entry": "pets/weather/convert_weather_props.py",
+    "sha256": "3847ef0df77645143505520d227b6d14eaa0a0fd50c586cec0bd7ca76394b3bf",
+    "bytes": 1368
+  },
+  "assets/pets/weather/prompts.json": {
+    "entry": "pets/weather/prompts.json",
+    "sha256": "04e3d2243e444e6dba1f40bfdde819f7783f01418bbcdf3654bb0d347ef31df4",
+    "bytes": 2254
+  },
+  "assets/pets/weather/rain-parasol.png": {
+    "entry": "pets/weather/rain-parasol.png",
+    "sha256": "bff8ad6cc9d41e05609f1daa9f2e5765cc6fad9dbfe506e72db096568433142a",
+    "bytes": 722584
+  },
+  "assets/pets/weather/README.md": {
+    "entry": "pets/weather/README.md",
+    "sha256": "ef6bf0c08914565797238bb60b2007a7335749e9c4283a09c19402026511f4e5",
+    "bytes": 1242
+  },
+  "assets/pets/weather/winter-cushion.png": {
+    "entry": "pets/weather/winter-cushion.png",
+    "sha256": "c867d020fbe18d4f955468da4b311e80846e539daaefd273c485b22ca8f51c8c",
+    "bytes": 1477681
+  },
+  "assets/pets/__pycache__/convert_assets.cpython-312.pyc": {
+    "entry": "pets/__pycache__/convert_assets.cpython-312.pyc",
+    "sha256": "ba16c355eea6b251ba8bc1da089015188ece4b4322e6b6c8f871140d168205e1",
+    "bytes": 17799
+  },
+  "main/generated/ui_art.c": {
+    "entry": "ui_art.c",
+    "sha256": "7969321d8f13323b683e64cf4b5f9b804fea10a47cc49c82dca8555c484f0fcd",
+    "bytes": 2046970
+  },
+  "main/generated/ui_art.h": {
+    "entry": "ui_art.h",
+    "sha256": "01a3f5cafd8e092b6c47ec6357b8bb98d21c769228fb9e5d021465533e06c9a7",
+    "bytes": 148
+  },
+  "main/generated/ui_motion.c": {
+    "entry": "ui_motion.c",
+    "sha256": "16608d301a694b1e456719b0d06af6c03b1d858f15b377392a3bc1469bf11554",
+    "bytes": 20468925
+  },
+  "main/generated/ui_wardrobe_art.c": {
+    "entry": "ui_wardrobe_art.c",
+    "sha256": "6dbe8d8a8fc7cd4c4e8b4bb889c59b78baaab20040087170480f23c0289b6d5c",
+    "bytes": 7702606
+  },
+  "main/generated/ui_wardrobe_art.h": {
+    "entry": "ui_wardrobe_art.h",
+    "sha256": "81dfbf8baf4d51447ea09d163893e8f148b9461c1f637fd72b11288385aebfdd",
+    "bytes": 206
+  },
+  "main/generated/ui_pet_weather_art.c": {
+    "entry": "ui_pet_weather_art.c",
+    "sha256": "09bdf75ddfe4e994b12c8f7cf6eb6606ed4186b17f1c354d4b86161906ea3ea9",
+    "bytes": 347644
+  },
+  "main/generated/ui_pet_weather_art.h": {
+    "entry": "ui_pet_weather_art.h",
+    "sha256": "9af1cb303850af591d50682c23844e5f0428a9e1824e125693b2f96822d1c519",
+    "bytes": 139
+  }
+}

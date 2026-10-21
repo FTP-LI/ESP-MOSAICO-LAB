@@ -1,0 +1,106 @@
+{
+  "checked_date": "2026-10-21",
+  "website": "https://mosaico-ideas.espressif.com/publish",
+  "website_status_at_check": "maintenance; login required",
+  "website_checked_date": "2026-10-20",
+  "sdk": {
+    "url": "https://github.com/espressif/esp-idf",
+    "commit": "1c42e514c90ae621af33bde3b6ad3dac22edcbfd"
+  },
+  "vibe": {
+    "url": "https://github.com/esp-mosaico/esp-mosaico-vibe",
+    "commit": "dd63f3a742686d90046dd4eb003a4f8eb1ad05f1"
+  },
+  "utils": {
+    "url": "https://github.com/esp-mosaico/esp-mosaico-utils",
+    "commit": "fc63d43f3ac72aa54e701b07b07fbed07a16b3ca"
+  },
+  "bsp": {
+    "url": "https://github.com/esp-mosaico/esp-mosaico-bsp",
+    "commit": "5f88b91e1be055d1d3674364123b2779a1758377",
+    "local_path": "components/esp-mosaico-bsp"
+  },
+  "fonts": {
+    "name": "Noto Sans CJK SC Regular",
+    "url": "https://raw.githubusercontent.com/notofonts/noto-cjk/main/Sans/OTF/SimplifiedChinese/NotoSansCJKsc-Regular.otf",
+    "sha256": "2c76254f6fc379fddfce0a7e84fb5385bb135d3e399294f6eeb6680d0365b74b",
+    "license": "OFL-1.1",
+    "derived_files": [
+      "main/generated/fonts/font_16.c",
+      "main/generated/fonts/font_18.c",
+      "main/generated/fonts/font_24.c",
+      "main/generated/fonts/font_52.c",
+      "main/generated/fonts/font_84.c"
+    ],
+    "provenance": "assets/fonts/README.md"
+  },
+  "note": "Time-Tick 0.1.0: single Dai Meow pet, BQ27220 battery display, weather-backed timer, focus milestones and configurable day/night/automatic themes. PC regression: 17 tests passed. Device display, dial controls, rotation and reminder sound have user confirmation in test records. Voice assistant is archived and excluded from this version. Battery runtime and spontaneous power loss remain under investigation; no Mosaico Ideas release.",
+  "network_interaction_reference": {
+    "path": "examples/esp-mosaico-vibe/submodule/esp-mosaico-utils/esp-mosaico-recovery/firmware/recovery/main/",
+    "files": [
+      "vibe_ui.c",
+      "factory_network.c"
+    ],
+    "use": "Behavior reference: scan/list/select/password; Time-Tick implements its own LVGL page and IDF service."
+  },
+  "generated_weather_art": {
+    "generator": "Codex built-in imagegen",
+    "provenance": "assets/weather/README.md",
+    "prompts": "assets/weather/prompts.json",
+    "mapping": "assets/weather/scenes.json",
+    "derived_files": [
+      "main/generated/ui_weather_art.c",
+      "main/generated/ui_weather_art.h"
+    ]
+  },
+  "generated_brand_art": {
+    "generator": "Codex built-in imagegen",
+    "provenance": "assets/brand/README.md",
+    "prompts": "assets/brand/prompts.json",
+    "derived_files": [
+      "main/generated/ui_brand.c",
+      "main/generated/ui_brand.h"
+    ]
+  },
+  "voice": {
+    "status": "archived; excluded from the current application and dependencies",
+    "archive": "archive/voice-assistant/README.md",
+    "provider": "https://help.aliyun.com/zh/model-studio/realtime",
+    "model": "qwen3.8-omni-flash-realtime",
+    "wake_component": "espressif/esp-sr 2.6.0",
+    "wake_model": "wn9s_nihaoxiaozhi",
+    "websocket_component": "espressif/esp_websocket_client 1.7.0",
+    "license": "archive/voice-assistant/LICENSE.esp-sr",
+    "hardware_verified": false,
+    "cloud_verified": false
+  },
+  "location": {
+    "ip_geolocation": "https://ipwhois.io/documentation",
+    "city_search": "https://open-meteo.com/en/docs/geocoding-api",
+    "behavior": "User-initiated HTTPS lookup; IP estimate requires confirmation. Up to five city candidates show administrative region. Selected WGS84 coordinates are saved with settings.",
+    "pc_live_city_search_verified": true,
+    "hardware_verified": false
+  },
+  "generated_pet_art": {
+    "generator": "Codex built-in imagegen",
+    "provenance": "assets/pets/daimao/README.md",
+    "prompts": "assets/pets/daimao/prompt.txt",
+    "source": "assets/pets/daimao/atlas.png",
+    "character_reference": "Monster Hunter Palico Kit T. / CAPCOM",
+    "derived_files": [
+      "main/generated/ui_daimao.c",
+      "main/generated/ui_daimao.h"
+    ],
+    "archive": "archive/pets-2026-10-21.zip",
+    "frames": 54,
+    "pixel_format": "RGB565A8"
+  },
+  "battery": {
+    "chip": "BQ27220",
+    "address": "0x55",
+    "implementation": "main/platform/power_monitor.c",
+    "behavior": "10s charge sampling and 60s diagnostics. Owner confirmed 68mAh cell. If DesignCapacity differs, attempt bounded RAM-only 68mAh FCC/design and 4mAh NearFull setup while charging above 3.5V, read back and reseal. Preserve learned FCC when design already matches. No OTP, charger, calibration or cell-curve writes. Hide SOC while capacity mismatches.",
+    "hardware_verified": true,
+    "verification_scope": "User confirmed battery operation with USB unplugged, dimming, touch wake, rotation and timer wheels. Original capacity confirmed as 68mAh on 2026-10-21; prior gauge design/full was 3000mAh. Capacity setup evidence and limitations are in test-records/2026-10-21-performance-battery.md. SOC accuracy, spontaneous power-loss cause and battery runtime remain unresolved."
+  }
+}

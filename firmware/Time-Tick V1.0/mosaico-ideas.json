@@ -1,0 +1,36 @@
+{
+  "schema": "mosaico-ideas/project-upload/v1",
+  "project": {
+    "title": "Time-Tick V1.0（开发中）",
+    "categories": [
+      "display",
+      "sensors"
+    ],
+    "boards": [],
+    "tags": [
+      "esp32s31",
+      "flip-timer",
+      "imu",
+      "clock",
+      "weather",
+      "experimental"
+    ],
+    "license": "原创源码与说明沿用仓库 GNU GPL v3；第三方组件保留各自许可证，发布前完成逐项清单。",
+    "external_links": [
+      {
+        "label": "源码与硬件设计（开发分支，尚无发布版本）",
+        "url": "https://github.com/FTP-LI/ESP-MOSAICO-LAB",
+        "platform": "github"
+      }
+    ]
+  },
+  "content": {
+    "readme": "docs/ideas-readme.md",
+    "covers": [],
+    "resources": [],
+    "attachments": []
+  },
+  "release": {
+    "changelog": "新增 Time-Tick V1.0：可配置翻转倒计时，正放暂停并显示时钟天气，IMU 屏幕与触摸旋转、校准、NVS 设置及官方 Iris 应用发布框架。核心 C 测试、官方元数据与应用配置检查、VS Code 官方 ESP-IDF 完整编译均通过。尚未打包发布、烧录或上传，设备验收待完成。"
+  }
+}

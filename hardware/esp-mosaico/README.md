@@ -50,7 +50,7 @@
 - 待登记 BaseBoard 丝印、设备固件版本和实际持有的扩展模块。
 - 待核对连接器 Pin1、插接方向与实物照片。
 - 待验证按钮动作、电源输出、通信和具体软硬件组合。
-- 实测时使用 [测试记录模板](../../docs/templates/test-record.md)，保存到本项目对应修订版下，再更新 [兼容性索引](../../docs/compatibility.md)。
+- 实测时使用 [验证记录要求](../README.md#验证记录)，保存到本项目对应修订版下，再更新 [硬件状态](../README.md)。
 
 ## 已知差异与恢复入口
 
@@ -74,6 +74,6 @@
 | [摄像头模块指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide_camera.html) | 左槽限制及 USB Serial/JTAG 资源冲突 |
 | [交互子板指南](https://docs.espressif.com/projects/esp-dev-kits/zh_CN/latest/esp32s31/esp-mosaico/user_guide_interact.html) | 两侧插槽使用与插入方向 |
 
-本目录自行整理的文档和关键器件表沿用仓库现有 [LICENSE](../../LICENSE)。`rev-1.2/upstream/` 中的第三方 PDF 保留原有权利，不纳入本仓库 GPL 授权；文件归属、分发限制与取得情况见 [归档说明](rev-1.2/upstream/README.md)。固定提交、文件版本及 SHA-256 见 [来源清单](rev-1.2/sources.json)。
+本目录自行整理的文档和关键器件表沿用仓库现有 [LICENSE](../LICENSE)。`rev-1.2/upstream/` 中的第三方 PDF 保留原有权利，不纳入本仓库 GPL 授权；文件归属、分发限制与取得情况见 [归档说明](rev-1.2/upstream/README.md)。固定提交、文件版本及 SHA-256 见 [来源清单](rev-1.2/sources.json)。
 
 返回 [仓库首页与项目索引](../../README.md)。

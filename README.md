@@ -1,89 +1,52 @@
 # ESP-MOSAICO-LAB
 
-面向 ESP-Mosaico 设备的**非官方扩展项目**，用于长期维护扩展板、配套固件、自动化程序和使用文档。本仓库不代表官方产品或官方支持功能。
+基于 ESP-Mosaico 的非官方软硬件开发仓库。目前包含 **GamePlay V1.0** 游戏机和 **Time-Tick V1.0** 翻转计时器两个独立项目。
 
-当前已登记 ESP-Mosaico CoreBoard V1.2，并建立游戏机按键板原理图草案和显示、声音、按键诊断固件。状态为 `experimental`：两种诊断配置已编译通过，网表与固件映射核对通过，[原理图严格 DRC 已通过](hardware/gamepad-board/rev-0.1/checks/2026-10-19-drc.md)。母 PCB 文档名为 `GamePlay V1.0`，尚无布局；器件机械配合、烧录、打样和设备实测尚未完成。
+两个项目均处于实验阶段，名称中的 V1.0 不表示已发布稳定版。GamePlay 已有显示、声音、触摸和按键诊断，以及九键原理图和结构预布局，尚未接入游戏核心或完成整机。Time-Tick 已实现翻转倒计时、圆盘轻点/长按、可选铃声与翻转停铃、天气时钟、可配置昼夜主题、电量显示及呆猫陪伴；PC回归与官方ESP-IDF构建通过，已安装到实机。长期稳定性、一小时电池续航与整机验收仍待完成，语音助手归档至下一版本。
 
-## 先从这里看
-
-- [游戏机套件开发快速开始：获取、构建与软硬件联调](docs/game-console-kit/quick-start.md)
-- [当前设备与板载硬件](hardware/esp-mosaico/README.md)
-- [诊断固件：显示、声音、板载与外接按键](firmware/game-console/README.md)
-- [ESP-IDF 环境与激活脚本](tools/esp-idf/README.md)
-- [按键板原理图、接口和布局](hardware/gamepad-board/README.md)
-- [游戏机套件文件规划](docs/game-console-kit/README.md)
-- [游戏机套件从哪里开始：硬件与软件并行开发](docs/game-console-kit/requirements.md)
-- [FC、GB 与 PICO-8 运行方案](docs/game-console-kit/emulation-plan.md)
-- [V1.2 设计分析与关键器件](hardware/esp-mosaico/rev-1.2/design-analysis.md)
-- [官方原理图与规格图归档](hardware/esp-mosaico/rev-1.2/upstream/README.md)
-- [左侧 H2 与右侧 H1 的区别、引脚和电源](hardware/esp-mosaico/rev-1.2/interfaces.md)
-- [顶部 POWER、BOOT、AI KEY 按键](hardware/esp-mosaico/rev-1.2/buttons.md)
-- [SAM8108 是什么、有哪些替代方案](hardware/esp-mosaico/rev-1.2/buttons.md#sam8108-与替代方案)
-- [兼容性与验证状态](docs/compatibility.md)
-
-## 目录结构
+## 目录
 
 ```text
 ESP-MOSAICO-LAB/
+├── examples/                 官方工程和例程
+├── firmware/
+│   ├── GamePlay V1.0/        游戏机软件
+│   ├── Time-Tick V1.0/       翻转计时器软件
+│   └── LICENSE
+├── hardware/
+│   ├── GamePlay V1.0/        按键板、外壳与设计记录
+│   ├── Time-Tick V1.0/       计时器硬件需求、结构与验证记录
+│   ├── esp-mosaico/          主机硬件参考资料
+│   ├── README.md
+│   └── LICENSE
 ├── README.md
-├── REPOSITORY_GUIDELINES.md
-├── CHANGELOG.md
-├── LICENSE
-├── hardware/                       硬件资料与扩展板
-│   ├── gamepad-board/               rev-0.1 原理图、接口草案与 BOM
-│   └── esp-mosaico/                 当前主机的参考资料
-│       ├── README.md
-│       └── rev-1.2/
-│           ├── interfaces.md       左右接口与电源
-│           ├── buttons.md          顶部按键、电源芯片与下载模式
-│           ├── design-analysis.md  原理图分析与资料差异
-│           ├── components.csv      关键器件表；非完整 BOM
-│           ├── sources.json        来源、版本与文件校验值
-│           └── upstream/           9 份原始 PDF 及归档说明
-├── firmware/                       game-console 显示、声音与按键诊断
-├── automation/                     自动化程序；待添加项目
-├── tools/                          ESP-IDF 激活与网表/固件一致性检查
-├── examples/                       独立示例；待添加示例
-├── docs/                           跨项目索引与通用模板
-│   ├── compatibility.md
-│   ├── game-console-kit/           游戏机套件文件规划
-│   └── templates/
-└── .github/                        Issue、PR 模板及后续工作流
+└── CHANGELOG.md
 ```
 
-分类规则统一见 [仓库规范](REPOSITORY_GUIDELINES.md#2-目录结构与命名)。空的分类目录以 `.gitkeep` 保留；有实际项目后删除占位文件，建立 `<board-id>`、`<firmware-id>` 或 `<automation-id>` 子目录，并提供项目 README。
+- [官方工程](examples/README.md)：Vibe、Claw、BSP 的本机参考副本与固定来源。
+- [GamePlay V1.0 软件](firmware/GamePlay%20V1.0/README.md)：源码、ESP-IDF 配置、构建记录和 Mosaico Ideas 发布资料。
+- [GamePlay V1.0 硬件](hardware/GamePlay%20V1.0/README.md)：按键板、接口、BOM、结构尺寸与设计源文件。
+- [Time-Tick V1.0 软件](firmware/Time-Tick%20V1.0/README.md)：翻转计时、双语时钟天气、可调昼夜主题、呆猫专注陪伴、自动旋转和 Mosaico Ideas 发布框架；[电脑预览启动](firmware/Time-Tick%20V1.0/pc/README.md)。
+- [Time-Tick V1.0 硬件](hardware/Time-Tick%20V1.0/README.md)：板载 IMU/屏幕/振动复用、姿态校准和结构验收要求。
+- [主机资料与硬件状态](hardware/README.md)；[变更记录](CHANGELOG.md)。
 
-## 项目索引
+## 克隆后开始
 
-| 类别 | 目录入口 | 当前内容与状态 |
-| --- | --- | --- |
-| 扩展板与硬件资料 | [hardware/](hardware/) | [主机参考资料](hardware/esp-mosaico/README.md)、[按键板 rev-0.1](hardware/gamepad-board/README.md)，均为 `experimental` |
-| 配套固件 | [game-console](firmware/game-console/README.md) | 显示、声音、按键诊断；`experimental`，构建通过、实机未测 |
-| 自动化程序 | [automation/](automation/) | 尚无自动化项目 |
-| 烧录、诊断和配置工具 | [ESP-IDF 环境](tools/esp-idf/README.md) | 固定工具链激活；[网表一致性检查](tools/check-gamepad.py) |
-| 独立使用示例 | [examples/](examples/) | 尚无可执行示例 |
-| 跨项目文档 | [docs/](docs/) | [游戏机套件](docs/game-console-kit/README.md)，`experimental`（诊断与电气原型）；[兼容性索引](docs/compatibility.md)及通用模板 |
-| GitHub 协作 | [.github/](.github/) | Issue、PR 模板；尚无工作流 |
+1. 克隆本仓库，选择 `firmware/Time-Tick V1.0` 或 `firmware/GamePlay V1.0` 作为VS Code工作区。
+2. 按[官方依赖说明](examples/README.md)初始化固定版本Vibe及子模块；本仓库不重复打包上游完整工程。
+3. 按所选项目README准备SDK。Time-Tick可先运行[电脑预览](firmware/Time-Tick%20V1.0/pc/README.md)，再通过官方系统更新包装入设备。
+4. 当前能力与验证边界以项目README、`test-records/`、[变更记录](CHANGELOG.md)为准。
 
-新增项目时，在此索引中添加项目 README 链接与状态：`experimental`、`verified` 或 `deprecated`。`verified` 必须链接对应测试记录；未测试的设备和版本必须标为“未验证”。
+源码、固定依赖清单、BSP、原始素材、可直接构建的生成C数组、硬件设计、测试及功能归档进入Git。`build-*`、SDK/依赖缓存、下载的官方仓库、本机配置、日志、设备设置与宠物存档不上传。不要在源码中填写实际Wi-Fi密码或API密钥。
 
-## 快速开始
+## 开发约定
 
-1. 阅读 [仓库规范](REPOSITORY_GUIDELINES.md)，了解目录、验证和发布要求。
-2. 从 [设备说明](hardware/esp-mosaico/README.md) 了解主机，核对 [兼容性记录](docs/compatibility.md)。软件从 [诊断工程](firmware/game-console/README.md) 构建开始；硬件从 [接口草案](hardware/gamepad-board/rev-0.1/interfaces.md) 核对实物方向，尚不可直接接线。
-3. 新建项目时，在对应类别下使用小写英文及连字符命名目录，将 [项目 README 模板](docs/templates/project-readme.md) 复制为该目录的 `README.md`，填写实际信息并加入根目录索引。
-4. 验证时使用 [测试记录模板](docs/templates/test-record.md)；硬件项目另使用 [硬件检查记录模板](docs/templates/hardware-review.md)。没有执行的检查须标为“未执行”。
+软件与硬件使用同一项目名称；源文件、说明和检查工具就近放在项目内，硬件修订号单独保留。编译、烧录使用 VS Code 官方 ESP-IDF 扩展，并按各工程 README 选择固定 SDK。构建产物和依赖缓存不提交。
 
-硬件设计按修订版保存，例如 `hardware/<board-id>/rev-1.0/`。只有存在实际内容时才建立目录；模板中的占位说明不能作为参数依据或测试结论。连接方式尚未确认时必须注明“不可按此接线”。
+每项验证记录日期、版本、步骤、结果和未验证项。修改接口时同步更新针号表和固件映射；发布前核对源码版本、第三方来源、安装包及设备测试。各项目的具体发布要求见对应软件 README。
 
-## 协作与发布入口
+## 归档与许可
 
-- [问题反馈](.github/ISSUE_TEMPLATE/bug-report.md)、[功能提案](.github/ISSUE_TEMPLATE/feature-request.md)、[PR 模板](.github/pull_request_template.md)。
-- [变更记录](CHANGELOG.md)与[发布说明模板](docs/templates/release-notes.md)。当前尚未发布版本。
-- 分支、提交、配置和验证要求统一见 [仓库规范](REPOSITORY_GUIDELINES.md)。已有本地构建及网表检查，尚无设备实测或 CI 工作流。
+旧目录、包装脚本、模板和构建缓存已移至仓库外的同级归档 `ESP-MOSAICO-LAB-archive-2026-10-19-231502`，保留迁移清单、编辑前备份和校验信息。历史记录中的旧路径以当时快照为准。根目录另保留 Git 管理所需的 `.git`、`.gitignore`。
 
-## 来源与许可
-
-本仓库沿用已有的 [GNU GPL v3 许可证文本](LICENSE)。新增项目须在 README 中明确源码、硬件设计和文档的许可范围。
-
-硬件分析由本仓库整理，文中标明来源与查询日期。官方原理图和供应商规格图集中在 [upstream 归档](hardware/esp-mosaico/rev-1.2/upstream/README.md)，保留原有归属与限制，不适用本仓库 GPL 许可；带明确分发限制的手册只保留官方链接。源码和其他图片通过链接引用。仓库规范及模板不替代许可证。
+原创内容沿用已有 GPL v3：[软件许可](firmware/LICENSE)、[硬件及文档许可](hardware/LICENSE)。官方工程、BSP、原理图 PDF 和外部模型保留各自许可证与归属。

@@ -1,0 +1,41 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Time-Tick: 配置电脑预览",
+      "type": "process",
+      "command": "cmake",
+      "args": ["-S", "pc", "-B", "build-pc", "-G", "Ninja", "-DCMAKE_BUILD_TYPE=Debug", "-DCMAKE_C_COMPILER=gcc", "-DCMAKE_CXX_COMPILER=g++"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "shared"}
+    },
+    {
+      "label": "Time-Tick: 编译电脑预览",
+      "type": "process",
+      "command": "cmake",
+      "args": ["--build", "build-pc", "--parallel", "8"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "dependsOn": "Time-Tick: 配置电脑预览",
+      "problemMatcher": ["$gcc"],
+      "presentation": {"reveal": "always", "panel": "shared"}
+    },
+    {
+      "label": "Time-Tick: 启动电脑预览",
+      "type": "process",
+      "command": "${workspaceFolder}/build-pc/time_tick_preview.exe",
+      "dependsOn": "Time-Tick: 编译电脑预览",
+      "problemMatcher": [],
+      "presentation": {"reveal": "always", "panel": "shared"}
+    },
+    {
+      "label": "Time-Tick: 测试电脑预览",
+      "type": "process",
+      "command": "ctest",
+      "args": ["--test-dir", "build-pc", "--output-on-failure"],
+      "options": {"cwd": "${workspaceFolder}"},
+      "dependsOn": "Time-Tick: 编译电脑预览",
+      "problemMatcher": []
+    }
+  ]
+}

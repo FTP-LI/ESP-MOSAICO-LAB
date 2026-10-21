@@ -56,3 +56,9 @@ _autosave-*
 
 # 新增项目时，在这里或项目内补充真实配置及工具专用忽略规则。
 # 不统一忽略 CSV、ZIP、PDF、Gerber 或锁定文件，以保留 BOM、制造资料和依赖版本。
+
+# ESP-IDF generated files
+build-*/
+managed_components/
+.codex-runs/
+*.irisfw
