@@ -1,0 +1,94 @@
+{
+  "generated_on": "2026-10-22",
+  "source_commit": "bb00e05223a6843ed19829352dcbfa3e7628625f",
+  "screenshots": "Native shared LVGL UI from 17 passing PC/core tests; simulated weather, battery and date; BMP-to-PNG pixel-preserving conversion.",
+  "layout": "Code-native SVG composed by build-materials.cjs, rasterized by sharp.",
+  "files": [
+    {
+      "path": "publish/screens/achievements-zh.png",
+      "bytes": 33833,
+      "sha256": "31518dc14db1b4071140f1eeb493086438a709c62cf6dcd7c6b8960ab19280ca"
+    },
+    {
+      "path": "publish/screens/alarm-preview-zh.png",
+      "bytes": 22238,
+      "sha256": "c0eff12d72223e5ef820021d68ad5c60f6fc862aecd5e7deec247d35d9a88335"
+    },
+    {
+      "path": "publish/screens/countdown-zh.png",
+      "bytes": 160328,
+      "sha256": "e56d9605e7688386f0e56f8e78cd72949d47dd862dc6df8d296997b1dc4c1b37"
+    },
+    {
+      "path": "publish/screens/paused-zh.png",
+      "bytes": 160680,
+      "sha256": "de7e32a4d3b4bd8b730a56fb332df4376e3ba68d0ec2a70203e331e908974c0b"
+    },
+    {
+      "path": "publish/screens/progress-zh.png",
+      "bytes": 159406,
+      "sha256": "ee780e82499468ae1a401c6294146ba11930100dc1c30d42c3f4ee951d0cf9dc"
+    },
+    {
+      "path": "publish/screens/scene-pet-0-season-3.png",
+      "bytes": 285104,
+      "sha256": "f414d5ded036f6d9e016a5b0d17ad742619541f16cf5da10f3084a7b008584eb"
+    },
+    {
+      "path": "publish/screens/scene-rain-a.png",
+      "bytes": 318892,
+      "sha256": "aa78c17a7c77e3c299c7263fb46d5f971e03b145deafb5c06c77a177ca9d0924"
+    },
+    {
+      "path": "publish/screens/scene-time-1.png",
+      "bytes": 308103,
+      "sha256": "96fe1934c52db4a246a703ee7c5ffb188b65d03cbc44b37036e3b7b85ed27dbc"
+    },
+    {
+      "path": "publish/screens/theme-night-home.png",
+      "bytes": 181788,
+      "sha256": "39b52bb1f8edce764097665f12d9695fc5de649fad51d645cc2c6ec993979b2d"
+    },
+    {
+      "path": "publish/screens/theme-night-timer.png",
+      "bytes": 111253,
+      "sha256": "6837f5f3efb302f6342b35aeebe9877a20dc1f0994c03e466b131a89fef5d57b"
+    },
+    {
+      "path": "publish/screens/timer-settings-zh.png",
+      "bytes": 28950,
+      "sha256": "66b180c058f2e9e055c24ba239b77a4a296c21778f00f16fc1b884ca9286fb40"
+    },
+    {
+      "path": "docs/media/01-cover.png",
+      "bytes": 634668,
+      "sha256": "3d1cefd1ac732fae2f2fe6c618472c6f7039f61032b5606a56762c2fe11cc5e1"
+    },
+    {
+      "path": "docs/media/02-controls.png",
+      "bytes": 479946,
+      "sha256": "eef18340c770d2128529dc1cc340e191c0e5b06e2ad6d377c245d8bd8b12e6ec"
+    },
+    {
+      "path": "docs/media/03-timing-alarm.png",
+      "bytes": 193141,
+      "sha256": "b09848ae120575c195b87d811a84f96d298fc928a1863236e870d6e3a8667144"
+    },
+    {
+      "path": "docs/media/04-theme.png",
+      "bytes": 582320,
+      "sha256": "884ad38054dabea16387d7d7626590520e834fc0cad2bc37bf208c8921b1bcf4"
+    },
+    {
+      "path": "docs/media/05-weather.png",
+      "bytes": 990708,
+      "sha256": "358161a45c777a6ad418052deca1d121fcccf4679e50f029105e1da60f084633"
+    },
+    {
+      "path": "docs/media/06-companion.png",
+      "bytes": 191576,
+      "sha256": "7679ccdcd34e23ec99b8f43a35e9a2e70d54f95de00bc585615f989b96ccbb27"
+    }
+  ],
+  "firmware_version": "0.1.1"
+}

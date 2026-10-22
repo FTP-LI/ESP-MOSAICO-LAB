@@ -1,0 +1,15 @@
+{
+  "checked_date": "2026-10-22",
+  "method": "Mosaico website software editor",
+  "status": "draft_saved",
+  "project_code": "eB5iQGzwAJTu",
+  "edit_url": "https://mosaico.ai/zh-hans/publish?code=eB5iQGzwAJTu",
+  "title": "Time-Tick｜翻转计时与天气小院",
+  "version": "0.1.1",
+  "verified": "Account software list shows exactly one draft; reopening its editor shows all six images, readme, firmware and guide.",
+  "submitted_for_review": false,
+  "publicly_published": false,
+  "firmware_sha256": "cfa757b566c81973460cbf17588c4cb541abbb233ab2bb242d32b8e98e7f9bbc",
+  "pending": "Settings rotation and touch passed user hardware validation. Resolve first-boot Wi-Fi watchdog and pass healthy installation before replacing draft firmware and guide.",
+  "local_evidence": "build-assets/publish-20261022/mosaico-draft-saved.png"
+}

@@ -1,7 +1,7 @@
 {
-  "schema": "mosaico-ideas/project-upload/v1",
+  "schema": "mosaico-ideas/project-release/1",
   "project": {
-    "title": "Time-Tick V1.0（开发中）",
+    "title": "Time-Tick｜翻转计时与天气小院",
     "categories": [
       "display",
       "sensors"
@@ -15,22 +15,44 @@
       "weather",
       "experimental"
     ],
-    "license": "原创源码与说明沿用仓库 GNU GPL v3；第三方组件保留各自许可证，发布前完成逐项清单。",
+    "license": "原创代码与文档：GNU GPL v3；第三方组件保留各自许可。呆猫为参考《怪物猎人》艾露猫 Kit T. 的 AI 重绘，角色标识 ©CAPCOM，不主张角色原创或额外授权。",
     "external_links": [
       {
-        "label": "源码与硬件设计（开发分支，尚无发布版本）",
-        "url": "https://github.com/FTP-LI/ESP-MOSAICO-LAB",
+        "label": "源码、硬件工程与构建说明",
+        "url": "https://github.com/FTP-LI/ESP-MOSAICO-LAB/tree/codex/time-tick-vibe-02",
         "platform": "github"
       }
     ]
   },
-  "content": {
+  "firmware": "build-idf62-v02/time_tick-system-update.irisfw",
+  "website": {
     "readme": "docs/ideas-readme.md",
-    "covers": [],
+    "covers": [
+      "docs/media/01-cover.png",
+      "docs/media/02-controls.png",
+      "docs/media/03-timing-alarm.png",
+      "docs/media/04-theme.png",
+      "docs/media/05-weather.png",
+      "docs/media/06-companion.png"
+    ],
     "resources": [],
-    "attachments": []
+    "attachments": [
+      "docs/time-tick-guide.md",
+      "assets/fonts/OFL.txt"
+    ],
+    "changelog": "docs/changelog-0.1.1.md"
   },
-  "release": {
-    "changelog": "新增 Time-Tick V1.0：可配置翻转倒计时，正放暂停并显示时钟天气，IMU 屏幕与触摸旋转、校准、NVS 设置及官方 Iris 应用发布框架。核心 C 测试、官方元数据与应用配置检查、VS Code 官方 ESP-IDF 完整编译均通过。尚未打包发布、烧录或上传，设备验收待完成。"
+  "device": {
+    "default_locale": "zh-CN",
+    "presentations": {
+      "zh-CN": {
+        "mode": "prebuilt",
+        "display": "publish/device/zh-CN/display.json"
+      },
+      "en": {
+        "mode": "prebuilt",
+        "display": "publish/device/en/display.json"
+      }
+    }
   }
 }

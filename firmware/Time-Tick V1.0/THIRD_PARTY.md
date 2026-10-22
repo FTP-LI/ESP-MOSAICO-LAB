@@ -8,7 +8,7 @@
 | SDL2（仅电脑预览） | [libsdl-org/SDL 2.32.10](https://github.com/libsdl-org/SDL/releases/tag/release-2.32.10)，官方 MinGW 开发包 | zlib 许可证；仅位于 `build-pc/_deps/sdl2-src`，CMake 固定下载 SHA-256。分发桌面预览时同时保留 SDL 的 LICENSE.txt 和 LVGL 的 MIT LICENSE；不进入 ESP32 固件 |
 | ESP-IDF | espressif/esp-idf，`1c42e514c90ae621af33bde3b6ad3dac22edcbfd` | 外部 SDK；保留其 LICENSE 和第三方声明 |
 | ESP-Mosaico BSP | `5f88b91e1be055d1d3674364123b2779a1758377` | 已复制固定副本，[UPSTREAM](components/esp-mosaico-bsp/UPSTREAM.md)、[Apache-2.0 LICENSE](components/esp-mosaico-bsp/LICENSE) |
-| ESP-Iris / app recovery / 打包集成 | esp-mosaico-utils，`fc63d43f3ac72aa54e701b07b07fbed07a16b3ca` | 引用 examples 内官方子模块，保留各目录声明；未另写烧录/构建包装器 |
+| ESP-Iris / app recovery / 打包集成 | esp-mosaico-utils，`be151ae047014e79a9c7ae0092dd203844499003` | 由 tools/prepare_dependencies.py 获取固定依赖；mosaico.py 仅转发官方 CLI，保留各目录声明 |
 | LVGL、cJSON、BMI270 及 BSP 驱动依赖 | [实际依赖锁文件](dependencies.lock)：LVGL 9.5.0、cJSON 1.7.19~2、BMI270 0.4.1、esp_lvgl_adapter 0.6.2、esp_tinyusb 2.4.0、tinyusb 0.21.0~2 等 | 由本工程组件管理器解析；各组件保留其许可证文件，发布前按最终链接结果汇总完整分发清单 |
 | Open-Meteo / GeoNames | [天气 API](https://open-meteo.com/en/docs)、[城市 API](https://open-meteo.com/en/docs/geocoding-api) | 网络数据；UI 和网页说明标注 Open-Meteo，城市来源在文档保留；使用公共非商业服务，发行用途变化时复核服务条款 |
 | 时间小方 TK3 | [厂商产品页](https://www.nllano.cn/products) | 仅交互参考，没有导入固件、美术或机械源文件 |

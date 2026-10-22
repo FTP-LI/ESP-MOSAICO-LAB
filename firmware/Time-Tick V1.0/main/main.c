@@ -285,17 +285,20 @@ void app_main(void)
             else ESP_LOGW(TAG,"Pet autosave failed; retry in 60 seconds");
             next_pet_save=now+60000;
         }
-        if ((!tt_ui_editing() || timer.state==TT_FINISHED) && sample_ok && orientation.settled) {
-            face = tt_face_from_axis(&settings.timer, orientation.stable);
-            if (timer.state==TT_FINISHED) {
-                if (tt_alarm_turn(&reminder,orientation.stable)) {
-                    tt_timer_stop(&timer); timer.observed=face; touch_until=0;
-                    ESP_LOGI("tt_alarm","dismissed by turn: axis=%d face=%d; next flip may start a timer",orientation.stable,face);
-                }
-            } else tt_timer_face(&timer, &settings.timer, face, now);
-            int wanted = tt_rotation(face, settings.timer.reverse_rotation, rotation);
-            /* The display worker applies this request between completed frames. */
-            rotation = wanted;
+        if (sample_ok && orientation.settled) {
+            tt_face_t sensed_face = tt_face_from_axis(&settings.timer, orientation.stable);
+            /* Settings rotate too; editing only suppresses flip-to-time actions.
+             * The display worker changes panel and touch mapping between frames. */
+            rotation = tt_rotation(sensed_face, settings.timer.reverse_rotation, rotation);
+            if (!tt_ui_editing() || timer.state==TT_FINISHED) {
+                face = sensed_face;
+                if (timer.state==TT_FINISHED) {
+                    if (tt_alarm_turn(&reminder,orientation.stable)) {
+                        tt_timer_stop(&timer); timer.observed=face; touch_until=0;
+                        ESP_LOGI("tt_alarm","dismissed by turn: axis=%d face=%d; next flip may start a timer",orientation.stable,face);
+                    }
+                } else tt_timer_face(&timer, &settings.timer, face, now);
+            }
         }
         if (timer.state != TT_FINISHED) { alarm = false; if (!reminder.preview) tt_alarm_stop(&reminder); }
         tt_alarm_output_t alert=tt_alarm_poll(&reminder,now);

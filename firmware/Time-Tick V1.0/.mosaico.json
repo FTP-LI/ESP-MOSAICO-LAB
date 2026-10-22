@@ -1,5 +1,5 @@
 {
-  "schema_version": 1,
+  "schema_version": 2,
   "workspace": {
     "projects_dir": ".",
     "default_project": ".",
@@ -7,9 +7,9 @@
   },
   "dependencies": {
     "bsp": ".",
-    "esp_iris": "../../examples/esp-mosaico-vibe/submodule/esp-mosaico-utils/ESP-Iris"
+    "esp_iris": "build-deps/esp-mosaico-utils/ESP-Iris"
   },
-  "build": {"runner": "builtin"},
+  "build": {"runner": "builtin", "configdep": "off"},
   "devices": [
     {
       "id": "esp-mosaico",

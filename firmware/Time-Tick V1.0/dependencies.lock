@@ -328,7 +328,7 @@ dependencies:
       type: service
     version: 1.1.0
   espressif/libpng:
-    component_hash: d094357a329f78668629d7c9656064b2b0123196eb6d25ca77db3782e0752480
+    component_hash: 9a576d8fbd0ddb29330e1f4c4fe82470b3e0e7eca71ea3bc4dce168d0b1088e3
     dependencies:
     - name: idf
       require: private
@@ -340,7 +340,7 @@ dependencies:
     source:
       registry_url: https://components.espressif.com
       type: service
-    version: 1.6.58~2
+    version: 1.6.59
   espressif/mdns:
     component_hash: 3ba256ac95e07c274be53cbd73f06cb846c403b61e8fbdf1be57bdb79db7a63e
     dependencies:
@@ -417,6 +417,6 @@ direct_dependencies:
 - espressif/spi_nand_flash
 - idf
 - lvgl/lvgl
-manifest_hash: f5eb6739b49de6902ca4418adc4b9ef54ec8ddd1b32ddc1fe73f22658b367d9b
+manifest_hash: e4cddd8318ec0ae8d782b71b457f1534074afbe331d58790cd80e99eeb9697c2
 target: esp32s31
 version: 3.0.0

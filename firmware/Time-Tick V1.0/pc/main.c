@@ -213,17 +213,20 @@ static void update(void)
     pet_dirty|=tt_pet_tick(&pets,&pet_runtime,settings.pet,now);
     process_commands(now);
     if (pet_dirty && now>=next_pet_save) { if (pet_save(&pets)) pet_dirty=false; next_pet_save=now+60000; }
-    if ((!tt_ui_editing() || timer.state==TT_FINISHED) && orientation.settled) {
-        face = tt_face_from_axis(&settings.timer, orientation.stable);
-        if (timer.state==TT_FINISHED) {
-            if (tt_alarm_turn(&reminder,orientation.stable)) {
-                tt_timer_stop(&timer); timer.observed=face;
-            }
-        } else tt_timer_face(&timer, &settings.timer, face, now);
-        int wanted = tt_rotation(face, settings.timer.reverse_rotation, rotation);
+    if (orientation.settled) {
+        tt_face_t sensed_face = tt_face_from_axis(&settings.timer, orientation.stable);
+        int wanted = tt_rotation(sensed_face, settings.timer.reverse_rotation, rotation);
         if (wanted != rotation) {
             rotation = wanted;
             lv_display_set_rotation(display, (lv_display_rotation_t)(rotation / 90));
+        }
+        if (!tt_ui_editing() || timer.state==TT_FINISHED) {
+            face = sensed_face;
+            if (timer.state==TT_FINISHED) {
+                if (tt_alarm_turn(&reminder,orientation.stable)) {
+                    tt_timer_stop(&timer); timer.observed=face;
+                }
+            } else tt_timer_face(&timer, &settings.timer, face, now);
         }
     }
     if (timer.state != TT_FINISHED) { alarm = false; if (!reminder.preview) tt_alarm_stop(&reminder); }
@@ -261,7 +264,7 @@ static void update(void)
         (const char *[]) {"待机", "计时中", "已暂停", "时间到"}[timer.state],
         (long long)timer.remaining_ms,rotation,
         weather?tt_text(TT_ZH,tt_weather_text(service.weather_code)):"无数据",weather?service.weather_code:-1,
-        alarm?"到时提醒：仅模拟，不驱动马达":tt_ui_editing()?"设置中：暂时锁定屏幕方向":"方向按钮模拟 IMU；电脑不连接真实传感器");
+        alarm?"到时提醒：仅模拟，不驱动马达":tt_ui_editing()?"设置中：屏幕随方向旋转，不触发新计时":"方向按钮模拟 IMU；电脑不连接真实传感器");
     if (info) {
         lv_label_set_text_fmt(lv_obj_get_child(control_buttons[12],0),"时段：%s · 点击切换",simulated_period<0?"跟随时钟":(const char*[]){"清晨","白天","黄昏","夜晚"}[simulated_period]);
         lv_label_set_text_fmt(lv_obj_get_child(control_buttons[13],0),"季节：%s · 点击切换",simulated_season<0?"跟随日期":(const char*[]){"春季","夏季","秋季","冬季"}[simulated_season]);
@@ -1086,6 +1089,27 @@ static int timer_smoke(void)
     if (timer.state!=TT_IDLE || reminder.active || !tt_ui_editing() || !city ||
         strcmp(lv_textarea_get_text(city),"KeepTurnDraft")) return 177;
     if (!press("Back") || !press("Back") || !press("Back")) return 178;
+    /* Rotate an unsaved form through all upright poses and flat, without
+     * creating a timer or replacing a running preset/deadline. */
+    flip(2); tt_timer_init(&timer);
+    if (!press("Settings") || !press("Weather") || !press("Advanced: coordinates")) return 300;
+    city=find_field(lv_screen_active()); if (!city) return 301;
+    lv_textarea_set_text(city,"RotateDraft");
+    const int settings_axes[]={1,-2,-1,3,-3,2};
+    const int settings_angles[]={270,180,90,90,90,0};
+    for (unsigned i=0;i<sizeof(settings_axes)/sizeof(*settings_axes);++i) {
+        flip(settings_axes[i]);
+        if (rotation!=settings_angles[i] || !tt_ui_editing() || timer.state!=TT_IDLE ||
+            strcmp(lv_textarea_get_text(city),"RotateDraft")) return 302;
+    }
+    if (!press("Back") || !press("Back") || !press("Back")) return 303;
+    settings.timer.seconds[TT_RIGHT]=300; flip(1);
+    int64_t settings_deadline=timer.deadline_ms;
+    if (!press("Settings")) return 304;
+    flip(-1); flip(2);
+    if (rotation!=0 || timer.state!=TT_RUNNING || timer.active!=TT_RIGHT ||
+        timer.deadline_ms!=settings_deadline) return 305;
+    if (!press("Back")) return 306;
     puts("PASS: real IMU filter -> all presets/rotation -> pause/resume/home restart -> stop/start/disabled -> alarm over care/settings, draft retained, motion/calibration guards");
     return 0;
 }

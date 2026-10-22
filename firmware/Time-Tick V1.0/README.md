@@ -1,12 +1,16 @@
 # Time-Tick V1.0 — 软件
 
-ESP-Mosaico CoreBoard V1.2 / ESP32-S31 的翻转计时器项目。交互参考时间小方 TK3，加入可配置方向、正放时钟天气和屏幕自动旋转。项目名称为 **Time-Tick V1.0**，应用构建名为 `time_tick`，开发版本由 [version.txt](version.txt)提供，当前 `0.1.0`。
+ESP-Mosaico CoreBoard V1.2 / ESP32-S31 的翻转计时器项目。交互参考时间小方 TK3，加入可配置方向、正放时钟天气和屏幕自动旋转。项目名称为 **Time-Tick V1.0**，应用构建名为 `time_tick`，开发版本由 [version.txt](version.txt)提供，当前 `0.1.1`。
 
 已实现以翻转计时为主体的独立倒计时页、全屏天气时钟、七页首次引导、双语界面及可选桌宠陪伴，并保留 Mosaico Ideas 发布框架。当前只保留呆猫：54帧涵盖待机、双向行走、照料、庆祝、睡眠及天气姿态；旧三宠已归档，不进入固件，不增加照料负担。PC 与固件共用 LVGL 和养成逻辑；已通过官方系统更新包装入实机，确认 Wi-Fi 与真实天气可用，卡顿修复与待验项见 [实机验证记录](test-records/2026-10-21-device.md)。尚未完成整机验收或网站发布。硬件配套见 [Time-Tick 硬件](../../hardware/Time-Tick%20V1.0/README.md)。
 
 **版本范围：语音助手已归档，当前V1.0不加入；计划下一版本接回。** 源码、模型、详细教程及恢复步骤见[语音助手归档](archive/voice-assistant/README.md)。
 
 **主题可选日间、夜间、自动。** 在“设置 → 系统 → 显示 → 主题与时段”切换；日间/夜间固定配色，自动模式用小时、分钟滚轮设定“夜间开始”和“日间恢复”，默认20:00–次日05:00，支持跨午夜。选项即时预览，保存后断电保留；返回取消本页修改，之后在父页面保存也不会带回已取消的主题。自动模式的两个时间不能相同。手动模式不需要联网校时；自动模式使用设备当地时间，时间未有效同步时保留当前配色。界面、天气光照及桌宠受光一起遵循主题，但时钟仍显示真实时间。详情见[可配置主题验证](test-records/2026-10-21-theme-settings.md)。
+
+## Vibe Mode 0.2 迁移
+
+0.1.1 使用 Recovery ABI 2 与双 USB CDC 通道，已在 Vibe Mode 0.2.1 上通过完整安装的首次启动、健康确认、正常重启与 60 次旋转/亮度切换检查。`main/platform/sdk_compat.c` 在时钟树初始化后恢复 PVT 所需的 REF160M 时钟门，解决旧基础固件暖启动到新 SDK 时的 Wi-Fi 初始化卡死；不增加运行期时钟引用、不关闭动态调频。完整证据与测试边界见 [迁移验证记录](test-records/2026-10-22-vibe-02.md)。
 
 ## 电量与运行优化
 
@@ -67,7 +71,7 @@ ESP-Mosaico CoreBoard V1.2 / ESP32-S31 的翻转计时器项目。交互参考�
 4. 完成引导并保存后进入小院：伙伴自主散步、停留与打盹；点草地召唤，点伙伴摸头。点右下角“陪伴”进入独立伙伴页，喂食、玩耍、洗澡、休息，并查看专注次数、累计分钟、亲密度和六项专注成就。状态不会随时间下降，互动不扣其他状态，成就永久保留，长期不照料不会受罚。翻转会直接退出养成并启动计时。旧三宠存档自动迁移，呆猫继承经验最高伙伴的进度，专注成就保留，详见 [养成规则](docs/PET_CARE.md)。中英文和网络均可在设置中调整。
 5. 在计时设置中修改方向预设；逐方向验证计时和触摸。画面方向相反时启用“反转屏幕旋转方向”。
 
-普通设置操作期间冻结自动姿态切换，已启动的计时继续按原状态运行。养成页不会冻结翻转；到时提醒优先于养成及设置，覆盖设置时也可翻转结束提醒，随后返回原设置表单并保留草稿。校准需要加速度接近 1g、角速度较小且稳定至少 450 ms；无有效 IMU 数据时保持计时状态。屏幕和触摸同步切换 0°/90°/180°/270°。平放时重力不能确定屏幕平面内的朝向，因此保持上一朝向。
+普通设置操作期间屏幕和触摸继续随四个竖放方向旋转，保留未保存内容；只暂停翻转触发的新计时或预设切换，已启动的计时继续按原状态运行。养成页不会冻结翻转；到时提醒优先于养成及设置，覆盖设置时也可翻转结束提醒，随后返回原设置表单并保留草稿。校准需要加速度接近 1g、角速度较小且稳定至少 450 ms；无有效 IMU 数据时保持计时状态。屏幕和触摸同步切换 0°/90°/180°/270°。平放时重力不能确定屏幕平面内的朝向，因此保持上一朝向。
 
 ## 声音、振动与对话入口
 
@@ -125,17 +129,17 @@ ESP-Mosaico CoreBoard V1.2 / ESP32-S31 的翻转计时器项目。交互参考�
 在 VS Code 中直接打开本目录，使用官方 **ESP-IDF 扩展**。SDK 固定为 ESP-IDF 6.2 开发版 `1c42e514c90ae621af33bde3b6ad3dac22edcbfd`；本机路径 `C:\Espressif\esp-idf-v6.2-mosaico\esp-idf`，目标 `esp32s31`。使用 `ESP-IDF: Build Your Project`。扩展提供的 ESP-IDF 终端中等价命令为：
 
 ```powershell
-idf.py --preview --no-ccache --no-configdep -B build-idf62 build
-idf.py --preview --no-ccache --no-configdep -B build-idf62 system-update-bundle
+idf.py --preview --no-ccache --no-configdep -B build-idf62-v02 build
+idf.py --preview --no-ccache --no-configdep -B build-idf62-v02 system-update-bundle
 ```
 
-本机工作区配置位于被 Git 忽略的 `.vscode/settings.json`，生成配置位于 `build-idf62/sdkconfig`。本机 EIM 的环境仍引用 GCC 15.2，当前项目通过扩展的 `idf.customExtraVars.CMAKE_PROGRAM_PATH` 指向已安装的 `C:\Espressif\tools\tools\riscv32-esp-elf\esp-16.1.0_20260609\riscv32-esp-elf\bin`，并设置匹配的 `ESP_ROM_ELF_DIR`；新构建目录避开旧编译器缓存。使用终端时同样确保这两个环境变量正确，或选择已完整修正工具链的官方 SDK 环境。
+本机工作区配置位于被 Git 忽略的 `.vscode/settings.json`，新版生成配置位于 `build-idf62-v02/sdkconfig`。本机 EIM 的环境仍引用 GCC 15.2，当前项目通过扩展的 `idf.customExtraVars.CMAKE_PROGRAM_PATH` 指向已安装的 `C:\Espressif\tools\tools\riscv32-esp-elf\esp-16.1.0_20260609\riscv32-esp-elf\bin`，并设置匹配的 `ESP_ROM_ELF_DIR`；新构建目录避开旧编译器缓存。使用终端时同样确保这两个环境变量正确，或选择已完整修正工具链的官方 SDK 环境。
 
-独立设置 SDK 的机器还需按 [官方例程说明](../../examples/README.md)初始化固定 Vibe/utils 子模块，并配置 ESP-Iris 打包的官方 Python 运行环境。[dependencies.lock](dependencies.lock)由本工程 ESP-IDF 组件管理器实际解析生成，不以另一个工程的编译结果代替本工程验证。
+首次在应用目录运行 `python tools/prepare_dependencies.py`，获取固定提交的官方 Vibe Mode 0.2 / Iris 依赖；再配置 ESP-Iris 打包 Python 环境（`ESP_IRIS_PYTHON`）。项目根 `mosaico.py` 只转发该依赖的官方 CLI。源字体和发布资源的准备见 [发布说明](publish/README.md)。[dependencies.lock](dependencies.lock)由本工程组件管理器实际解析生成。
 
-16 MiB 分区保留 Vibe 固定区域，应用位于 `ota_0`（0x210000）。官方集成禁止普通 flash/app-flash，使用官方 `.irisfw` 应用安装流程；已通过官方gateway安装并核验新启动及ELF哈希，证据见 [实机记录](test-records/2026-10-21-daimao-power.md)。
+16 MiB 分区保留 Vibe 固定区域：`vibe_mode/app/test` 位于 0x20000，正常应用 `main_app/app/ota_0` 位于 0x210000。旧版设备须先通过本项目 `mosaico.py recover` 迁移基础固件；不能跨代 OTA。日常通过 `mosaico.py iris system-update --bundle build-idf62-v02/time_tick-system-update.irisfw` 安装。新集成支持匹配布局下的原生烧录，但本项目设备操作统一使用官方 CLI，先核对完整写入范围；不覆盖用户 NVS。迁移结果见 [0.2 验证记录](test-records/2026-10-22-vibe-02.md)。
 
-最新界面与养成实现见 [界面规范](docs/UI_STYLE.md) 和 [验证记录](test-records/2026-10-20-scene-voice.md)。PC 预览在 VS Code F5 中运行；扫描列表、网络连接与天气为模拟数据，系统设置只保留当前会话，桌宠进度单独保存在 `build-pc/preview_pet_save.bin`，重启可恢复。控制窗口可切换正常/空列表/扫描失败；模拟密码 `wrongpass` 用于验证错误提示。当前 EIM 的 configdep 0.2.3 对工程路径中的空格处理有误，上述终端命令显式关闭可选构建加速器；Ninja 的普通增量编译仍然保留。不要因 SDK 的通用 flash 提示而覆盖 Vibe 的 factory 分区。
+最新界面与养成实现见 [界面规范](docs/UI_STYLE.md) 和 [验证记录](test-records/2026-10-20-scene-voice.md)。PC 预览在 VS Code F5 中运行；扫描列表、网络连接与天气为模拟数据，系统设置只保留当前会话，桌宠进度单独保存在 `build-pc/preview_pet_save.bin`，重启可恢复。控制窗口可切换正常/空列表/扫描失败；模拟密码 `wrongpass` 用于验证错误提示。当前 EIM 的 configdep 0.2.3 对工程路径中的空格处理有误，上述终端命令显式关闭可选构建加速器；Ninja 的普通增量编译仍然保留。不要因 SDK 的通用 flash 提示而覆盖保留的 Vibe Mode 分区。
 
 PC 构建包含计时、设置、闹铃、养成、动画、电量、天气、场景、地点九组核心测试，以及八组界面测试，共17项；覆盖模拟IMU到计时页面、七页引导、经纬度验证、联网/断线状态刷新、亮度与主题预览、保存/撤销及昼夜时段边界。先按 [电脑启动流程](pc/README.md)完成构建，再运行：
 
@@ -144,7 +148,7 @@ ctest --test-dir build-pc --output-on-failure
 python publish/validate.py
 ```
 
-保留有效 `build-pc/`、`build-idf62/` 与必要依赖以支持增量编译。旧 `build/`、`build-host/` 和重复单帧导出已清理；桌宠存档位于 `build-pc/preview_pet_save.bin`，删除构建目录前须单独备份。
+保留有效 `build-pc/`、新版 `build-idf62-v02/`、旧版 `build-idf62/` 与必要依赖以支持增量编译。旧 `build/`、`build-host/` 和重复单帧导出已清理；桌宠存档位于 `build-pc/preview_pet_save.bin`，删除构建目录前须单独备份。
 
 实际结果和未验证项见 [验证记录](test-records/2026-10-20-scene-voice.md)。发布步骤见 [发布说明](publish/README.md)。原创源码沿用 [GPL v3](../LICENSE)，第三方内容见 [THIRD_PARTY.md](THIRD_PARTY.md)。
 

@@ -1,8 +1,8 @@
 {
-  "checked_date": "2026-10-21",
-  "website": "https://mosaico-ideas.espressif.com/publish",
-  "website_status_at_check": "maintenance; login required",
-  "website_checked_date": "2026-10-20",
+  "checked_date": "2026-10-22",
+  "website": "https://mosaico.ai",
+  "website_status_at_check": "draft eB5iQGzwAJTu saved and visibly verified; six images, introduction, firmware and guide present; final verified firmware replacement pending; not submitted for review or publicly published",
+  "website_checked_date": "2026-10-22",
   "sdk": {
     "url": "https://github.com/espressif/esp-idf",
     "commit": "1c42e514c90ae621af33bde3b6ad3dac22edcbfd"
@@ -13,7 +13,8 @@
   },
   "utils": {
     "url": "https://github.com/esp-mosaico/esp-mosaico-utils",
-    "commit": "fc63d43f3ac72aa54e701b07b07fbed07a16b3ca"
+    "commit": "be151ae047014e79a9c7ae0092dd203844499003",
+    "local_path": "build-deps/esp-mosaico-utils"
   },
   "bsp": {
     "url": "https://github.com/esp-mosaico/esp-mosaico-bsp",
@@ -34,7 +35,7 @@
     ],
     "provenance": "assets/fonts/README.md"
   },
-  "note": "Time-Tick 0.1.0: single Dai Meow pet, BQ27220 battery display, weather-backed timer, focus milestones and configurable day/night/automatic themes. PC regression: 17 tests passed. Device display, dial controls, rotation and reminder sound have user confirmation in test records. Voice assistant is archived and excluded from this version. Battery runtime and spontaneous power loss remain under investigation; no Mosaico Ideas release.",
+  "note": "Time-Tick 0.1.1 migrates to Vibe Mode 0.2 / Recovery ABI 2, restores the REF160M gate required by PVT on warm restart from Vibe 0.2.1, and fixes settings-page rotation. Final build passed healthy installation, first boot, normal restart, 60 display rotation/brightness steps and 17 PC/core tests. Settings rotation/touch confirmed by user. See test-records/2026-10-22-vibe-02.md for limits. Website final replacement pending.",
   "network_interaction_reference": {
     "path": "examples/esp-mosaico-vibe/submodule/esp-mosaico-utils/esp-mosaico-recovery/firmware/recovery/main/",
     "files": [
@@ -102,5 +103,9 @@
     "behavior": "10s charge sampling and 60s diagnostics. Owner confirmed 68mAh cell. If DesignCapacity differs, attempt bounded RAM-only 68mAh FCC/design and 4mAh NearFull setup while charging above 3.5V, read back and reseal. Preserve learned FCC when design already matches. No OTP, charger, calibration or cell-curve writes. Hide SOC while capacity mismatches.",
     "hardware_verified": true,
     "verification_scope": "User confirmed battery operation with USB unplugged, dimming, touch wake, rotation and timer wheels. Original capacity confirmed as 68mAh on 2026-10-21; prior gauge design/full was 3000mAh. Capacity setup evidence and limitations are in test-records/2026-10-21-performance-battery.md. SOC accuracy, spontaneous power-loss cause and battery runtime remain unresolved."
+  },
+  "legacy_utils": {
+    "url": "https://github.com/esp-mosaico/esp-mosaico-utils",
+    "commit": "fc63d43f3ac72aa54e701b07b07fbed07a16b3ca"
   }
 }
