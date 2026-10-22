@@ -1,15 +1,20 @@
 {
   "checked_date": "2026-10-22",
   "method": "Mosaico website software editor",
-  "status": "draft_saved",
+  "status": "draft_updated_and_reopened",
   "project_code": "eB5iQGzwAJTu",
   "edit_url": "https://mosaico.ai/zh-hans/publish?code=eB5iQGzwAJTu",
   "title": "Time-Tick｜翻转计时与天气小院",
   "version": "0.1.1",
-  "verified": "Account software list shows exactly one draft; reopening its editor shows all six images, readme, firmware and guide.",
+  "verified": "Updated the existing draft, saved, and reloaded the editor. Six images, revised validation/settings-rotation body, migration source URL, firmware and updated guide persisted. No duplicate draft created.",
   "submitted_for_review": false,
   "publicly_published": false,
-  "firmware_sha256": "cfa757b566c81973460cbf17588c4cb541abbb233ab2bb242d32b8e98e7f9bbc",
-  "pending": "Settings rotation and touch passed user hardware validation. Resolve first-boot Wi-Fi watchdog and pass healthy installation before replacing draft firmware and guide.",
-  "local_evidence": "build-assets/publish-20261022/mosaico-draft-saved.png"
+  "firmware_sha256": "50a26923a28850472a048d25ecb1586d744490019f0dca31461fade8c1cb852b",
+  "pending": "User review and any eventual public submission; no public release performed.",
+  "local_evidence": "build-assets/publish-20261022/mosaico-draft-final.png",
+  "firmware_bytes": 4219997,
+  "firmware_hash_scope": "Locally validated file selected in the website upload; website persistence checked through the editor, not a server-side hash comparison.",
+  "source_commit": "355217e4cba815835f06b0775dd7bcacdd7f84e1",
+  "source_branch": "codex/time-tick-vibe-02",
+  "release_package_sha256": "b76d82baebad3d65ac92871cbe4f96152c60ce942b603568799149275f60a454"
 }

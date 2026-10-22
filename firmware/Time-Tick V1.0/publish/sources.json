@@ -1,7 +1,7 @@
 {
   "checked_date": "2026-10-22",
   "website": "https://mosaico.ai",
-  "website_status_at_check": "draft eB5iQGzwAJTu saved and visibly verified; six images, introduction, firmware and guide present; final verified firmware replacement pending; not submitted for review or publicly published",
+  "website_status_at_check": "Existing draft eB5iQGzwAJTu updated and reloaded: six images, revised body, source branch link, final healthy firmware and guide persisted. Not submitted for review or publicly published.",
   "website_checked_date": "2026-10-22",
   "sdk": {
     "url": "https://github.com/espressif/esp-idf",
@@ -35,7 +35,7 @@
     ],
     "provenance": "assets/fonts/README.md"
   },
-  "note": "Time-Tick 0.1.1 migrates to Vibe Mode 0.2 / Recovery ABI 2, restores the REF160M gate required by PVT on warm restart from Vibe 0.2.1, and fixes settings-page rotation. Final build passed healthy installation, first boot, normal restart, 60 display rotation/brightness steps and 17 PC/core tests. Settings rotation/touch confirmed by user. See test-records/2026-10-22-vibe-02.md for limits. Website final replacement pending.",
+  "note": "Time-Tick 0.1.1 migrates to Vibe Mode 0.2 / Recovery ABI 2, restores the REF160M gate required by PVT on warm restart from Vibe 0.2.1, and fixes settings-page rotation. Final build passed healthy installation, first boot, normal restart, 60 display rotation/brightness steps and 17 PC/core tests. Settings rotation/touch confirmed by user. See test-records/2026-10-22-vibe-02.md for limits. Final website draft replacement verified after reload; source commit 355217e4cba815835f06b0775dd7bcacdd7f84e1 pushed to codex/time-tick-vibe-02.",
   "network_interaction_reference": {
     "path": "examples/esp-mosaico-vibe/submodule/esp-mosaico-utils/esp-mosaico-recovery/firmware/recovery/main/",
     "files": [

@@ -39,10 +39,12 @@ python mosaico.py project validate build-assets/publish-20261022/time-tick-0.1.1
 
 先验证完整 ZIP，再登录官方账号。此项目已有网站草稿，继续编辑该条目，不再次使用 `--create` 新建。
 
-0.2 账号状态与旧环境隔离，不拷贝私有凭据。2026-10-22，旧接口 `/api/v1/firmware-projects` 查询及创建均返回 404；新版 `/api/v1/ideas/uploads` 无认证 GET 也返回 404。随后通过网站表单保存草稿，在账号软件列表与编辑页确认六张图、介绍、固件和指南均在。已有草稿代码为 `eB5iQGzwAJTu`，后续只更新这条草稿；最终固件须通过实机启动验证后替换。详细回执见 `upload-result.json`。
+0.2 账号状态与旧环境隔离，不拷贝私有凭据。2026-10-22，旧接口 `/api/v1/firmware-projects` 查询及创建均返回 404；新版 `/api/v1/ideas/uploads` 无认证 GET 也返回 404。随后通过网站表单保存草稿，在账号软件列表与编辑页确认六张图、介绍、固件和指南均在。已有草稿代码为 `eB5iQGzwAJTu`，后续只更新这条草稿。最终固件通过实机启动验证后已替换，指南、验证说明和对应源码链接也已更新；重新载入编辑页确认内容保留。详细回执见 `upload-result.json`。
 
 只保存草稿，不自动提交审核。用户在网页自行选择的授权选项予以保留。本版源码位于 [迁移分支](https://github.com/FTP-LI/ESP-MOSAICO-LAB/tree/codex/time-tick-vibe-02)，同步固定依赖、构建入口及许可。
 
 ## 来源
 
 原创代码与文档沿用 GNU GPL v3，第三方组件保留各自许可。呆猫参考《怪物猎人》艾露猫 Kit T.，角色标识 ©CAPCOM；AI 重绘不等于获得角色授权。来源及生成提示词见 `../THIRD_PARTY.md` 和 assets 目录。当前不包含 AI 语音助手。
+
+对应源码提交 `355217e4cba815835f06b0775dd7bcacdd7f84e1` 已推送；本地发布 ZIP 为 7,267,339 字节，SHA-256 `b76d82baebad3d65ac92871cbe4f96152c60ce942b603568799149275f60a454`，官方校验通过（18 个文件）。网站使用固件与指南单独上传，设备目录资源保留在 ZIP 中。
