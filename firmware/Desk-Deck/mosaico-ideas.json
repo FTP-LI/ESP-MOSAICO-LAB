@@ -1,0 +1,30 @@
+{
+  "schema": "mosaico-ideas/project-release/1",
+  "project": {
+    "title": "Desk-Deck｜桌面快捷控制台",
+    "categories": ["display", "communication", "sensors"],
+    "boards": [],
+    "tags": ["esp32s31", "usb-hid", "desktop", "shortcuts", "windows", "experimental"],
+    "license": "原创代码与文档 GPL-3.0-only；第三方组件保留各自许可，详见源码 THIRD_PARTY.md。",
+    "external_links": [{
+      "label": "源码、安装与验证记录",
+      "url": "https://github.com/FTP-LI/ESP-MOSAICO-LAB/tree/desk-deck-v0.1.0-dev/firmware/Desk-Deck",
+      "platform": "github"
+    }]
+  },
+  "firmware": "build-idf62/desk_deck-system-update.irisfw",
+  "website": {
+    "readme": "publish/description.md",
+    "covers": ["publish/media/01-cover.png", "publish/media/02-profiles.png", "publish/media/03-controls.png", "publish/media/04-install.png"],
+    "resources": [],
+    "attachments": ["publish/guide.md", "LICENSE", "docs/licenses/THIRD-PARTY-NOTICES.txt"],
+    "changelog": "publish/release-notes.md"
+  },
+  "device": {
+    "default_locale": "zh-CN",
+    "presentations": {
+      "zh-CN": {"mode": "prebuilt", "display": "publish/device/zh-CN/display.json"},
+      "en": {"mode": "prebuilt", "display": "publish/device/en/display.json"}
+    }
+  }
+}

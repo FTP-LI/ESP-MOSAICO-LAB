@@ -1,0 +1,48 @@
+{
+  "generated_by": "publish/build_materials.py",
+  "screenshot_source": "ESP-Mosaico, validated Desk-Deck 0.1.0-dev, 2026-10-25",
+  "firmware_elf_sha256": "41188647a03ed42e0d1e6cfe3b583a03e14411173cfa410024d9c712c44aa210",
+  "font": "Microsoft YaHei, raster output only; font files not redistributed",
+  "files": [
+    {
+      "path": "screens/profile-0.png",
+      "bytes": 18176,
+      "sha256": "f96848bc3e539755d98176b9de8db4b7cef320057e7c884c1e5298bd5eb1ac83"
+    },
+    {
+      "path": "screens/profile-1.png",
+      "bytes": 19282,
+      "sha256": "91c061729012568ece9c7d3c1d70a60f6bca0df6a4465c2f5628e2cbdc3d934a"
+    },
+    {
+      "path": "screens/profile-2.png",
+      "bytes": 18971,
+      "sha256": "7205918451febbf16c05ccd9f9e3a0577194651893fa5aba441c1be0851ae434"
+    },
+    {
+      "path": "screens/profile-3.png",
+      "bytes": 19567,
+      "sha256": "776f54a9de1d67d7f5560294769ddf791b3c3db36e1d181d6ce9a3ced82c9163"
+    },
+    {
+      "path": "media/01-cover.png",
+      "bytes": 118042,
+      "sha256": "6cf52f58194d07f6ef536fe0a32f1c5a3ae029c764c8cb4442fdc7d1379f5b9b"
+    },
+    {
+      "path": "media/02-profiles.png",
+      "bytes": 218462,
+      "sha256": "4063ae52c96ef79e8837ca1e45dc6365ff91c00346052355b4989961b537215d"
+    },
+    {
+      "path": "media/03-controls.png",
+      "bytes": 142392,
+      "sha256": "902b21eebdc0551e8359ab9fee6e296a4cfa4d26f048c189d84f0d8be219229b"
+    },
+    {
+      "path": "media/04-install.png",
+      "bytes": 136243,
+      "sha256": "1ab45bc77a2a29e720cbaef483537ee98e99d88f5f60dc1bea0dd7dfbf330677"
+    }
+  ]
+}

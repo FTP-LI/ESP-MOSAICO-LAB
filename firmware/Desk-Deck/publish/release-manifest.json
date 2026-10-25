@@ -1,0 +1,29 @@
+{
+  "version": "0.1.0-dev",
+  "tag": "desk-deck-v0.1.0-dev",
+  "date": "2026-10-25",
+  "firmware_elf_sha256": "41188647a03ed42e0d1e6cfe3b583a03e14411173cfa410024d9c712c44aa210",
+  "official_package_validation": "valid, 17 files",
+  "files": [
+    {
+      "name": "desk-deck-0.1.0-dev.irisfw",
+      "bytes": 666420,
+      "sha256": "00c5152959add89523b814889447815290c1d069c26b69ce7cac926837ee3c23"
+    },
+    {
+      "name": "desk-deck-0.1.0-dev-release.zip",
+      "bytes": 1300181,
+      "sha256": "358a80e8f125ddd14c1f0ecd48490c6741f80c60db76af7efa6499e0cb2e16b0"
+    },
+    {
+      "name": "desk-deck-guide.md",
+      "bytes": 3866,
+      "sha256": "b01e157d34b062cb3c5ff9407a67be47cbda80321b7fde05bb85abe10a431064"
+    },
+    {
+      "name": "THIRD-PARTY-NOTICES.txt",
+      "bytes": 245315,
+      "sha256": "f188dfae2ecb16e91fd5c45f1cea2fcdbb178cf4869c4c296d089d7e778568e6"
+    }
+  ]
+}

@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="dark light">
+  <title>Desk-Deck · 桌面快捷控制台</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <div class="page">
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Desk-Deck 预览首页"><span class="brand-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>Desk-Deck<span class="edition">DESIGN 01</span></a>
+      <span class="prototype-tag"><span></span>交互原型 · 不发送真实快捷键</span>
+    </header>
+    <main>
+      <section class="intro">
+        <p class="eyebrow">桌面快捷控制台 / ESP-MOSAICO</p>
+        <h1>顺手一按，<span>回到专注。</span></h1>
+        <p>六个大按钮，四套工作场景。把反复寻找的操作，放到手边。</p>
+      </section>
+      <div class="workbench">
+        <section class="preview-column" aria-label="设备界面预览">
+          <div class="device-wrap">
+            <div class="device-shell">
+              <div id="screen" class="screen" data-theme="dark" data-accent="mint">
+                <header class="screen-header">
+                  <button id="profile-picker" class="profile-picker" aria-label="切换配置页面"><small>DESK-DECK</small><span><b id="profile-title">常用</b><span class="chevron">⌄</span></span></button>
+                  <div class="device-tools"><span id="usb-badge" class="usb-badge">USB 就绪</span><button id="lock-button" class="icon-button" aria-label="锁定控制台"></button><button id="settings-button" class="icon-button" aria-label="打开设备设置"></button></div>
+                </header>
+                <div class="screen-caption"><span id="profile-caption">让常用操作，触手可及</span><span id="page-number">01 / 04</span></div>
+                <div id="key-grid" class="key-grid" aria-label="快捷操作"></div>
+                <footer class="screen-footer"><div id="action-feedback" role="status" aria-live="polite">轻点发送 · 长按查看</div><div id="profile-dots" class="profile-dots" aria-label="配置页"></div></footer>
+                <div id="overlay" class="overlay" hidden></div>
+              </div>
+            </div>
+          </div>
+          <div class="device-meta"><span><i></i><b>480 × 480</b> 触控布局</span><span id="pose-label">正放 · 文字已按观看方向对正</span></div>
+          <div class="gesture-notes"><span><b>轻点</b> 发送操作</span><span><b>长按</b> 查看说明</span><span><b>翻转 / 滑动</b> 切换场景</span></div>
+        </section>
+        <aside class="inspector" aria-label="原型体验控制">
+          <div class="panel-heading"><span class="eyebrow">体验控制</span><span class="small-tag">仅本页模拟</span></div>
+          <section class="control-section">
+            <h2>转一转，换个场景</h2>
+            <p>模拟稳定翻转。平放时保留上一页。</p>
+            <div class="pose-grid" id="pose-controls">
+              <button data-pose="upright" aria-pressed="true"><span>↑</span>正放<small>常用</small></button>
+              <button data-pose="right" aria-pressed="false"><span>→</span>右转<small>开发</small></button>
+              <button data-pose="inverted" aria-pressed="false"><span>↓</span>倒置<small>办公</small></button>
+              <button data-pose="left" aria-pressed="false"><span>←</span>左转<small>媒体</small></button>
+            </div>
+            <button id="flat-button" class="flat-button">模拟平放 <span>保留页面与朝向</span></button>
+          </section>
+          <section class="control-section compact-section">
+            <label for="connection">USB 连接状态</label>
+            <select id="connection"><option value="ready">已识别，可发送</option><option value="power">仅供电 / 未识别</option><option value="suspended">电脑休眠</option></select>
+            <div class="row"><span>界面外观</span><div class="segmented"><button data-theme="dark" aria-pressed="true">夜间</button><button data-theme="light" aria-pressed="false">日间</button></div></div>
+          </section>
+          <section class="control-section edit-section">
+            <h2>让按键符合你的习惯</h2>
+            <p>先选按键再编辑；保存只更新本页原型。</p>
+            <label for="edit-slot">当前页面的按键</label><select id="edit-slot"></select>
+            <form id="key-editor">
+              <label for="edit-label">显示名称</label><input id="edit-label" maxlength="8" required autocomplete="off">
+              <label for="edit-action">操作</label><select id="edit-action"></select>
+              <div class="form-actions"><button id="cancel-edit" type="button" class="secondary">撤销编辑</button><button type="submit" class="primary">保存按键</button></div>
+            </form>
+            <p id="editor-feedback" class="editor-feedback" role="status">可导出配置，刷新后恢复默认。</p>
+          </section>
+          <button id="export-config" class="export-button">导出当前配置 <span>JSON ↗</span></button>
+        </aside>
+      </div>
+      <section class="scope-strip" aria-label="首版范围"><div><span>01</span><b>即插即用</b><p>目标是 USB 键盘与媒体控制</p></div><div><span>02</span><b>操作有分寸</b><p>翻转切页，点击才发送按键</p></div><div><span>03</span><b>安静待命</b><p>无需持续联网或后台动画</p></div></section>
+    </main>
+    <footer class="site-footer"><span>Desk-Deck / 独立工程 · 0.0.1-design</span><a href="../README.md">项目说明 ↗</a><span>固件与 USB HID 兼容性待验证</span></footer>
+  </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "product": "Desk-Deck",
+  "platform": "windows",
+  "settings": { "brightness": 70, "haptics": true, "flipProfiles": true, "theme": "dark" },
+  "profiles": [
+    {
+      "id": "everyday", "name": "常用", "caption": "让常用操作，触手可及", "orientation": "upright", "accent": "mint",
+      "buttons": [
+        { "id": "copy", "label": "复制", "icon": "copy", "hint": "Ctrl + C", "action": { "type": "keyboard", "keys": ["CTRL", "C"] } },
+        { "id": "paste", "label": "粘贴", "icon": "paste", "hint": "Ctrl + V", "action": { "type": "keyboard", "keys": ["CTRL", "V"] } },
+        { "id": "screenshot", "label": "截图", "icon": "capture", "hint": "Win + Shift + S", "action": { "type": "keyboard", "keys": ["GUI", "SHIFT", "S"] } },
+        { "id": "undo", "label": "撤销", "icon": "undo", "hint": "Ctrl + Z", "action": { "type": "keyboard", "keys": ["CTRL", "Z"] } },
+        { "id": "redo", "label": "重做", "icon": "redo", "hint": "Ctrl + Y", "action": { "type": "keyboard", "keys": ["CTRL", "Y"] } },
+        { "id": "desktop", "label": "显示桌面", "icon": "desktop", "hint": "Win + D", "action": { "type": "keyboard", "keys": ["GUI", "D"] } }
+      ]
+    },
+    {
+      "id": "develop", "name": "开发", "caption": "VS Code 默认快捷键", "orientation": "right", "accent": "blue",
+      "buttons": [
+        { "id": "run", "label": "运行调试", "icon": "play", "hint": "F5", "action": { "type": "keyboard", "keys": ["F5"] } },
+        { "id": "stop", "label": "停止调试", "icon": "stop", "hint": "Shift + F5", "action": { "type": "keyboard", "keys": ["SHIFT", "F5"] } },
+        { "id": "terminal", "label": "终端", "icon": "terminal", "hint": "Ctrl + `", "action": { "type": "keyboard", "keys": ["CTRL", "BACKQUOTE"] } },
+        { "id": "format", "label": "格式化", "icon": "code", "hint": "Shift + Alt + F", "action": { "type": "keyboard", "keys": ["SHIFT", "ALT", "F"] } },
+        { "id": "search_all", "label": "全局搜索", "icon": "search", "hint": "Ctrl + Shift + F", "action": { "type": "keyboard", "keys": ["CTRL", "SHIFT", "F"] } },
+        { "id": "command", "label": "命令面板", "icon": "command", "hint": "Ctrl + Shift + P", "action": { "type": "keyboard", "keys": ["CTRL", "SHIFT", "P"] } }
+      ]
+    },
+    {
+      "id": "office", "name": "办公", "caption": "文档与浏览器的顺手搭档", "orientation": "inverted", "accent": "peach",
+      "buttons": [
+        { "id": "save", "label": "保存", "icon": "save", "hint": "Ctrl + S", "action": { "type": "keyboard", "keys": ["CTRL", "S"] } },
+        { "id": "find", "label": "查找", "icon": "search", "hint": "Ctrl + F", "action": { "type": "keyboard", "keys": ["CTRL", "F"] } },
+        { "id": "select_all", "label": "全选", "icon": "select", "hint": "Ctrl + A", "action": { "type": "keyboard", "keys": ["CTRL", "A"] } },
+        { "id": "new_tab", "label": "新建标签", "icon": "tab", "hint": "Ctrl + T", "action": { "type": "keyboard", "keys": ["CTRL", "T"] } },
+        { "id": "restore_tab", "label": "恢复标签", "icon": "restore", "hint": "Ctrl + Shift + T", "action": { "type": "keyboard", "keys": ["CTRL", "SHIFT", "T"] } },
+        { "id": "switch_window", "label": "切换窗口", "icon": "windows", "hint": "Alt + Tab", "action": { "type": "keyboard", "keys": ["ALT", "TAB"] } }
+      ]
+    },
+    {
+      "id": "media", "name": "媒体", "caption": "轻触控制，专注眼前", "orientation": "left", "accent": "violet",
+      "buttons": [
+        { "id": "previous", "label": "上一曲", "icon": "previous", "hint": "媒体按键", "action": { "type": "consumer", "usage": "SCAN_PREVIOUS_TRACK" } },
+        { "id": "play_pause", "label": "播放 / 暂停", "icon": "play", "hint": "媒体按键", "action": { "type": "consumer", "usage": "PLAY_PAUSE" } },
+        { "id": "next", "label": "下一曲", "icon": "next", "hint": "媒体按键", "action": { "type": "consumer", "usage": "SCAN_NEXT_TRACK" } },
+        { "id": "mute", "label": "静音切换", "icon": "mute", "hint": "媒体按键", "action": { "type": "consumer", "usage": "MUTE" } },
+        { "id": "volume_down", "label": "音量降低", "icon": "volumeDown", "hint": "每次一档", "action": { "type": "consumer", "usage": "VOLUME_DECREMENT" } },
+        { "id": "volume_up", "label": "音量提高", "icon": "volumeUp", "hint": "每次一档", "action": { "type": "consumer", "usage": "VOLUME_INCREMENT" } }
+      ]
+    }
+  ]
+}

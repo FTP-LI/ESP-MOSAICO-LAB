@@ -1,0 +1,21 @@
+{
+  "folders": [{ "name": "Desk-Deck", "path": "." }, { "name": "Desk-Deck 硬件", "path": "../../hardware/Desk-Deck" }],
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [{
+      "label": "预览 Desk-Deck",
+      "type": "process",
+      "command": "python",
+      "args": ["tools/preview.py"],
+      "options": { "cwd": "${workspaceFolder:Desk-Deck}" },
+      "problemMatcher": []
+    }, {
+      "label": "构建 Desk-Deck 固件",
+      "type": "process",
+      "command": "powershell",
+      "args": ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "tools/build.ps1", "-Bundle"],
+      "options": { "cwd": "${workspaceFolder:Desk-Deck}" },
+      "problemMatcher": []
+    }]
+  }
+}

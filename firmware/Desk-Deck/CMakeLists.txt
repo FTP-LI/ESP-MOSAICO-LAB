@@ -1,0 +1,21 @@
+cmake_minimum_required(VERSION 3.16)
+set(MOSAICO_UTILS_ROOT "${CMAKE_CURRENT_LIST_DIR}/build-deps/esp-mosaico-utils")
+set(MOSAICO_BSP_ROOT "${CMAKE_CURRENT_LIST_DIR}")
+set(MOSAICO_ESP_IRIS_ROOT "${MOSAICO_UTILS_ROOT}/ESP-Iris")
+if(NOT EXISTS "${MOSAICO_UTILS_ROOT}/mosaico-tools/cmake/system_update.cmake")
+    message(FATAL_ERROR "Run python tools/prepare_dependencies.py first")
+endif()
+if(NOT SDKCONFIG)
+    set(SDKCONFIG "${CMAKE_BINARY_DIR}/sdkconfig")
+endif()
+set(SDKCONFIG_DEFAULTS "sdkconfig.defaults")
+list(APPEND EXTRA_COMPONENT_DIRS
+    "${CMAKE_CURRENT_LIST_DIR}/build-deps/esp-mosaico-bsp/components/esp-mosaico-bsp"
+    "${MOSAICO_ESP_IRIS_ROOT}/components/esp_iris"
+    "${MOSAICO_UTILS_ROOT}/esp-mosaico-vibe-mode/components/esp_mosaico_app_recovery")
+set(PROJECT_VER "0.1.0-dev")
+include("${MOSAICO_UTILS_ROOT}/esp-mosaico-vibe-mode/cmake/mosaico_idf_project.cmake")
+idf_build_set_property(MINIMAL_BUILD ON)
+project(desk_deck)
+idf_build_get_property(PROJECT_VERSION PROJECT_VER)
+include("${MOSAICO_UTILS_ROOT}/mosaico-tools/cmake/system_update.cmake")

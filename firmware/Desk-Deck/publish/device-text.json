@@ -1,0 +1,10 @@
+{
+  "zh-CN": {
+    "name": "Desk-Deck 快捷控制台",
+    "description": "六个大按钮，四套桌面场景。USB 连接 Windows，轻点发送快捷键，翻转切换页面。开发预览版：按键固定，网页配置尚未接入。"
+  },
+  "en": {
+    "name": "Desk-Deck",
+    "description": "Six large keys, four desktop profiles. Connect to Windows over USB. Tap to send shortcuts; rotate to switch pages. Developer preview with fixed keys; no live web configuration."
+  }
+}

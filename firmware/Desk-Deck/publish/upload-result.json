@@ -1,0 +1,23 @@
+{
+  "checked_date": "2026-10-25",
+  "project": "Desk-Deck",
+  "version": "0.1.0-dev",
+  "github": {
+    "branch": "codex/desk-deck-plan",
+    "tag": "desk-deck-v0.1.0-dev",
+    "status": "prepared",
+    "release_url": "https://github.com/FTP-LI/ESP-MOSAICO-LAB/releases/tag/desk-deck-v0.1.0-dev"
+  },
+  "mosaico": {
+    "project_code": "R5tTkWfKZ3bc",
+    "edit_url": "https://mosaico.ai/zh-hans/publish?code=R5tTkWfKZ3bc",
+    "status": "draft_saved_and_reopened",
+    "verified": "The account software list shows one Desk-Deck draft; reopening its editor retained four images, description, source link, firmware and guide.",
+    "submitted_for_review": false,
+    "publicly_published": false,
+    "pending": "User confirmation of the website upload/content rules before submission; optional co-creation consent remains unchecked."
+  },
+  "firmware_sha256": "00c5152959add89523b814889447815290c1d069c26b69ce7cac926837ee3c23",
+  "release_package_sha256": "358a80e8f125ddd14c1f0ecd48490c6741f80c60db76af7efa6499e0cb2e16b0",
+  "hash_scope": "Locally verified files. Website file names/persistence checked through the editor; no website server-side checksum comparison."
+}
