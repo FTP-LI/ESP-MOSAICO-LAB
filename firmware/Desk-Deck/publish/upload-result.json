@@ -14,13 +14,17 @@
   },
   "mosaico": {
     "project_code": "R5tTkWfKZ3bc",
+    "project_number": 200105,
     "edit_url": "https://mosaico.ai/zh-hans/publish?code=R5tTkWfKZ3bc",
-    "status": "draft_saved_and_reopened",
-    "verified": "The account software list shows one Desk-Deck draft; reopening its editor retained four images, description, source link, firmware and guide.",
-    "submitted_for_review": false,
+    "status": "pending_review",
+    "status_label": "待审核",
+    "verified": "After the user submitted the project, the signed-in software list showed Desk-Deck, project 200105, as pending review. Four images, description, source link, firmware and guide were verified in the saved editor before submission.",
+    "submitted_for_review": true,
+    "submitted_by": "user",
+    "submission_date": "2026-10-25",
     "publicly_published": false,
     "sync_to_community_after_approval": true,
-    "pending": "User confirmation of the website upload/content rules before submission; optional co-creation consent remains unchecked."
+    "pending": "Mosaico platform review. Submission is confirmed; approval and public publication are not yet confirmed."
   },
   "firmware_sha256": "00c5152959add89523b814889447815290c1d069c26b69ce7cac926837ee3c23",
   "release_package_sha256": "358a80e8f125ddd14c1f0ecd48490c6741f80c60db76af7efa6499e0cb2e16b0",

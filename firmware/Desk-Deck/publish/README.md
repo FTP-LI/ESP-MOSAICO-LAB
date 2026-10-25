@@ -2,6 +2,12 @@
 
 版本：**0.1.0-dev 开发预览**。源码标签：`desk-deck-v0.1.0-dev`。本版直接发布 2026-10-25 已获实物确认的固件，不为包装或版本文案重新编译应用。
 
+## 发布状态（2026-10-25）
+
+- [GitHub 开发预览版](https://github.com/FTP-LI/ESP-MOSAICO-LAB/releases/tag/desk-deck-v0.1.0-dev)已公开，5 个附件的大小和 GitHub 返回的 SHA-256 与本地一致。固件对应源码提交 `0ed065b21f1713e0f8affd86a50a34fb8d1f79b4`。
+- Mosaico 项目 **200105**（`R5tTkWfKZ3bc`）已由用户提交审核，账号软件列表已核对为**待审核**。四张展示图、介绍、固件和指南已上传，审核通过后自动同步社区。
+- 当前尚未确认 Mosaico 审核通过或公开发布；状态以 [上传回执](upload-result.json) 和平台实际结果为准。
+
 ## 内容
 
 - `description.md`：Mosaico 中文正文。
@@ -33,6 +39,6 @@ python mosaico.py project validate build-assets/release-0.1.0-dev/desk-deck-0.1.
 
 GitHub 发布为 prerelease，附件为 `.irisfw`、官方校验通过的 `-release.zip`、中文指南、第三方许可声明与 SHA256SUMS。源码、文档、原始截图、可重建素材及锁定依赖进入 Git；SDK、构建缓存、日志、凭据、网关状态均忽略。
 
-Mosaico 上传相同 `.irisfw`、指南、四张图与中文正文；保存后从账号软件列表重新打开确认。网站审核与公开发布状态分别记录。上传规则确认与可选开发者共创授权遵循用户在网页上的选择。
+Mosaico 上传相同 `.irisfw`、指南、四张图与中文正文；保存后从账号软件列表重新打开确认。网站审核与公开发布状态分别记录；本次相关授权及最终提交由用户在网页上完成。
 
 当前功能与实测边界见 [实机记录](../docs/HARDWARE-TEST-2026-10-25.md)。网页原型的配置修改不会同步到设备。
