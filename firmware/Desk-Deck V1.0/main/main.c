@@ -166,7 +166,7 @@ static void draw_ui(void)
     lv_obj_set_style_bg_opa(root,LV_OPA_COVER,0); lv_obj_set_style_bg_color(root,bg,0);
     lv_obj_remove_flag(root,LV_OBJ_FLAG_SCROLLABLE);
     if (panel==0) {
-        label(root,"Desk-Deck",20,18,&lv_font_montserrat_24,ink);
+        label(root,"Desk-Deck V1.0",20,18,&lv_font_montserrat_24,ink);
         label(root,profile_names[profile],20,52,&lv_font_deck_20,accent);
         label(root,deck_hid_ready()?"USB 就绪":"USB 未就绪",138,53,&lv_font_deck_20,muted);
         button(320,15,64,44,"锁定",open_event,3); button(392,15,68,44,"设置",open_event,1);

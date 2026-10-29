@@ -1,6 +1,6 @@
-# Desk-Deck 硬件与结构需求
+# Desk-Deck V1.0 硬件与结构需求
 
-独立于 Time-Tick。机械结构仍为需求规划，首版复用 ESP-Mosaico 主机，不要求增加电路板；没有生成或修改原理图/PCB。2026-10-25 已安装独立固件进行板载功能调试，结果见 [实机记录](../../firmware/Desk-Deck/docs/HARDWARE-TEST-2026-10-25.md)。
+独立于 Time-Tick。机械结构仍为需求规划，首版复用 ESP-Mosaico 主机，不要求增加电路板；没有生成或修改原理图/PCB。2026-10-25 已安装独立固件进行板载功能调试，结果见 [实机记录](../../firmware/Desk-Deck%20V1.0/docs/HARDWARE-TEST-2026-10-25.md)。
 
 ## 板载资源用途
 
@@ -25,4 +25,4 @@
 
 记录主机版本、固件提交、USB 数据线/端口、Windows 版本、测试步骤和结果。检查触控、四向稳定切页、平放保持、接口拉力、连续运行温升和主机休眠恢复。没有实测结果前不标为通过。
 
-[软件与原型](../../firmware/Desk-Deck/README.md) · [主机参考资料](../esp-mosaico/README.md) · [许可](../LICENSE)
+[软件与原型](../../firmware/Desk-Deck%20V1.0/README.md) · [主机参考资料](../esp-mosaico/README.md) · [许可](../LICENSE)

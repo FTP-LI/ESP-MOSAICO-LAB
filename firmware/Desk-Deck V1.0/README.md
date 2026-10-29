@@ -1,4 +1,6 @@
-# Desk-Deck · 桌面快捷控制台
+# Desk-Deck V1.0 · 桌面快捷控制台
+
+工程名称中的 **V1.0** 是产品命名；固件版本仍为 **0.1.0-dev**，不表示已发布 1.0 稳定版。配置协议标识 `Desk-Deck`、NVS 命名空间 `deskdeck`、构建标识 `desk_deck` 继续保留，兼容已有配置与安装记录。
 
 独立的 ESP-Mosaico 项目，将桌面上的小屏变成可翻转的快捷键面板。**当前为 0.1.0-dev 实机调试版，已提供独立固件和交互原型。**
 
@@ -22,7 +24,7 @@
 python tools/preview.py
 ```
 
-浏览器访问 <http://127.0.0.1:8766/prototype/>。也可以打开 `Desk-Deck.code-workspace`，运行任务“预览 Desk-Deck”。端口被占用时使用 `python tools/preview.py --port 8767`。
+浏览器访问 <http://127.0.0.1:8766/prototype/>。也可以打开 `Desk-Deck V1.0.code-workspace`，运行任务“预览 Desk-Deck V1.0”。端口被占用时使用 `python tools/preview.py --port 8767`。
 
 原型中的按钮、断连、翻转、锁定、主题和设置均为本地模拟，**不会向操作系统发送快捷键**。配置修改保留在当前页面内，可手动导出 JSON；刷新页面恢复仓库默认配置。亮度只是对屏幕区域的视觉模拟，不控制真实硬件。
 
@@ -48,7 +50,7 @@ python tools/preview.py
 ## 项目文件
 
 ```text
-Desk-Deck/
+Desk-Deck V1.0/
 ├── configs/default-profiles.json   四套默认配置，原型直接使用
 ├── main/                          LVGL 界面、HID 和中文字库
 ├── docs/BUILD.md                   构建、官方安装与诊断命令
@@ -61,14 +63,14 @@ Desk-Deck/
 ├── tools/preview.py                仅绑定本机的预览服务
 ├── tools/build.ps1                 独立固件构建入口
 ├── mosaico.py                      官方设备操作入口
-├── Desk-Deck.code-workspace        独立编辑器工作区
+├── Desk-Deck V1.0.code-workspace        独立编辑器工作区
 └── project.json                    项目阶段和固定依赖版本
 ```
 
-[硬件需求](../../hardware/Desk-Deck/README.md) · [软件许可](LICENSE) · [第三方来源](THIRD_PARTY.md)
+[硬件需求](../../hardware/Desk-Deck%20V1.0/README.md) · [软件许可](LICENSE) · [第三方来源](THIRD_PARTY.md)
 
 ## 与 Time-Tick 隔离
 
-不引用、复制或修改 Time-Tick 的代码、素材、构建目录和设备配置。Desk-Deck 使用独立依赖目录、构建产物和 NVS 命名空间 `deskdeck`。安装只写入应用及相同布局的分区表，保留系统保护区和原有 NVS 数据。
+不引用、复制或修改 Time-Tick 的代码、素材、构建目录和设备配置。Desk-Deck V1.0 使用独立依赖目录、构建产物和 NVS 命名空间 `deskdeck`。安装只写入应用及相同布局的分区表，保留系统保护区和原有 NVS 数据。
 
-同一台设备安装 Desk-Deck 会替换正常运行的应用；独立工程不代表设备能同时运行两款固件。恢复其他应用时，进入 Vibe Mode 后使用对应项目已验证的安装包。
+同一台设备安装 Desk-Deck V1.0 会替换正常运行的应用；独立工程不代表设备能同时运行两款固件。恢复其他应用时，进入 Vibe Mode 后使用对应项目已验证的安装包。

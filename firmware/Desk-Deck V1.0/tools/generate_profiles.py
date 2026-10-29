@@ -30,4 +30,4 @@ for profile in data['profiles']:
     lines.append('    },')
 lines.append('};')
 (root/'main/profiles.inc').write_text('\n'.join(lines)+'\n',encoding='utf-8')
-print('Generated 24 Desk-Deck actions')
+print('Generated 24 Desk-Deck V1.0 actions')

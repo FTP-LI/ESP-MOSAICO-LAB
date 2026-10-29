@@ -1,6 +1,6 @@
 # 硬件
 
-- [Desk-Deck](Desk-Deck/README.md)：桌面快捷控制台的板载复用、USB 接入与稳定支撑需求，当前为规划阶段，不改动现有电路板。
+- [Desk-Deck V1.0](Desk-Deck%20V1.0/README.md)：桌面快捷控制台的板载复用、USB 接入与稳定支撑需求，当前为规划阶段，不改动现有电路板。
 - [GamePlay V1.0](GamePlay%20V1.0/README.md)：当前开发的按键板和掌机结构。
 - [Time-Tick V1.0](Time-Tick%20V1.0/README.md)：翻转计时器的硬件复用、稳定支撑面与六方向验收要求，目前为需求阶段。
 - [ESP-Mosaico 主机](esp-mosaico/README.md)：CoreBoard V1.2 的接口、器件分析和原始资料。

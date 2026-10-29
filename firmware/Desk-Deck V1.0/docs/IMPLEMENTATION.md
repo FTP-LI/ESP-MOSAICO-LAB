@@ -10,7 +10,7 @@
 
 验证步骤：
 
-1. Desk-Deck 独立获取固定版本 SDK/BSP/utils，核对依赖许可与锁定提交；不引用其他应用的 build-deps。
+1. Desk-Deck V1.0 独立获取固定版本 SDK/BSP/utils，核对依赖许可与锁定提交；不引用其他应用的 build-deps。
 2. 清点当前设备、配置、接口与端点描述符，分别核对所用控制器的高速/全速能力和端点预算。
 3. 检查官方是否提供合并描述符/类驱动扩展入口。只保留一处 USB 驱动与描述符所有者，禁止另装一套 TinyUSB 与 Iris 抢占控制器。
 4. 构建最小验证应用：一个键盘 HID、一个 Consumer Control 报告与官方 CDC 通道共存。先固定界面，再接 IMU。
@@ -44,7 +44,7 @@
 
 ## 配置约束
 
-`configs/default-profiles.json` 同时用于原型和编译期默认动作生成。调试版没有设备端配置导入器。G3 固件加载器必须验证 schemaVersion=1、product=Desk-Deck、四个唯一场景 ID、每场景六个唯一按键 ID、支持的朝向、名称长度及主题值；未知字段按协议定义处理。
+`configs/default-profiles.json` 同时用于原型和编译期默认动作生成。调试版没有设备端配置导入器。G3 固件加载器必须验证 schemaVersion=1、product=Desk-Deck（兼容标识，工程名为 Desk-Deck V1.0）、四个唯一场景 ID、每场景六个唯一按键 ID、支持的朝向、名称长度及主题值；未知字段按协议定义处理。
 
 键盘动作限制为零或多个不同修饰键（CTRL/SHIFT/ALT/GUI）加一个普通键；Consumer 动作限制为枚举白名单。禁止任意脚本、终端命令或隐式连续宏。参考 usage：上一曲 0xB6、下一曲 0xB5、播放/暂停 0xCD、静音 0xE2、音量加 0xE9、音量减 0xEA（Consumer Page 0x0C）；实际描述符与主机行为仍要核验。
 
@@ -71,7 +71,7 @@ USB 主机挂起、普通静置、主动操作、显示亮度改变分别记录�
 
 ## 隔离清单
 
-- 软件目录 `firmware/Desk-Deck`，硬件目录 `hardware/Desk-Deck`，独立工作区。
+- 软件目录 `firmware/Desk-Deck V1.0`，硬件目录 `hardware/Desk-Deck V1.0`，独立工作区。
 - `project.json` 记录固定依赖，不借用 Time-Tick 的本机路径、构建目录或官方项目标识。
 - 未来自身 `build-*`、`build-deps` 和本机配置按仓库规则忽略；固件/原始素材/协议/测试记录自身管理。
 - 分区方案以官方规范为准；不整片擦除、不复用 Time-Tick 宠物/网络/设置命名空间。

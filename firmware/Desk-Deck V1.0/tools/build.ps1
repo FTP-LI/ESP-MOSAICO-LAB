@@ -18,5 +18,5 @@ try {
     if ($LASTEXITCODE -ne 0) { throw 'Profile generation failed' }
     $target = if ($Bundle) {'system-update-bundle'} else {'build'}
     & "$env:IDF_PYTHON_ENV_PATH/Scripts/python.exe" "$env:IDF_PATH/tools/idf.py" -B build-idf62 $target
-    if ($LASTEXITCODE -ne 0) { throw 'Desk-Deck build failed' }
+    if ($LASTEXITCODE -ne 0) { throw 'Desk-Deck V1.0 build failed' }
 } finally { Pop-Location }

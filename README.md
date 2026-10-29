@@ -1,8 +1,8 @@
 # ESP-MOSAICO-LAB
 
-基于 ESP-Mosaico 的非官方软硬件开发仓库。目前包含 **GamePlay V1.0** 游戏机、**Time-Tick V1.0** 翻转计时器，以及新增的 **Desk-Deck** 桌面快捷控制台三个独立项目。
+基于 ESP-Mosaico 的非官方软硬件开发仓库。目前包含 **GamePlay V1.0** 游戏机、**Time-Tick V1.0** 翻转计时器，以及新增的 **Desk-Deck V1.0** 桌面快捷控制台三个独立项目。
 
-项目均处于实验或规划阶段，名称中的 V1.0 不表示已发布稳定版。GamePlay 已有显示、声音、触摸和按键诊断，以及九键原理图和结构预布局，尚未接入游戏核心或完成整机。Time-Tick 已实现翻转倒计时、圆盘轻点/长按、可选铃声与翻转停铃、天气时钟、可配置昼夜主题、电量显示及呆猫陪伴；PC回归与官方ESP-IDF构建通过，已安装到实机。长期稳定性、一小时电池续航与整机验收仍待完成，语音助手归档至下一版本。Desk-Deck 已提供四场景六键独立调试固件及网页原型，实机双 CDC + HID 枚举、截图、旋转/亮度组合与重启检查通过；复制/粘贴、修正后的正放/倒置和设置页触控已获用户确认，其他动作和长期验收仍待完成。
+项目均处于实验或规划阶段，名称中的 V1.0 不表示已发布稳定版。GamePlay 已有显示、声音、触摸和按键诊断，以及九键原理图和结构预布局，尚未接入游戏核心或完成整机。Time-Tick 已实现翻转倒计时、圆盘轻点/长按、可选铃声与翻转停铃、天气时钟、可配置昼夜主题、电量显示及呆猫陪伴；PC回归与官方ESP-IDF构建通过，已安装到实机。长期稳定性、一小时电池续航与整机验收仍待完成，语音助手归档至下一版本。Desk-Deck V1.0 已提供四场景六键独立调试固件及网页原型，实机双 CDC + HID 枚举、截图、旋转/亮度组合与重启检查通过；复制/粘贴、修正后的正放/倒置和设置页触控已获用户确认，其他动作和长期验收仍待完成。
 
 ## 目录
 
@@ -10,12 +10,12 @@
 ESP-MOSAICO-LAB/
 ├── examples/                 官方工程和例程
 ├── firmware/
-│   ├── Desk-Deck/            桌面快捷控制台固件与交互原型
+│   ├── Desk-Deck V1.0/            桌面快捷控制台固件与交互原型
 │   ├── GamePlay V1.0/        游戏机软件
 │   ├── Time-Tick V1.0/       翻转计时器软件
 │   └── LICENSE
 ├── hardware/
-│   ├── Desk-Deck/            控制台板载复用与桌面结构需求
+│   ├── Desk-Deck V1.0/            控制台板载复用与桌面结构需求
 │   ├── GamePlay V1.0/        按键板、外壳与设计记录
 │   ├── Time-Tick V1.0/       计时器硬件需求、结构与验证记录
 │   ├── esp-mosaico/          主机硬件参考资料
@@ -26,7 +26,7 @@ ESP-MOSAICO-LAB/
 ```
 
 - [官方工程](examples/README.md)：Vibe、Claw、BSP 的本机参考副本与固定来源。
-- [Desk-Deck 软件与原型](firmware/Desk-Deck/README.md)：Windows USB 快捷控制台调试版，四套场景、六键触控、翻转切页与本地可点击原型；[硬件需求](hardware/Desk-Deck/README.md)。
+- [Desk-Deck V1.0 软件与原型](firmware/Desk-Deck%20V1.0/README.md)：Windows USB 快捷控制台调试版，四套场景、六键触控、翻转切页与本地可点击原型；[硬件需求](hardware/Desk-Deck%20V1.0/README.md)。
 - [GamePlay V1.0 软件](firmware/GamePlay%20V1.0/README.md)：源码、ESP-IDF 配置、构建记录和 Mosaico Ideas 发布资料。
 - [GamePlay V1.0 硬件](hardware/GamePlay%20V1.0/README.md)：按键板、接口、BOM、结构尺寸与设计源文件。
 - [Time-Tick V1.0 软件](firmware/Time-Tick%20V1.0/README.md)：翻转计时、双语时钟天气、可调昼夜主题、呆猫专注陪伴、自动旋转和 Mosaico Ideas 发布框架；[电脑预览启动](firmware/Time-Tick%20V1.0/pc/README.md)。
@@ -40,7 +40,7 @@ ESP-MOSAICO-LAB/
 3. 按所选项目README准备SDK。Time-Tick可先运行[电脑预览](firmware/Time-Tick%20V1.0/pc/README.md)，再通过官方系统更新包装入设备。
 4. 当前能力与验证边界以项目README、`test-records/`、[变更记录](CHANGELOG.md)为准。
 
-Desk-Deck 可直接运行 `python tools/preview.py` 查看模拟原型；固件另有独立工具链、依赖与构建入口，见[构建说明](firmware/Desk-Deck/docs/BUILD.md)。安装到同一设备会替换运行中的应用，保留系统保护区与其他应用设置，不修改 Time-Tick 工程。
+Desk-Deck V1.0 可直接运行 `python tools/preview.py` 查看模拟原型；固件另有独立工具链、依赖与构建入口，见[构建说明](firmware/Desk-Deck%20V1.0/docs/BUILD.md)。安装到同一设备会替换运行中的应用，保留系统保护区与其他应用设置，不修改 Time-Tick 工程。
 
 源码、固定依赖清单、BSP、原始素材、可直接构建的生成C数组、硬件设计、测试及功能归档进入Git。`build-*`、SDK/依赖缓存、下载的官方仓库、本机配置、日志、设备设置与宠物存档不上传。不要在源码中填写实际Wi-Fi密码或API密钥。
 

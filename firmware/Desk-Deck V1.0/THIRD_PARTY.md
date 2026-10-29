@@ -1,6 +1,6 @@
 # 第三方来源与许可
 
-Desk-Deck 原创代码与文档采用 GPL-3.0-only，完整文本见 [LICENSE](LICENSE)。构建时链接的第三方组件保留各自许可，完整版本锁定见 `dependencies.lock` 与 `project.json`；已收集的原始声明见 [第三方许可原文](docs/licenses/THIRD-PARTY-NOTICES.txt)。
+Desk-Deck V1.0 原创代码与文档采用 GPL-3.0-only，完整文本见 [LICENSE](LICENSE)。构建时链接的第三方组件保留各自许可，完整版本锁定见 `dependencies.lock` 与 `project.json`；已收集的原始声明见 [第三方许可原文](docs/licenses/THIRD-PARTY-NOTICES.txt)。
 
 | 来源 | 固定版本或位置 | 许可与用途 |
 | --- | --- | --- |

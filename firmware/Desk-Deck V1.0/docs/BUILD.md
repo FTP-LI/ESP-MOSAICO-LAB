@@ -1,6 +1,6 @@
 # 构建与实机调试
 
-Desk-Deck 使用自身的依赖、构建目录和 NVS 命名空间 `deskdeck`。网页原型仍可独立运行，不会发送电脑快捷键。
+Desk-Deck V1.0 使用自身的依赖、构建目录和 NVS 命名空间 `deskdeck`。网页原型仍可独立运行，不会发送电脑快捷键。
 
 ## 工具链
 
@@ -33,7 +33,7 @@ python mosaico.py iris system-update --bundle build-idf62/desk_deck-system-updat
 python mosaico.py iris device-status --json
 ```
 
-同一设备只运行一个正常应用。安装 Desk-Deck 会替换原应用；正常安装包不包含 bootloader、Vibe、sysmeta、coredump、NVS 数据镜像，不整片擦除。要恢复其他应用，进入 Vibe Mode 后用对应应用自己的官方入口和已验证安装包恢复。
+同一设备只运行一个正常应用。安装 Desk-Deck V1.0 会替换原应用；正常安装包不包含 bootloader、Vibe、sysmeta、coredump、NVS 数据镜像，不整片擦除。要恢复其他应用，进入 Vibe Mode 后用对应应用自己的官方入口和已验证安装包恢复。
 
 ## USB 结构
 

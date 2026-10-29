@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Use the official pinned CLI for every Desk-Deck device operation."""
+"""Use the official pinned CLI for every Desk-Deck V1.0 device operation."""
 from pathlib import Path
 import os
 import runpy
