@@ -1,6 +1,6 @@
 # ESP-MOSAICO-LAB
 
-基于 ESP-Mosaico 的非官方软硬件开发仓库。目前包含 **GamePlay V1.0** 游戏机、**Time-Tick V1.0** 翻转计时器，以及新增的 **Desk-Deck V1.0** 桌面快捷控制台三个独立项目。
+基于 ESP-Mosaico 的非官方软硬件开发仓库。目前包含 **GamePlay V1.0** 游戏机、**Time-Tick V1.0** 翻转计时器、**Desk-Deck V1.0** 桌面快捷控制台，以及 **Mic-Lab V1.0** USB 麦克风四个独立项目。
 
 项目均处于实验或规划阶段，名称中的 V1.0 不表示已发布稳定版。GamePlay 已有显示、声音、触摸和按键诊断，以及九键原理图和结构预布局，尚未接入游戏核心或完成整机。Time-Tick 已实现翻转倒计时、圆盘轻点/长按、可选铃声与翻转停铃、天气时钟、可配置昼夜主题、电量显示及呆猫陪伴；PC回归与官方ESP-IDF构建通过，已安装到实机。长期稳定性、一小时电池续航与整机验收仍待完成，语音助手归档至下一版本。Desk-Deck V1.0 已提供四场景六键独立调试固件及网页原型，实机双 CDC + HID 枚举、截图、旋转/亮度组合与重启检查通过；复制/粘贴、修正后的正放/倒置和设置页触控已获用户确认，其他动作和长期验收仍待完成。
 
@@ -12,11 +12,13 @@ ESP-MOSAICO-LAB/
 ├── firmware/
 │   ├── Desk-Deck V1.0/            桌面快捷控制台固件与交互原型
 │   ├── GamePlay V1.0/        游戏机软件
+│   ├── Mic-Lab V1.0/         USB 麦克风、音量表与持久化短录音
 │   ├── Time-Tick V1.0/       翻转计时器软件
 │   └── LICENSE
 ├── hardware/
 │   ├── Desk-Deck V1.0/            控制台板载复用与桌面结构需求
 │   ├── GamePlay V1.0/        按键板、外壳与设计记录
+│   ├── Mic-Lab V1.0/         板载音频、USB 与录音存储需求
 │   ├── Time-Tick V1.0/       计时器硬件需求、结构与验证记录
 │   ├── esp-mosaico/          主机硬件参考资料
 │   ├── README.md
@@ -26,6 +28,7 @@ ESP-MOSAICO-LAB/
 ```
 
 - [官方工程](examples/README.md)：Vibe、Claw、BSP 的本机参考副本与固定来源。
+- [Mic-Lab V1.0](firmware/Mic-Lab%20V1.0/README.md)：USB 麦克风音频基础开发版，实时电平、增益、静音及 30 秒录音断电保存；DIY 主屏幕尚未实现，实机验收待完成；[换电脑开发交接](firmware/Mic-Lab%20V1.0/docs/HANDOFF.md)；[硬件需求](hardware/Mic-Lab%20V1.0/README.md)。
 - [Desk-Deck V1.0 软件与原型](firmware/Desk-Deck%20V1.0/README.md)：Windows USB 快捷控制台调试版，四套场景、六键触控、翻转切页与本地可点击原型；[硬件需求](hardware/Desk-Deck%20V1.0/README.md)。
 - [GamePlay V1.0 软件](firmware/GamePlay%20V1.0/README.md)：源码、ESP-IDF 配置、构建记录和 Mosaico Ideas 发布资料。
 - [GamePlay V1.0 硬件](hardware/GamePlay%20V1.0/README.md)：按键板、接口、BOM、结构尺寸与设计源文件。

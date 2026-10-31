@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-29",
+  "project": "Mic-Lab V1.0",
+  "firmware": "0.1.0-dev",
+  "hardware_verified": false,
+  "package": {
+    "path": "build-idf62/mic_lab-system-update.irisfw",
+    "size": 711320,
+    "sha256": "0f3a814604c291c5680574799c7bd058b37e8e68d4c57812c6a9b82b32003baa"
+  },
+  "manifest": {
+    "components": [
+      {
+        "file": "partition-table.bin",
+        "id": 1,
+        "kind": "partition_table",
+        "sha256": "8d28cdded305dd5f31c4a2aec315e4577e8e55f8ade887775d543306e6eb59a6",
+        "size": 4096,
+        "target_offset": 32768
+      },
+      {
+        "file": "ota_0.bin",
+        "id": 2,
+        "kind": "application",
+        "sha256": "75dc62b13a0d075bfe9da374c997521172afeb537051871128178a16aea76410",
+        "size": 1194432,
+        "target_offset": 2162688
+      }
+    ],
+    "minimum_recovery_version": "0.2.0",
+    "release": "0.1.0-dev",
+    "schema": "esp-iris-system-update/0.2",
+    "target": {
+      "chip_id": 32,
+      "flash_size": 16777216
+    },
+    "target_layout_sha256": "8d28cdded305dd5f31c4a2aec315e4577e8e55f8ade887775d543306e6eb59a6"
+  }
+}

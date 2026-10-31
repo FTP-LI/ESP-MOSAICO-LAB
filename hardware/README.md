@@ -1,5 +1,6 @@
 # 硬件
 
+- [Mic-Lab V1.0](Mic-Lab%20V1.0/README.md)：复用板载麦克风、ES8311、扬声器、USB 和 NAND 的麦克风实验台，待实机音频与断电验收。
 - [Desk-Deck V1.0](Desk-Deck%20V1.0/README.md)：桌面快捷控制台的板载复用、USB 接入与稳定支撑需求，当前为规划阶段，不改动现有电路板。
 - [GamePlay V1.0](GamePlay%20V1.0/README.md)：当前开发的按键板和掌机结构。
 - [Time-Tick V1.0](Time-Tick%20V1.0/README.md)：翻转计时器的硬件复用、稳定支撑面与六方向验收要求，目前为需求阶段。

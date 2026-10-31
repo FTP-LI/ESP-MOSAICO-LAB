@@ -1,0 +1,17 @@
+{
+  "name": "Mic-Lab V1.0",
+  "displayName": "USB 麦克风实验台",
+  "version": "0.1.0-dev",
+  "stage": "audio-foundation-diy-screen-pending",
+  "target": "ESP-Mosaico / ESP32-S31 / 480x480",
+  "hostPlatform": "Windows",
+  "configSchemaVersion": 1,
+  "nvsNamespace": "miclab",
+  "firmwareBuildAvailable": true,
+  "dependencies": {
+    "note": "独立固定依赖；双 CDC + UAC2 音频的实际 Windows 枚举、收音及断电恢复待验证",
+    "espMosaicoUtils": "be151ae047014e79a9c7ae0092dd203844499003",
+    "espIdf": "1c42e514c90ae621af33bde3b6ad3dac22edcbfd",
+    "bsp": "5f88b91e1be055d1d3674364123b2779a1758377"
+  }
+}

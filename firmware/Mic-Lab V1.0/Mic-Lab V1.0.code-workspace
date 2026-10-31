@@ -1,0 +1,6 @@
+{
+  "folders": [{ "path": "." }],
+  "settings": {
+    "idf.buildPathWin": "${workspaceFolder}/build-idf62"
+  }
+}
