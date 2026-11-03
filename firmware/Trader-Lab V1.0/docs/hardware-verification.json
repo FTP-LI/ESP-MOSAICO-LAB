@@ -1,0 +1,51 @@
+{
+  "date": "2026-10-27",
+  "version": "0.1.0-dev",
+  "hardwareInstalled": true,
+  "basicChecksPassed": true,
+  "fullAcceptanceComplete": false,
+  "bundleSha256": "c1b34100b223c6c8714d17bd120035aeb30411254a6dfe6b4130476e0dd98a36",
+  "applicationSha256": "f78db3f617b197856834b7037eebfa0990d4b9dffcadadbbb963ed4e163711d3",
+  "deviceFirmwareElfSha256": "d81f260c7bc6c9866b05b30e798a7bd5806e83722ff6a479dac80d65614387d2",
+  "officialInstallerHealthy": true,
+  "normalRestartPassed": true,
+  "recoveryRoundTripPassed": false,
+  "screenTestSteps": 24,
+  "resetReason": 3,
+  "crashCount": 0,
+  "network": {
+    "wifi": true,
+    "clock": true,
+    "quotes": 47,
+    "indices": 12,
+    "requests": 2,
+    "failures": 0,
+    "global_requests": 1,
+    "global_failures": 0,
+    "http": 200,
+    "audio_error": false
+  },
+  "hostAssertions": 2928,
+  "hostUiChecksPassed": true,
+  "pending": [
+    "physical touch confirmation for revised layout",
+    "live trading-session crossing notification",
+    "AP disconnection/reconnection",
+    "long runtime, power and thermal tests"
+  ],
+  "globalHostAssertions": 55,
+  "hostUiScenes": 18,
+  "initialWatchlistCount": 47,
+  "watchlistLimit": 64,
+  "recoveryRoundTripNote": "Passed on the preceding baseline; revised build installed through recovery and passed normal restart. Additional unchanged-image recovery round trip not repeated.",
+  "memoryAfterRestart": {
+    "free_internal": 77863,
+    "min_free_internal": 32092,
+    "task_stack_free_min_bytes": 2060
+  },
+  "userConfirmedAudioAndQuoteDisplay": true,
+  "userConfirmedBaselineRotationAndTouch": true,
+  "tlsMemory": "external-spiram",
+  "displayMemoryErrorsAfterFix": 0,
+  "concurrentQuoteRefreshAndRotationPassed": true
+}

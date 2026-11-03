@@ -1,0 +1,14 @@
+sdkconfig
+sdkconfig.old
+build-*/
+managed_components/
+.codex-runs/
+.clangd
+.gateway/
+build-output.log
+install-output.log
+device-boot.log
+tests/fixtures.local/
+iris-status.local.json
+
+ui-check-output.log

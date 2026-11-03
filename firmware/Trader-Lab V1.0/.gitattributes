@@ -1,0 +1,23 @@
+# Preserve the exact source bytes recorded in docs/build-verification.json.
+CMakeLists.txt -text
+dependencies.lock -text
+main/alarm_model.c -text
+main/alarm_model.h -text
+main/audio.c -text
+main/audio.h -text
+main/CMakeLists.txt -text
+main/gbk.c -text
+main/global_market.c -text
+main/global_market.h -text
+main/idf_component.yml -text
+main/main.c -text
+main/model.c -text
+main/model.h -text
+main/network.c -text
+main/network.h -text
+main/sdk_compat.c -text
+main/trader_font.c -text
+main/trader_font.h -text
+main/watchlist_seed.c -text
+partitions.csv -text
+sdkconfig.defaults -text

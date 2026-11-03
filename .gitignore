@@ -62,3 +62,6 @@ build-*/
 managed_components/
 .codex-runs/
 *.irisfw
+
+# Local gateway runtime state
+/firmware/Time-Tick V1.0/.gateway/

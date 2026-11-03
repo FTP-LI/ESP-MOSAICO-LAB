@@ -1,0 +1,17 @@
+{
+  "folders": [
+    {"name": "Trader-Lab V1.0", "path": "."},
+    {"name": "Trader-Lab 硬件", "path": "../../hardware/Trader-Lab V1.0"}
+  ],
+  "tasks": {
+    "version": "2.0.0",
+    "tasks": [{
+      "label": "预览 Trader-Lab",
+      "type": "process",
+      "command": "python",
+      "args": ["tools/preview.py"],
+      "options": {"cwd": "${workspaceFolder:Trader-Lab V1.0}"},
+      "problemMatcher": []
+    }]
+  }
+}

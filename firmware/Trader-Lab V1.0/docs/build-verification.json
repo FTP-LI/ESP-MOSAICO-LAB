@@ -1,0 +1,70 @@
+{
+  "version": "0.1.0-dev",
+  "hardwareValidated": false,
+  "hardwareInstalled": false,
+  "bundle": {
+    "file": "build-idf62/trader_lab-system-update.irisfw",
+    "bytes": 2705269,
+    "sha256": "c1b34100b223c6c8714d17bd120035aeb30411254a6dfe6b4130476e0dd98a36"
+  },
+  "application": {
+    "bytes": 4658624,
+    "sha256": "f78db3f617b197856834b7037eebfa0990d4b9dffcadadbbb963ed4e163711d3"
+  },
+  "manifest": {
+    "components": [
+      {
+        "file": "partition-table.bin",
+        "id": 1,
+        "kind": "partition_table",
+        "sha256": "8d28cdded305dd5f31c4a2aec315e4577e8e55f8ade887775d543306e6eb59a6",
+        "size": 4096,
+        "target_offset": 32768
+      },
+      {
+        "file": "ota_0.bin",
+        "id": 2,
+        "kind": "application",
+        "sha256": "f78db3f617b197856834b7037eebfa0990d4b9dffcadadbbb963ed4e163711d3",
+        "size": 4658624,
+        "target_offset": 2162688
+      }
+    ],
+    "minimum_recovery_version": "0.2.0",
+    "release": "0.1.0-dev",
+    "schema": "esp-iris-system-update/0.2",
+    "target": {
+      "chip_id": 32,
+      "flash_size": 16777216
+    },
+    "target_layout_sha256": "8d28cdded305dd5f31c4a2aec315e4577e8e55f8ade887775d543306e6eb59a6"
+  },
+  "dependencyPins": {
+    "esp-mosaico-utils": "be151ae047014e79a9c7ae0092dd203844499003",
+    "esp-mosaico-bsp": "5f88b91e1be055d1d3674364123b2779a1758377"
+  },
+  "sourceSha256": {
+    "CMakeLists.txt": "3912ea970f4b2a28b8f3a1656bbf19f448c262a1a992d00a381094fc66ec0080",
+    "dependencies.lock": "322e006f51e231f0f1d9717271a765cf963047f2d6775513cfc4c8eaf083066c",
+    "main/alarm_model.c": "7258627bc683db9d5e9f3bcafab983294c02acb56533aebc9262ef5bbac7f12a",
+    "main/alarm_model.h": "686a210ea894ada488c061be5c91ef4f2e5634ecde376f8a66774faf1a8e9f75",
+    "main/audio.c": "cbeafe02587100961b87da08aa43f6f06a8a2beffbd7ce5ac68fd88f95b723ef",
+    "main/audio.h": "8b93bdcbbe7bcab46161db20f6aeb303113b38550fc6d95065b914822c7e193d",
+    "main/CMakeLists.txt": "23ec78155364e56ec97ed1b4294280ffd6137f4b9f96eeeee3c3755f9fb631b3",
+    "main/gbk.c": "17d81787c1574b925d964969a61ef4c604224c7ddf62186b02793b26d8654e87",
+    "main/global_market.c": "e5df42d8d04051838106bd6512eabe179cbee9dae004a60acfb8483f1cc51c0e",
+    "main/global_market.h": "176c976f1c0ad1f2d5f6d1135948ff1f80a1a3c18421ab8d421577fc2fb3b856",
+    "main/idf_component.yml": "af5dd0c93effb30afc5803da94bd7554e5c578c64491e662bb376148e436fc44",
+    "main/main.c": "ea84b48b2d8ab3d1d5cb63d73a40c4700fefba2ba250900255f6e182668470ec",
+    "main/model.c": "6e5c3f254d53496661ace78cb1c8a28831c1d1e105cfbb8f9ca583e059fcafe6",
+    "main/model.h": "cbe369913b2405124edde3264b74b9af0904d3fb6975f0aa6893c2c671530cf4",
+    "main/network.c": "0ccf748055feee74d159888ccad8162e7a3316a92087c1e3a48700a6abc8cc37",
+    "main/network.h": "cb0b077f73e0b2f7ce7007ae861fdf154c7ef42403cdcf939f387ff8eeb6e630",
+    "main/sdk_compat.c": "88451b00b1e146773bfef5de15022cdd2dfc94a6b0620f3c9015cd4e70d874f3",
+    "main/trader_font.c": "6af03c73da960361bb5fe28a31df4d915906dd2ce1438717bdf30a51bd820571",
+    "main/trader_font.h": "2bafff81a45ba7b70d1ee562e3e87987675bbb1e719f941dd2bb219ef4e26a07",
+    "main/watchlist_seed.c": "60a6246cdcf8f0a3f162c45770d664a8a3ff5039a0a0d0a4a74e7c4f8b922ec8",
+    "partitions.csv": "7bce2ac14329bc2c25c6d0a8037da7598b9a8ad30a62ef526261f1a8ef8bd53f",
+    "sdkconfig.defaults": "494654bf9b33bae4e325ff1cde621c2d7e1c7d7d4937b3cbb801e183d2411a2e"
+  }
+}

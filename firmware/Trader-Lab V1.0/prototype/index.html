@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Trader-Lab V1.0 · 界面原型</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="layout">
+    <section class="intro">
+      <p class="eyebrow">ESP-MOSAICO / NEW PROJECT</p>
+      <h1>桌面上的<br><span>行情观察窗。</span></h1>
+      <p class="description">Trader-Lab V1.0<br>连上 Wi-Fi，留下你关心的行情。<br>电脑关机后，设备仍可独立工作。</p>
+      <div class="tags"><span>独立工程</span><span>Wi-Fi 联网方案</span><span>480 × 480</span></div>
+      <div class="scope"><strong>先把四件事做好</strong><p>看自选 · 看趋势 · 看市场 · 收到提醒</p><small>当前为功能与交互原型；全部数据为合成示例，<br>尚未连接行情服务或实物设备。</small></div>
+    </section>
+    <section class="preview" aria-label="设备原型">
+      <div class="frame"><div class="screen" id="screen">
+        <header class="device-header"><div><strong>TRADER LAB</strong><span>V1.0</span></div><button id="settings" aria-label="打开设置">设置</button></header>
+        <div id="quality" class="quality"></div>
+        <div id="content" class="content"></div>
+        <nav class="navigation" aria-label="设备页面">
+          <button data-page="watch" aria-label="自选页"><span>01</span>自选</button>
+          <button data-page="chart" aria-label="图表页"><span>02</span>图表</button>
+          <button data-page="market" aria-label="市场页"><span>03</span>市场</button>
+          <button data-page="alerts" aria-label="提醒页"><span>04</span>提醒</button>
+        </nav>
+      </div></div>
+      <div class="lab">
+        <div class="lab-title"><strong>交互模拟</strong><span id="direction-label">正放 · 自选</span></div>
+        <div class="directions" role="group" aria-label="模拟设备方向">
+          <button data-direction="0">正放</button><button data-direction="1">右转</button><button data-direction="2">倒置</button><button data-direction="3">左转</button>
+        </div>
+        <div class="sim-controls"><button id="network">模拟断网</button><button id="trigger">模拟到价提醒</button></div>
+        <p id="message" role="status">点自选卡片查看图表；方向按钮模拟转动后的阅读视图。</p>
+      </div>
+    </section>
+  </main>
+  <dialog id="settings-dialog">
+    <form method="dialog">
+      <div class="dialog-heading"><h2>显示与操作</h2><button aria-label="关闭设置">关闭</button></div>
+      <p>以下设置仅作用于本次原型预览。</p>
+      <label>主题<select id="theme"><option value="dark">夜间</option><option value="light">日间</option><option value="auto">自动跟随时间</option></select></label>
+      <label class="check"><input id="flip" type="checkbox" checked>翻转时切换页面</label>
+      <p class="note">实机规划：Wi-Fi 配置、自选编辑、提醒铃声、亮度预览与日夜切换时间；本轮尚未实现。</p>
+      <button class="primary close-settings">完成</button>
+    </form>
+  </dialog>
+  <script src="app.js"></script>
+</body>
+</html>

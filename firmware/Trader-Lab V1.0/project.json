@@ -1,0 +1,31 @@
+{
+  "name": "Trader-Lab V1.0",
+  "displayName": "独立联网行情终端",
+  "version": "0.1.0-dev",
+  "stage": "hardware-installed-basic-checks-passed",
+  "target": "ESP-Mosaico / ESP32-S31 / 480x480",
+  "connectivity": "standalone-wifi",
+  "requiresDesktopCompanion": false,
+  "nvsNamespace": "traderlab",
+  "firmwareBuildAvailable": true,
+  "liveMarketDataAvailable": true,
+  "liveQuotesHostVerified": true,
+  "hardwareInstalled": true,
+  "hardwareBasicChecksPassed": true,
+  "hardwareValidated": false,
+  "tradingCalendarYear": 2026,
+  "watchlistLimit": 64,
+  "reference": {
+    "repository": "Genius-Trader-Lab",
+    "commit": "c033c444f05f59ae73355bc14ec8dae090d6d2fa",
+    "inspectedOn": "2026-10-26",
+    "module": "Trader-Map",
+    "runtimeDependency": false
+  },
+  "initialWatchlistCount": 47,
+  "globalIndexCount": 12,
+  "homePages": [
+    "ETF 自选",
+    "全球指数"
+  ]
+}
